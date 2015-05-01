@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+</head>
+	<title>Impact Game</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type='text/javascript' src="jquery.json-2.3.min.js"></script>
+	
+	<style type="text/css">
+		html,body {
+			background-color: #000;
+			color: #fff;
+			font-family: helvetica, arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+		}
+		
+		#canvas {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			border: 1px solid #555;
+		}
+	</style>
+
+	<script type="text/javascript" src="lib/impact/impact.js" charset="utf-8"></script>
+	<script type="text/javascript" src="lib/game/main.js" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+	
+	$(document).ready(function () {
+	var t=setTimeout("loadFileData('highscores')",2500);
+	
+	
+	//console.log('document ready')
+	//$("#saveForm").click(sendFormData);
+	//
+	
+	});
+	
+	function loadFileData(filename) {
+	console.log("loading "+filename);
+	
+	var keys = [];
+	var vals = [];
+		
+	var r = Math.floor(Math.random()*1000000); // déjouer cache
+	$.getJSON(filename + '.json?'+r, 
+		function (data) {
+		
+		$.each(data, function (key, val) {
+			keys.push(key); // ex. coulers
+			vals.push(val); // ex. red			
+		});
+		
+		
+	}).success(function() { console.log("highscores loaded");
+				processData(keys,vals); // now that all data is in arrays
+    					})
+	.error(function() { console.log("Erreur de téléchargement des données - prochain tentative de téléchargement dans 2500 ms");
+						setTimeout(loadFileData('highscores'),2500); 
+						})
+	.complete(function() { console.log("complete"); 
+						});
+
+	
+	function processData(keys,vals){
+	
+	
+		for (var i=0;i<keys.length;i++){
+			if (keys[i] == 'top10'){ 
+				for (var ii=0;ii<10;ii++){
+					
+					ig.game.highscores.push(vals[i][ii]);
+				
+    				
+    			}
+    		}
+		}
+		//fillFormWithData(keys[j], vals[j]); // fill out the rest of the form
+	}
+	
+	
+};
+function saveHighScores(score) {
+	console.log("score = "+score)
+	var higherIsBetter = false; // in race games, a lower number is faster and therefore better
+	
+	var hs = ig.game.highscores;
+	var numHighScores = 10;
+	
+	
+	for (var i=0;i<numHighScores;i++){
+	    if (higherIsBetter){
+		if (score > hs[i] ){
+			hs.splice(i,0,score) // insert at index i, remove 0, insert s
+			console.log("inserted "+score+" at index "+i);
+			break;
+		}
+	    }else{
+		if (score < hs[i] || hs[i] == 0){
+			hs.splice(i,0,score) // insert at index i, remove 0, insert s
+			console.log("inserted "+score+" at index "+i);
+			break;
+		}
+	    }
+	}
+	   
+	    
+	
+	for (var i=0;i<numHighScores;i++){
+		if (hs.length>10)hs.pop(); // remove low scores so there remain only 10 in index
+	}
+    var data = {"top10":hs};
+    
+    var dataString = $.toJSON(data);
+    
+    $.post('saveHighScores.php', { data: dataString }, function (data) {
+    	console.log("saved highscores "+hs);
+        
+    });
+    return false;
+    };
+
+</script>
+
+
+<body>
+
+	<canvas id="canvas"></canvas>
+</body>
+</html>
