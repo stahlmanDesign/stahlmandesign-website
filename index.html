@@ -1,89 +1,226 @@
 <!DOCTYPE html>
 <html class="no-js"> <!-- Modernizr removes the "no-js" class and replaces it with "js" if Javascript enabled. -->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Stahlman Design</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Stahlman Design</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
 
-        <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css">
-        <style>
-		.chart {
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.0.3/united/bootstrap.min.css">
 
-		}
+<style>
+.jumbotron{
+	background: white;
+}
+#animation-list{
+	list-style: none;
+}
+#animation-list li{
+	margin:0px 19px 0px 0px;
+	float:left;
+}
+</style>
 
-		.main text {
-		    font: 10px sans-serif;
-		}
+<link rel="stylesheet" href="css/main.css">
 
-		.axis line, .axis path {
-		    shape-rendering: crispEdges;
-		    stroke: black;
-		    fill: none;
-		}
+<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="js/libs/jquery-1.10.2.js"></script>
+<script src="js/libs/handlebars-1.1.2.js"></script>
+<script src="js/libs/ember-1.3.1.js"></script>
+<!-- <script src='http://courseware.codeschool.com/ember/ember-data.js'></script> --> <!-- don't need for now -->
+<script src='js/app.js'></script>
 
-		circle {
-		    fill: steelblue;
-		}
-		.jumbotron{
-			background: white;
-		}
-		#animation-list{
-			list-style: none;
-		}
-		#animation-list li{
-			margin:0px 19px 0px 0px;
-			float:left;
-		}
-		</style>
-        <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-        <link rel="stylesheet" href="css/main.css">
-
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-		<script src="js/vendor/purl.js"></script>
-    </head>
-    <body>
-	    <div id="navbar" class="navbar navbar-default navbar-fixed-top"></div>
-	    <div id="content"></div>
+</head>
+<body>
+  <!-- <script type='text/x-handlebars' data-template-name='application'> -->
 
 
-<div class="col-lg-6">
-<hr>
-<footer>
-<!-- <p class="small">Infographics, 3D modelling, video games, animation, data visualisation, HTML5</p> -->
-<!-- <br/>Infographie, modélisation 3D, art, animation et visualisation des donnnées<br/>Проекты, 3Д-моделирование и анимация -->
-Find me here: <a href="https://github.com/stahlmanDesign">GitHub</a>,
-<a href="http://www.flickr.com/people/stahlmandesign/">Flickr</a>,
-<a href="https://soundcloud.com/jstahlman/">SoundCloud</a>,
-<a href="http://sketchup.google.com/3dwarehouse/search?uq=0202590493107099598855145">3D Warehouse</a>,
-<a href="http://stahlmandesign.tumblr.com">Tumblr</a>,
-<a href="https://vimeo.com/stahlmandesign">Vimeo</a>,
-<a href="https://twitter.com/jstahlman">Twitter</a>,
-<a href="http://www.linkedin.com/profile/view?id=5635310">LinkedIn</a>
+    <!--
+<div class='navbar navbar-default'>
+      <div class='container'>
+        {{#link-to 'index' class='navbar-brand'}}
+        <img src='http://courseware.codeschool.com/ember/images/logo.png' alt='logo' height='34' width='224' />
+        {{/link-to}}
+        <ul class='nav navbar-nav navbar-right'>
+          {{#link-to 'index' tagName='li'}}Home{{/link-to}}
+          {{#link-to 'newsgraphics' tagName='li'}}News Graphics{{/link-to}}
+          {{#link-to 'en5minutes' tagName='li'}}En 5 minutes{{/link-to}}
+          {{#link-to 'html5' tagName='li'}}HTML5{{/link-to}}
+          {{#link-to 'flash' tagName='li'}}Flash{{/link-to}}
+          {{#link-to 'animation' tagName='li'}}Animation{{/link-to}}
+          {{#link-to 'illustration' tagName='li'}}Illustration{{/link-to}}
+          {{#link-to 'music' tagName='li'}}Music{{/link-to}}
+        </ul>
+      </div>
+    </div>
+-->
+<script type='text/x-handlebars' data-template-name='application'>
+<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		    <span class="icon-bar"></span>
+		  </button>
+		  {{#link-to 'index' class='navbar-brand'}}Stahlman Design{{/link-to}}
+	</div>
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav">
 
-<br/>Send me Bitcoin: <strong>18M89SAL2dEqwtNjiJXtf7y8NeFQX5s7ux</strong></p>
+			{{#link-to 'newsgraphics' tagName='li'}}Graphics{{/link-to}}
+		    {{#link-to 'en5minutes' tagName='li'}}5 minutes{{/link-to}}
+		    {{#link-to 'html5' tagName='li'}}HTML5{{/link-to}}
+			{{#link-to 'flash' tagName='li'}}Flash{{/link-to}}
+			{{#link-to 'games' tagName='li'}}Games{{/link-to}}
+		    {{#link-to 'animation' tagName='li'}}Animation{{/link-to}}
+		    {{#link-to 'art' tagName='li'}}Art{{/link-to}}
+			{{#link-to 'music' tagName='li'}}Music{{/link-to}}
 
-<p>© 2014
-<script language=JavaScript>
+		</ul>
+		<form class="navbar-form navbar-right"></form>
+	</div><!--/.navbar-collapse -->
+</div>
 
-var user = "jstahlman";
-var host = "mac.com";
-var link = "Justin Stahlman";
-document.write("<a hre" + "f=ma" + "ilto:" + user + "@" + host + ">" + link + "</a>");
+    <div class='container'>
+      {{outlet}}
+    </div>
+
+	<div class="col-lg-6">
+	<hr>
+	<footer>
+	<!-- <p class="small">Infographics, 3D modelling, video games, animation, data visualisation, HTML5</p> -->
+	<!-- <br/>Infographie, modélisation 3D, art, animation et visualisation des donnnées<br/>Проекты, 3Д-моделирование и анимация -->
+	Find me here: <a href="https://github.com/stahlmanDesign">GitHub</a>,
+	<a href="http://www.flickr.com/people/stahlmandesign/">Flickr</a>,
+	<a href="http://sketchup.google.com/3dwarehouse/search?uq=0202590493107099598855145">3D Warehouse</a>,
+	<a href="http://stahlmandesign.tumblr.com">Tumblr</a>,
+	<a href="https://vimeo.com/stahlmandesign">Vimeo</a>,
+	<a href="https://twitter.com/jstahlman">Twitter</a>,
+	<a href="http://www.linkedin.com/profile/view?id=5635310">LinkedIn</a>
+
+	<br/>Send me bitcoins! <strong>18M89SAL2dEqwtNjiJXtf7y8NeFQX5s7ux</strong></p>
+
+	<p>© 2014
+	<!--
+	<script language=JavaScript>
+
+	var user = "jstahlman";
+	var host = "mac.com";
+	var link = "Justin Stahlman";
+	document.write("<a hre" + "f=ma" + "ilto:" + user + "@" + host + ">" + link + "</a>");
+	</script>
+	-->
+
+
+	</footer>
+	</div>
+
 </script>
 
 
-</footer>
-</div>
-    </body>
 
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-	    <script src="js/vendor/unveil-master/jquery.unveil.min.js"></script>
-	    <script src="http://d3js.org/d3.v3.min.js"></script>
-		<script src="js/plugins.js"></script>
-		<script src="js/main.js"></script>
+
+
+
+
+
+<!--
+<script type='text/x-handlebars' data-template-name='index'>
+    <div class='jumbotron'>
+      <h1>Welcome to The Flint &amp; Flame!</h1>
+      <p class='tagline'>
+        <img {{bind-attr src='logo'}} alt='Logo' />
+        Everything you need to make it through the winter.
+      </p>
+      <p>
+
+      </p>
+    </div>
+    <p class='pull-right text-muted'>Rendered on {{time}}</p>
+  </script>
+
+  <script type='text/x-handlebars' data-template-name='newsgraphics'>
+    <div class='row'>
+      <img {{bind-attr src='avatar'}} alt='Avatar' class='img-thumbnail col-sm-4'/>
+      <div class='col-sm-8'>
+        <h1>About The Fire Spirits</h1>
+        <p>Contact {{contactName}} for more info!</p>
+        <p>Current Status: {{open}}.</p>
+      </div>
+    </div>
+  </script>
+-->
+  <!--
+  <script type='text/x-handlebars' data-template-name='credits'>
+    <h1>Thanks for the Help!</h1>
+    <p>This site would not be possible without the hardworking Ember Core Team!</p>
+  </script>
+  <script type='text/x-handlebars' data-template-name='products'>
+    <div class='row'>
+      <div class='col-sm-3'>
+        <div class='list-group'>
+          {{#each}}
+            {{#link-to 'product' this classNames='list-group-item'}}
+              {{title}}
+            {{/link-to}}
+          {{/each}}
+        </div>
+      </div>
+      <div class='col-sm-9'>
+        {{outlet}}
+      </div>
+    </div>
+  </script>
+  <script type='text/x-handlebars' data-template-name='product'>
+    <div class='row'>
+      <div class='col-sm-7'>
+        <h2>{{title}}</h2>
+        <h3 class='text-success'>${{price}}</h3>
+        <p class='text-muted'>{{description}}</p>
+      </div>
+      <div class='col-sm-5'>
+        <img {{bind-attr src='image'}} class='img-thumbnail img-rounded'/>
+      </div>
+    </div>
+  </script>
+  <script type='text/x-handlebars' data-template-name='products/index'>
+    <p class='text-muted'>Choose a product from those on the left!</p>
+  </script>
+  <script type='text/x-handlebars' data-template-name='contacts'>
+    <div class='row'>
+      <div class='col-sm-9'>
+
+      </div>
+      <div class='col-sm-3'>
+        <div class='list-group'>
+          {{#each}}
+            {{#link-to 'contact' this classNames='list-group-item'}}
+              {{name}}
+            {{/link-to}}
+          {{/each}}
+        </div>
+      </div>
+      <div class='col-sm-9'>
+        {{outlet}}
+      </div>
+    </div>
+  </script>
+  <script type='text/x-handlebars' data-template-name='contact'>
+    <div class='row'>
+      <div class='col-sm-5'>
+        <img {{bind-attr src='avatar' alt='name'}} class='img-thumbnail img-rounded'/>
+      </div>
+      <div class='col-sm-7'>
+        <h2>{{name}}</h2>
+        <p>{{about}}</p>
+      </div>
+    </div>
+  </script>
+-->
+</body>
 </html>
+
+
+
+
