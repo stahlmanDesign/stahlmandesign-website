@@ -1,0 +1,64 @@
+body {
+	padding-top:50px;
+	padding-bottom:20px;
+	font-family:Georgia,serif;
+}
+
+h1 {
+	/* font-family:Arial,sans-serif; */
+
+	/* font-weight:900; */
+}
+
+.photo-container {
+	/* max-width:240px; */
+	min-height:320px;
+}
+
+#main-content ul {
+	padding:0;
+	margin:0;
+}
+
+#main-content li {
+	list-style:none;
+	float:left;
+}
+
+#main-content img {
+	padding:15px;
+	/* max-width:140px; */
+}
+
+.photo-title {
+	text-align:center;
+}
+
+.album {
+	display: block;
+	position:absolute;
+	min-width:100px;
+	/* font-size:1em; */
+}
+
+.albums li {
+	padding:15px 15px 57px 15px;
+	float:left;
+	list-style:none;
+}
+
+.photo-container img {
+	opacity:0;
+	transition:opacity .3s ease-in;
+}
+
+footer{
+	color:#a9a9a9;
+}
+#nodes{
+	max-width:100%
+}
+
+.thumbnail-photo{
+	max-height:250px;
+}
