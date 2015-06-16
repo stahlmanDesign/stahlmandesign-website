@@ -1,0 +1,371 @@
+
+<head>
+
+	<title>Stahlman Design : Design and programming</title>
+	<link rel="shortcut icon" href="media/icons/favicon.ico" />
+
+	<meta charset="utf-8">
+
+	<!-- for Google -->
+	<meta name="description" content="Stahlman Design : Infographics, dataviz, web & games" />
+	<meta name="keywords" content="Stahlman Design" />
+	<meta name="author" content="Justin Stahlman" />
+	<meta name="application-name" content="Design and programming" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- for Facebook -->
+	<meta property="og:title" content="Stahlman Design : Design and programming" />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="http://www.stahlmandesign.com/img/preview.png" />
+	<meta property="og:url" content="http://www.stahlmandesign.com/"/>
+	<meta property="og:description" content="Infographics, dataviz, web & games" />
+	<meta property="og:locale" content="fr_CA" />            <!-- Default -->
+	<meta property="og:locale:alternate" content="fr_FR" />  <!-- French -->
+	<meta property="og:site_name" content="Stahlman Design"/>
+
+	<!-- for Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Stahlman Design : Design and programming" />
+	<meta name="twitter:description" content="Infographics, dataviz, web & games" />
+	<meta name="twitter:image" content="http://www.stahlmandesign.com/img/preview.png" />
+
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+<!-- 	<link rel="stylesheet" type="text/css" href="http://infojdem.com/lib/cdn/c3.css" /> -->
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/united/bootstrap.min.css" rel="stylesheet">
+<!-- 	<link rel="stylesheet" type="text/css" href="css/main.css"> -->
+
+	<style type="text/css">
+body {
+	padding-top:50px;
+	padding-bottom:20px;
+	font-family:Georgia,serif;
+}
+
+	.fb-like {
+		z-index:9999!important;
+	}
+
+	.main text {
+		font:10px sans-serif;
+	}
+
+	.loader {
+		width:80px;
+		margin-left:50%;
+	}
+
+	.jumbotron {
+		background:#fff;
+	}
+
+
+	.photo-title {
+		text-align:center;
+		margin-left:20px;
+		min-width: 100px;
+		max-width: 180px;
+		min-height: 60px;
+	}
+
+	#animation-list {
+		list-style:none;
+	}
+
+	#animation-list li {
+		margin:0 19px 0 0;
+		float:left;
+	}
+	.game-img-preview{
+		min-width:300px;
+		max-width:768px;
+		width:100%;
+	}
+
+	.photo-container {
+		/* max-width:240px; */
+		min-height:320px;
+	}
+	#main-content ul {
+		padding:0;
+		margin:0;
+	}
+
+	#main-content li {
+		list-style:none;
+		float:left;
+	}
+
+	#main-content img {
+		padding:15px;
+		/* max-width:140px; */
+	}
+
+	.photo-title {
+		text-align:center;
+	}
+
+	.album {
+		display: block;
+		position:absolute;
+		min-width:100px;
+		/* font-size:1em; */
+	}
+
+	.albums li {
+		padding:15px 15px 57px 15px;
+		float:left;
+		list-style:none;
+	}
+
+	.photo-container img {
+		opacity:0;
+		transition:opacity .3s ease-in;
+	}
+
+	footer{
+		color:#a9a9a9;
+	}
+	#nodes{
+		max-width:100%
+	}
+
+	.thumbnail-photo{
+		max-height:250px;
+	}
+
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://d3js.org/queue.v1.min.js"></script>
+<script type="text/javascript" src="http://infojdem.com/lib/cdn/c3.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+<script type="text/javascript" src="http://infojdem.com/lib/cdn/jquery.jsonp.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+</body>
+
+<template name="home">
+  {{> Nav}}
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>Stahlman Design</h1>
+	    <div id="main-image"></div>
+	    <iframe src="https://player.vimeo.com/video/121525054?color=ff0179" width="100%" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	    <p><a href="http://www.stahlmandesign.com/games/dreamsong/">{{link}}</a>{{description}}</p>
+	  </div>
+	</div>
+
+<!--
+  <p>
+    Data Title: {{title}}
+  </p>
+-->
+
+  {{> Footer}}
+</template>
+
+<template name="newsgraphics">
+  {{> Nav}}
+
+  <h1>newsgraphics</h1>
+
+  {{> Footer}}
+</template>
+
+<template name="en5minutes">
+  {{> Nav}}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>En 5 minutes - {{years}}</h1>
+    <p>{{description}}</p>
+  </div>
+</div>
+
+<div class="container">
+   	<div id="main-content">
+	   	<img class="loader" src="../img/loader.gif"/>
+    </div>
+</div>
+
+  {{> Footer}}
+</template>
+
+<template name="en5minutes2">
+  {{> Nav}}
+
+  <h1>en5minutes-2</h1>
+
+  {{> Footer}}
+</template>
+
+<template name="html5">
+  {{> Nav}}
+
+  <h1>html5</h1>
+
+  {{> Footer}}
+</template>
+
+<template name="flash">
+  {{> Nav}}
+
+  <h1>flash</h1>
+
+  {{> Footer}}
+</template>
+
+<template name="games">
+  {{> Nav}}
+
+  <h1>games</h1>
+
+  {{> Footer}}
+</template>
+
+<template name="animation">
+  {{> Nav}}
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Animation</h1>
+    <p>These are the only animations I ever finished. It takes a lot of time and energy. After these, I moved on to making games... which takes even more time and energy.</p>
+  </div>
+</div>
+
+<div class="container">
+	<ul id="animation-list">
+		<li><iframe src="http://player.vimeo.com/video/84733869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<p><a href="http://vimeo.com/84733869">Ange Terrestre trouve ses ailes</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+
+		<li><iframe src="http://player.vimeo.com/video/84733354" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<p><a href="http://vimeo.com/84733354">Ange Terrestre et les abeilles</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+
+		<li><iframe src="http://player.vimeo.com/video/84643209" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<p><a href="http://vimeo.com/84643209">Ange Terrestre et l’oiseau qui a faim</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+
+		<li><iframe src="http://player.vimeo.com/video/84734301" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<p><a href="http://vimeo.com/84734301">Boy oh Boil</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+	</ul>
+</div>
+
+
+  {{> Footer}}
+</template>
+
+<template name="illustration">
+  {{> Nav}}
+
+  <h1>illustration</h1>
+
+  {{> Footer}}
+</template>
+
+<template name="music">
+  {{> Nav}}
+
+  <h1>music</h1>
+
+  {{> Footer}}
+</template>
+
+
+
+<template name="Nav">
+	<div id="navbar" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			    <span class="icon-bar"></span>
+			  </button>
+			  <a id="home" class="navbar-brand" href="/">Stahlman Design</a>
+			</div>
+			<div class="navbar-collapse collapse">
+			  <ul class="nav navbar-nav">
+
+			    <li id="infographics" class="dropdown">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Infographics <b class="caret"></b></a>
+			      <ul class="dropdown-menu">
+			      	<!--
+		<li class="dropdown-header">All things print</li>
+			      	<li class="divider"></li>
+		-->
+			        <li><a href="/newsgraphics">News graphics</a></li>
+			        <li><a href="/en5minutes/1">« En 5 minutes » old</a></li>
+			        <li><a href="/en5minutes/2">« En 5 minutes » new</a></li>
+			      </ul>
+			    </li>
+
+			    <li id="web" class="dropdown">
+			      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Web <b class="caret"></b></a>
+			      <ul class="dropdown-menu">
+			      	<!--
+		<li class="dropdown-header">All things web</li>
+			      	<li class="divider"></li>
+		-->
+			      	<li><a href="/html5">HTML5 (CSS, Javascript, PHP)</a></li>
+			        <li><a href="/flash">Flash (Animation, Actionscript)</a></li>
+			      </ul>
+			    </li>
+
+				<li id="games"><a href="/games">Games</a></li>
+			    <li id="animation"><a href="/animation">Animation</a></li>
+			    <li id="illustration"><a href="/illustration">Illustration</a></li>
+				<li id="music"><a href="/music">Music</a></li>
+				<li id="blog"><a href="//blog.stahlmandesign.com">Blog</a></li>
+			  </ul>
+			  <form class="navbar-form navbar-right"></form>
+			</div><!--/.navbar-collapse -->
+		</div>
+	</div>
+</template>
+
+<template name="Footer">
+<hr>
+	<footer>
+		<div class="container">
+			<p class="small">Infographics, 3D modelling, video games, animation, data visualisation, HTML5</p>
+			<p class="small">Infographie, modélisation 3D, art, animation et visualisation des donnnées</p>
+			<p class="small">Проекты, 3Д-моделирование и анимация</p>
+			Find me here: <a href="https://www.linkedin.com/in/justinstahlman">LinkedIn</a>,
+			<a href="https://3dwarehouse.sketchup.com/by/stahlmandesign">3D Warehouse</a>,
+			<a href="https://github.com/stahlmanDesign">GitHub</a>,
+			<a href="https://twitter.com/jstahlman">Twitter</a>,
+			<a href="http://www.flickr.com/people/stahlmandesign/">Flickr</a>,
+			<a href="https://soundcloud.com/jstahlman/">SoundCloud</a>,
+			<a href="http://stahlmandesign.tumblr.com">Tumblr</a>,
+			<a href="https://vimeo.com/stahlmandesign">Vimeo</a>
+
+
+
+			<p>I accept Bitcoin: <strong>18M89SAL2dEqwtNjiJXtf7y8NeFQX5s7ux</strong></p>
+
+			<p>© 2014
+<!--
+			<script language=JavaScript>
+
+			var user = "jstahlman";
+			var host = "mac.com";
+			var link = "Justin Stahlman";
+			document.write("<a hre" + "f=ma" + "ilto:" + user + "@" + host + ">" + link + "</a>");
+			</script>
+-->
+			</p>
+		</div>
+
+	</footer>
+
+
+</template>
