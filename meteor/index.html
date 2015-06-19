@@ -35,104 +35,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/united/bootstrap.min.css" rel="stylesheet">
 <!-- 	<link rel="stylesheet" type="text/css" href="css/main.css"> -->
 
-	<style type="text/css">
-body {
-	padding-top:50px;
-	padding-bottom:20px;
-	font-family:Georgia,serif;
-}
-
-	.fb-like {
-		z-index:9999!important;
-	}
-
-	.main text {
-		font:10px sans-serif;
-	}
-
-	.loader {
-		width:80px;
-		margin-left:50%;
-	}
-
-	.jumbotron {
-		background:#fff;
-	}
-
-
-	.photo-title {
-		text-align:center;
-		margin-left:20px;
-		min-width: 100px;
-		max-width: 180px;
-		min-height: 60px;
-	}
-
-	#animation-list {
-		list-style:none;
-	}
-
-	#animation-list li {
-		margin:0 19px 0 0;
-		float:left;
-	}
-	.game-img-preview{
-		min-width:300px;
-		max-width:768px;
-		width:100%;
-	}
-
-	.photo-container {
-		/* max-width:240px; */
-		min-height:320px;
-	}
-	#main-content ul {
-		padding:0;
-		margin:0;
-	}
-
-	#main-content li {
-		list-style:none;
-		float:left;
-	}
-
-	#main-content img {
-		padding:15px;
-		/* max-width:140px; */
-	}
-
-	.photo-title {
-		text-align:center;
-	}
-
-	.album {
-		display: block;
-		position:absolute;
-		min-width:100px;
-		/* font-size:1em; */
-	}
-
-	.albums li {
-		padding:15px 15px 57px 15px;
-		float:left;
-		list-style:none;
-	}
-
-	.photo-container img {
-		opacity:0;
-		transition:opacity .3s ease-in;
-	}
-
-	footer{
-		color:#a9a9a9;
-	}
-	#nodes{
-		max-width:100%
-	}
-
-	.thumbnail-photo{
-		max-height:250px;
-	}
+<style type="text/css">
 
 </style>
 
@@ -177,7 +80,18 @@ body {
 <template name="newsgraphics">
   {{> Nav}}
 
-  <h1>newsgraphics</h1>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>News graphics</h1>
+	    <p>Most of these infographics were published in <em>The San Antonio Express-News, The Montreal Gazette, Toronto Star, Le Soleil, La Presse,</em> and the book <em>The Rescue of Jerusalem</em>, by Henri Aubin.</p>
+	  </div>
+	</div>
+
+	<div class="container">
+	   	<div class="main-content">
+		   	<img class="loader" src="../img/loader.gif"/>
+	    </div>
+	</div>
 
   {{> Footer}}
 </template>
@@ -185,18 +99,18 @@ body {
 <template name="en5minutes">
   {{> Nav}}
 
-<div class="jumbotron">
-  <div class="container">
-    <h1>En 5 minutes - {{years}}</h1>
-    <p>{{description}}</p>
-  </div>
-</div>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>En 5 minutes - {{years}}</h1>
+	    <p>{{description}}</p>
+	  </div>
+	</div>
 
-<div class="container">
-   	<div id="main-content">
-	   	<img class="loader" src="../img/loader.gif"/>
-    </div>
-</div>
+	<div class="container">
+	   	<div class="main-content">
+		   	<img class="loader" src="../img/loader.gif"/>
+	    </div>
+	</div>
 
   {{> Footer}}
 </template>
@@ -204,7 +118,18 @@ body {
 <template name="en5minutes2">
   {{> Nav}}
 
-  <h1>en5minutes-2</h1>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>En 5 minutes - {{years}}</h1>
+	    <p>{{description}}</p>
+	  </div>
+	</div>
+
+	<div class="container">
+	   	<div class="main-content">
+		   	<img class="loader" src="../img/loader.gif"/>
+	    </div>
+	</div>
 
   {{> Footer}}
 </template>
@@ -212,7 +137,18 @@ body {
 <template name="html5">
   {{> Nav}}
 
-  <h1>html5</h1>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>HTML5</h1>
+	    <p>These interactive graphics and data visualisations are done in HTML5/CSS/Javascript using Bootstrap for responsive design. Data is loaded from CSV files or by querying Google Fusion Tables or any API that returns JSON/JSONP.</p>
+	  </div>
+	</div>
+
+	<div class="container">
+	   	<div class="main-content">
+		   	<img class="loader" src="../img/loader.gif"/>
+	    </div>
+	</div>
 
   {{> Footer}}
 </template>
@@ -220,44 +156,89 @@ body {
 <template name="flash">
   {{> Nav}}
 
-  <h1>flash</h1>
+		  <!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+		  <div class="container">
+		    <h1>Flash</h1>
+		    <p>Before HTML5, the mobile web and responsive design, interactive graphics were almost always created in Flash and Actionscript. These interactives were created between 2008-2011.</p>
+		  </div>
+		</div>
 
-  {{> Footer}}
-</template>
+		<div class="container">
+		   	<iframe id="interactif-iframe" src="http://www.canoe.ca/FlashInfo/home.php?lang=fr" scrolling="no" frameborder="0" style="border:none; width:1000px; height:1000px;"></iframe>
+		</div>
+
+	  {{> Footer}}
+	</template>
 
 <template name="games">
   {{> Nav}}
 
-  <h1>games</h1>
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+		<div class="jumbotron">
+		  <div class="container">
+		    <h1>Games</h1>
+		    <p>I love retro games because limited technology allows you to stay focused and doesn't require a whole team of programmers, artists musicians and writers. Most of these games are <a href="http://impactjs.com">ImpactJS</a> (JavaScript) remakes originally programmed in <a href="http://en.wikipedia.org/wiki/QuickBASIC">Microsoft QuickBasic</a> and on the Apple IIe using <a href="http://en.wikipedia.org/wiki/Apple_ProDOS">ProDOS</a> and the <a href="http://lostclassics.apple2.info/downloads/">Beagle Compiler</a> from 1988-1992. Some are incomplete. Most use the arrow keys, and X and C for action.</p>
+
+
+				<div class="col-xs-12">
+			    	<a href="../games/dreamsong/"><img class="game-img-preview" src="../img/dreamsong.png"/></a>
+			    	<h3>The Dreamsong (2015) - beta v0.12.*</h3>
+			    </div>
+				<br/>&nbsp;
+				<br/>&nbsp;
+		    <div class="row"></div>
+			<div class="col-sm-6 col-md-4">
+		    	<a href="http://www1.journaldemontreal.com/2014/04/jeu/"><img class="game-img-preview" src="../img/election.png"/></a>
+		    	<h3>Élections Québec (2014)</h3>
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+		    	<a href="http://www.stahlmandesign.com/games/sauterelles/"><img class="game-img-preview" src="../img/sauterelles.png"/></a>
+		    	<h3>Sauterelles (2012)</h3>
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+		    	<a href="http://www.stahlmandesign.com/games/ttal/"><img class="game-img-preview" src="../img/ttal.png"/></a>
+		    	<h3>To Tame A Land (1992/2012)</h3>
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+		    	<a href="http://www.stahlmandesign.com/games/sacredLamps/"><img class="game-img-preview" src="../img/sacredLamps.png"/></a>
+		    	<h3>The Sacred Lamps (1990/2012)</h3>
+		    </div>
+		    <div class="col-sm-6 col-md-4">
+		    	<a href="http://www.stahlmandesign.com/games/mountainbike/"><img class="game-img-preview" src="../img/mountainbike.png"/></a>
+		    	<h3>Mountain Bike (2012)</h3>
+		    </div>
+		</div>
+	</div>
 
   {{> Footer}}
 </template>
 
-<template name="animation">
-  {{> Nav}}
+	<template name="animation">
+	  {{> Nav}}
 
-<div class="jumbotron">
-  <div class="container">
-    <h1>Animation</h1>
-    <p>These are the only animations I ever finished. It takes a lot of time and energy. After these, I moved on to making games... which takes even more time and energy.</p>
-  </div>
-</div>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>Animation</h1>
+	    <p>These are the only animations I ever finished. It takes a lot of time and energy. After these, I moved on to making games... which takes even more time and energy.</p>
+	  </div>
+	</div>
 
-<div class="container">
-	<ul id="animation-list">
-		<li><iframe src="http://player.vimeo.com/video/84733869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<p><a href="http://vimeo.com/84733869">Ange Terrestre trouve ses ailes</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+	<div class="container">
+		<ul id="animation-list">
+			<li><iframe src="http://player.vimeo.com/video/84733869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p><a href="http://vimeo.com/84733869">Ange Terrestre trouve ses ailes</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
 
-		<li><iframe src="http://player.vimeo.com/video/84733354" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<p><a href="http://vimeo.com/84733354">Ange Terrestre et les abeilles</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+			<li><iframe src="http://player.vimeo.com/video/84733354" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p><a href="http://vimeo.com/84733354">Ange Terrestre et les abeilles</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
 
-		<li><iframe src="http://player.vimeo.com/video/84643209" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<p><a href="http://vimeo.com/84643209">Ange Terrestre et l’oiseau qui a faim</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+			<li><iframe src="http://player.vimeo.com/video/84643209" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p><a href="http://vimeo.com/84643209">Ange Terrestre et l’oiseau qui a faim</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
 
-		<li><iframe src="http://player.vimeo.com/video/84734301" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<p><a href="http://vimeo.com/84734301">Boy oh Boil</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
-	</ul>
-</div>
+			<li><iframe src="http://player.vimeo.com/video/84734301" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<p><a href="http://vimeo.com/84734301">Boy oh Boil</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
+		</ul>
+	</div>
 
 
   {{> Footer}}
@@ -266,7 +247,18 @@ body {
 <template name="illustration">
   {{> Nav}}
 
-  <h1>illustration</h1>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>Illustration</h1>
+	    <p>Most of these are from a long time ago. In university days, I drew the places where I lived.</p>
+	  </div>
+	</div>
+
+	<div class="container">
+		<div class="main-content">
+	    	<div class="gallery"></div>
+		</div>
+	</div>
 
   {{> Footer}}
 </template>
@@ -274,12 +266,118 @@ body {
 <template name="music">
   {{> Nav}}
 
-  <h1>music</h1>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Music</h1>
+    <p>These are solo albums from 1997-present, which are on iTunes.</p>
+  </div>
+</div>
+
+	<div class="container">
+	   	<div id="music"></div>
+			<ul class="albums">
+
+			<li>
+			<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-3-volume/id916557420"><img class="artwork" alt="Capricornucopia Vol. 3, Justin Stahlman" src="http://a2.mzstatic.com/us/r30/Music4/v4/95/32/bd/9532bd13-e83f-349c-5553-5bbb0352962b/capricornucopia3cover.170x170-75.jpg"></a>
+			<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-3-volume/id916557420" class="album"><br>
+			<span class="album">Capricornucopia Vol. 3</span></a><br>
+			<span class="year">2014</span>
+			</li>
+
+				<li>
+				<a href="https://itunes.apple.com/ca/album/god-of-love-ep/id666112858"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a3.mzstatic.com/us/r30/Music/v4/e5/d9/49/e5d949da-6b93-faeb-ee55-a8f2abc336fd/godOfLove.100x100-75.jpg"></a>
+				<a href="https://itunes.apple.com/ca/album/god-of-love-ep/id666112858" class="album"><br>
+				<span class="album">God of Love</span></a><br>
+				<span class="year">2013</span>
+				</li>
+
+				<li>
+				<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-2-volume/id513827605"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a2.mzstatic.com/us/r1000/116/Music/v4/c6/c7/96/c6c7961c-518f-942c-ec17-20605b511356/capricornucopia2cover.100x100-75.jpg"></a>
+				<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-2-volume/id513827605" class="album"><br>
+				<span class="album">Capricornucopia Vol. 2</span></a><br>
+				<span class="year">2012</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/capricornucopia-volume-1-volume/id436564730"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a3.mzstatic.com/us/r1000/059/Music/3e/4a/48/mzi.lbzwgszo.100x100-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/capricornucopia-volume-1-volume/id436564730" class="album"><br>
+				<span class="album">Capricornucopia Vol. 1</span></a><br>
+				<span class="year">2011</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/passions-convene/id347232120"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/042/Music/bb/64/96/mzi.iugjufpd.100x100-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/passions-convene/id347232120" class="album"><br>
+				<span class="album">Passions Convene</span></a><br>
+				<span class="year">2009</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/heroes-change/id268660337"><img class="artwork" alt="Heroes Change, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/028/Music/32/a7/18/mzi.cfkrsyju.100x100-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/heroes-change/id268660337" class="album"><br>
+				<span class="album">Heroes Change</span></a><br>
+				<span class="year">2007</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/sucker/id251356377"><img class="artwork" alt="Sucker, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/033/Music/c6/7a/79/mzi.augwznci.100x100-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/sucker/id251356377" class="album"><br>
+				<span class="album">Sucker</span></a><br>
+				<span class="year">2004</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/the-expatriate/id250907207"><img class="artwork" alt="The Expatriate, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/030/Music/cd/cb/7a/mzi.mykljaqa.100x100-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/the-expatriate/id250907207" class="album"><br>
+				<span class="album">The Expatriate</span></a><br>
+				<span class="year">2003</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/heart-soul-control/id163982990"><img class="artwork" alt="Heart &amp; Soul Control, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/030/Music/b9/5f/c4/mzi.vgnipkml.100x100-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/heart-soul-control/id163982990" class="album"><br>
+				<span class="album">Heart &amp; Soul Control</span></a><br>
+				<span class="year">2000</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/injustice-of-beauty/id111790682"><img class="artwork" alt="Injustice of Beauty, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/014/Music/bf/02/e0/mzi.uyhatflh.100x100-75.jpg"></a>	<a href="http://itunes.apple.com/us/album/injustice-of-beauty/id111790682" class="album"><br>
+				<span class="album">Injustice of Beauty</span></a><br>
+				<span class="year">1999</span>
+				</li>
+
+				<li>
+				<a href="http://itunes.apple.com/us/album/sweet-s-a/id99487950"><img class="artwork" alt="Sweet S.A., Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/055/Music/a6/cc/1d/mzi.osbotuib.100x100-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/sweet-s-a/id99487950" class="album"><br>
+				<span class="album">Sweet S.A.</span></a><br>
+				<span class="year">1997</span>
+				</li>
+
+			</ul>
+	    </div>
+
 
   {{> Footer}}
 </template>
 
+<template name="nyt">
 
+	<div id="content">
+
+		<label for="url" id="urllabel">URL</label>
+		<input id="url" placeholder="http://..."/>
+		<br/>
+
+		<input id="urlparams" type="checkbox" checked><label for="urlparams"> Sans params</label>
+		<br/>
+		<input id="pagewantedall" type="checkbox" checked><label for="pagewantedall"> ?pagewanted=all</label>
+		<br/>
+		<br/>
+		<button type="submit" id="savebutton">OK</button>
+	</div>
+    <div id="newURL"></div>
+
+</template>
 
 <template name="Nav">
 	<div id="navbar" class="navbar navbar-default navbar-fixed-top">

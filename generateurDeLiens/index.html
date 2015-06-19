@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script> <!-- jquery.min.js - most recent stable -->
+    <link rel="stylesheet" href="css.css" />
+
+</head>
+
+<body>
+<script type="text/javascript">
+var newHTML = {};
+newHTML.head =
+'<!DOCTYPE html>'+
+
+'<html lang="fr">'+
+'<head>'+
+    '<meta charset="utf-8">'+
+
+    '<title></title>';
+
+newHTML.foot =
+'<img src="images/coocoo.jpg">' +
+'<p>v1.21 - The Vampirates</p>'+
+'</head>'+
+'<body>';
+
+$(document).ready(function() {
+
+  $("#savebutton").click(function() {
+  	savedata($("#url").val());
+  });
+});
+function savedata(url) {
+console.log($("#urlparams").is(':checked'))
+	if ($("#urlparams").is(':checked')){
+		url = url.split("?")[0];
+	}
+	if ($("#pagewantedall").is(':checked')){
+		url += "?pagewanted=all";
+	}
+
+	var myHTML = (newHTML.head + '<a target="_blank" href="' + url + '">'+url+'</a>' + newHTML.foot);
+	var json = {"newHTML":myHTML};
+
+	var dataString = JSON.stringify(json);
+	$.post('save.php', {
+		formData: dataString
+	}, function(phpmessage) {
+		console.log(phpmessage);
+
+		window.open("lien.html","_parent");
+	});
+}
+</script>
+
+	<div id="content">
+
+		<label for="url" id="urllabel">URL</label>
+		<input id="url" placeholder="http://..."/>
+		<br/>
+
+		<input id="urlparams" type="checkbox" checked><label for="urlparams"> Sans params</label>
+		<br/>
+		<input id="pagewantedall" type="checkbox" checked><label for="pagewantedall"> ?pagewanted=all</label>
+		<br/>
+		<br/>
+		<button type="submit" id="savebutton">OK</button>
+	</div>
+    <div id="newURL"></div>
+
+</body>
+</html>

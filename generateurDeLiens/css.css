@@ -1,0 +1,21 @@
+body{
+		margin:15px;
+		font-size:20px;
+		font-family: monospace
+
+	}
+	#url{
+		width:50%
+	}
+	#urllabel{
+		font-size: 20px;
+		font-weight: bold;
+
+	}
+	#content{
+		font-size: 16px;
+	}
+	#savebutton{
+		width:100px;
+		height:20px;
+	}
