@@ -25,7 +25,7 @@ Requires on VPS server:
 - and then mongo in another tab
 
 # To start Meteor app
-- meteor build myoutputfolder
+- meteor build myoutputfolder <-- there's more to this but I forget
 - last command may require --server and some other things <--- not complete but this creates tarball
 - upload meteor.tar.gz to /home/stahlman3/stahlmandesign.com
 - tar -xzvf meteor.tar.gz <-- expand tarball which creates folder bundle
