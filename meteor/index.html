@@ -361,7 +361,7 @@
 </template>
 
 <template name="nyt">
-
+  {{> Nav}}
 	<div id="content">
 
 		<label for="url" id="urllabel">URL</label>
@@ -376,7 +376,16 @@
 		<button type="submit" id="savebutton">OK</button>
 	</div>
     <div id="newURL"></div>
+  {{> Footer}}
+</template>
 
+<template name="nyt-links">
+  {{> Nav}}
+  <hr>
+  <div class="container">
+	<a href='{{links}}'>{{links}}</a>
+  </div>
+  {{> Footer}}
 </template>
 
 <template name="Nav">

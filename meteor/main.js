@@ -130,6 +130,13 @@ Router.route('/illustration',function(){
 	getFlickr("72157639954127264");
 });
 Router.route('/music');
+Router.route('/nyt/links',function(){
+	this.render('nyt-links', {
+		data:{
+			links: 'http://www.nytimes.com/2015/06/26/us/politics/obama-supreme-court-aca-ruling-health-care.html?hp&action=click&pgtype=Homepage&module=first-column-region&region=top-news&WT.nav=top-news&_r=0&gwh=7F17B9A408C1CA3B9E4921A085C049E1&gwt=pay'
+		}
+	});
+});
 Router.route('/nyt', function() {
 	this.render('nyt', {
 		data: {
