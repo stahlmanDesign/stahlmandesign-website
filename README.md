@@ -25,18 +25,18 @@ Requires on VPS server:
 - and then mongo in another tab
 
 # To start Meteor app
-- meteor build myoutputfolder <-- there's more to this but I forget
-- last command may require --server and some other things <--- not complete but this creates tarball
+- ```meteor build <bundle path> --server <host>:<port>``` <-- I don't know if server was important
+- last command may require ```--server``` and some other things <--- not complete but this creates tarball
 - upload meteor.tar.gz to /home/stahlman3/stahlmandesign.com
-- tar -xzvf meteor.tar.gz <-- expand tarball which creates folder bundle
-- make sure forever is installed: sudo npm install forever -g
-- forever start bundle/main.js
-- cd programs/server
-- npm install
-- [ps439607]$ export MONGO_URL='mongodb://stahlman3:<PWD>@www.stahlmandesign.com:3000/test'
-- [ps439607]$ export ROOT_URL='http://www.stahlmandesign.com'
-- cd into /home/stahlman3/stahlmandesign.com/bundle
-- [ps439607]$ node main.js
+- ```tar -xzvf meteor.tar.gz``` <-- expand tarball which creates folder bundle
+- make sure forever is installed: ```sudo npm install forever -g```
+- ```forever start bundle/main.js```
+- ```cd programs/server```
+- ```npm install```
+- [ps439607]$ ```export MONGO_URL='mongodb://stahlman3:<PWD>@www.stahlmandesign.com:3000/test'```
+- [ps439607]$ ```export ROOT_URL='http://www.stahlmandesign.com'```
+- ```cd /home/stahlman3/stahlmandesign.com/bundle```
+- [ps439607]```$ node main.js```
 
 #Author
 
