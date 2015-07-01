@@ -13,30 +13,44 @@ Requires on VPS server:
 - Node.js
 - MonogDB
 
+#Node
+- **ps aux | grep node** find node processes running. 2nd number is process ID
+- **kill -9 PID** kill individual process where PID is replaced with the number
 #VPS server
 
 - using ngnix ("engine-x") instead of Apache on server
-- nginx.conf is found in /dh/nginx/servers/httpd-ps439607
-- must edit in ssh using sudo pico nginx.conf
-- then sudo service nginx restart
+- need to edit ```nginx.conf``` to add proxy_server to point port (ex. :3000) to www.stahlmandesign.com
+- **cd /dh/nginx/servers/httpd-ps439607**
+- **sudo pico nginx.conf**
+- must edit in ssh as sudoer using pico, cannot edit from FTP or in another text program
+- **sudo service nginx restart**
+- server should now serve index.html in **/home/stahlman3/stahlmandesign.com**
+- but this will be overridden as soon as meteor app started
 
 # MongoDB
 - MongoDB requires starting mongod in one tab
 - and then mongo in another tab
 
 # To start Meteor app
-- ```meteor build <bundle path> --server <host>:<port>``` <-- I don't know if server was important
-- last command may require ```--server``` and some other things <--- not complete but this creates tarball
-- upload meteor.tar.gz to /home/stahlman3/stahlmandesign.com
-- ```tar -xzvf meteor.tar.gz``` <-- expand tarball which creates folder bundle
-- make sure forever is installed: ```sudo npm install forever -g```
-- ```forever start bundle/main.js```
-- ```cd programs/server```
-- ```npm install```
-- [ps439607]$ ```export MONGO_URL='mongodb://stahlman3:<PWD>@www.stahlmandesign.com:3000/test'```
-- [ps439607]$ ```export ROOT_URL='http://www.stahlmandesign.com'```
-- ```cd /home/stahlman3/stahlmandesign.com/bundle```
-- [ps439607]```$ node main.js```
+- On next line, build path should be outside current folder. Will create tarball *meteor.tar.gz*
+- **meteor build** *your-build-path* **--server http://www.stahlmandesign.com
+- upload meteor.tar.gz to */home/stahlman3/stahlmandesign.com*
+- **ssh stahlman3@stahlmandesign.com**
+- **cd /home/stahlman3/stahlmandesign.com**
+- **tar -xzvf meteor.tar.gz** <-- expand tarball which creates folder *bundle*
+- If node.js module *forever* is not installed, install it: **sudo npm install forever -g**
+- **cd /home/stahlman3/stahlmandesign.com/bundle**
+- **forever start main.js**
+- **cd /home/stahlman3/stahlmandesign.com/bundle/programs/server**
+- **npm install**
+- **cd /home/stahlman3/stahlmandesign.com/bundle**
+- **env PORT=3000 MONGO_URL=mongodb://localhost:27017/myapp node main.js**
+- may be working at this point. If not, continue
+- On next line put real password in place of Lni11
+- **export MONGO_URL='mongodb://stahlman3:Lni11@www.stahlmandesign.com:3000/test'**
+- **export ROOT_URL='http://www.stahlmandesign.com'**
+- **cd /home/stahlman3/stahlmandesign.com/bundle**
+- **node main.js**
 
 #Author
 
