@@ -109,6 +109,24 @@ Router.route('/html5', function() {
 });
 Router.route('/flash');
 Router.route('/games');
+
+
+/*
+Router.route('/games/dreamsong', function (){
+ 	window.location.href = "../games/dreamsong/index.html"
+});
+Router.route('/games/ttal', function (){
+ 	window.location.href = "../games/ttal/index.html"
+});
+Router.route('/games/sacredLamps', function (){
+ 	window.location.href = "../games/sacredLamps/index.html"
+});
+Router.route('/games/mountainbike', function (){
+ 	window.location.href = "../games/mountainbike/index.html"
+});
+*/
+
+
 Router.route('/animation');
 Router.route('/illustration', function() {
 	this.render('illustration', {

@@ -16,6 +16,7 @@ Requires on VPS server:
 #Node
 - **ps aux | grep node** find node processes running. 2nd number is process ID
 - **kill -9 PID** kill individual process where PID is replaced with the number
+
 #VPS server
 
 - using ngnix ("engine-x") instead of Apache on server
@@ -32,8 +33,9 @@ Requires on VPS server:
 - and then mongo in another tab
 
 # To start Meteor app
+- first, kill node processes currently running from last deploy (see above)
 - On next line, build path should be outside current folder. Will create tarball *meteor.tar.gz*
-- **meteor build** *your-build-path* **--server http://www.stahlmandesign.com
+- **meteor build** *your-build-path* **--server http://www.stahlmandesign.com**
 - upload meteor.tar.gz to */home/stahlman3/stahlmandesign.com*
 - **ssh stahlman3@stahlmandesign.com**
 - **cd /home/stahlman3/stahlmandesign.com**
