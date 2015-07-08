@@ -192,7 +192,7 @@ Router.route('/nyt', function() {
 //--------------
 
 function getFlickr(photosetId, useFlickrDescAsUrl) {
-	console.log(useFlickrDescAsUrl)
+	//console.log(useFlickrDescAsUrl)
 	// photosetId as per Flickr API
 	// featured infographics photoset id = 72157600088568733
 	// en 5 minutes = 72157600047687564
