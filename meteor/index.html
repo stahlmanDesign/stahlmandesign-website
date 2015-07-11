@@ -63,7 +63,7 @@
 	  <div class="container">
 	    <h1>Stahlman Design</h1>
 	    <div id="main-image"></div>
-	    <!-- 4:3 aspect ratio -->
+	    <!-- 16:9 aspect ratio -->
 		<div class="embed-responsive embed-responsive-16by9">
 		  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/121525054?color=ff0179" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
@@ -179,7 +179,10 @@
 		</div>
 
 		<div class="container">
-		   	<iframe id="interactif-iframe" src="http://www.canoe.ca/FlashInfo/home.php?lang=fr" scrolling="no" frameborder="0" style="border:none; width:1000px; height:1000px;"></iframe>
+			<!-- 16:9 aspect ratio -->
+			<div class="embed-responsive embed-responsive-4by3">
+			  <iframe class="embed-responsive-item" src="http://www.canoe.ca/FlashInfo/home.php?lang=fr" scrolling="yes" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
 		</div>
 
 	  {{> Footer}}
@@ -192,70 +195,94 @@
 		<div class="jumbotron">
 		  <div class="container">
 		    <h1>Games</h1>
-		    <p>I love retro games because limited technology allows you to stay focused and doesn't require a whole team of programmers, artists musicians and writers. Most of these games are <a href="http://impactjs.com">ImpactJS</a> (JavaScript) remakes originally programmed in <a href="http://en.wikipedia.org/wiki/QuickBASIC">Microsoft QuickBasic</a> and on the Apple IIe using <a href="http://en.wikipedia.org/wiki/Apple_ProDOS">ProDOS</a> and the <a href="http://lostclassics.apple2.info/downloads/">Beagle Compiler</a> from 1988-1992. Some are incomplete. Most use the arrow keys, and X and C for action.</p>
+		    <p>I've always loved computer games that could be made by one person, which includes the classics like Pac-Man and Space Invaders, but also the more complex adventure games on home computers in the 80s. Making retro games isn't <em>just</em> about nostalgia. It means you constrain yourself to some basic technology in order to stay focused on the game. What I do doesn't require a whole team of programmers, artists, musicians and writers.</p>
+		    <p>Most of these games are <a href="http://impactjs.com">ImpactJS</a> (JavaScript) remakes originally programmed in <a href="http://en.wikipedia.org/wiki/QuickBASIC">Microsoft QuickBasic</a> and on the Apple IIe using <a href="http://en.wikipedia.org/wiki/Apple_ProDOS">ProDOS</a> and the <a href="http://lostclassics.apple2.info/downloads/">Beagle Compiler</a> from 1988-1992. Some are incomplete.</p>
+		    <p>The Dreamsong is the exception. It is a new game done in the style of <a href="http://blog.stahlmandesign.com/below-the-root-a-story-a-computer-game-and-my-lifelong-obsession/">Below the Root.</a> </p><p>These games mostly use the arrow keys, and X and C for action. They are not optimized for touch screens!</p>
+		  </div>
+		</div>
 
-
-				<div class="col-xs-12">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 text-center">
 			    	<a href="../games/dreamsong/index.html"><img class="game-img-preview" src="../img/dreamsong.png"/></a>
 			    	<h3>The Dreamsong (2015) - beta v0.12.*</h3>
 			    </div>
-				<br/>&nbsp;
-				<br/>&nbsp;
-		    <div class="row"></div>
-			<div class="col-sm-6 col-md-4">
-		    	<a href="http://www1.journaldemontreal.com/2014/04/jeu/"><img class="game-img-preview" src="../img/election.png"/></a>
-		    	<h3>Élections Québec (2014)</h3>
-		    </div>
-		    <div class="col-sm-6 col-md-4">
-		    	<a href="http://www1.journaldemontreal.com/2015/04/sauterelles/"><img class="game-img-preview" src="../img/sauterelles.png"/></a>
-		    	<h3>Sauterelles (2012)</h3>
-		    </div>
-		    <div class="col-sm-6 col-md-4">
-		    	<a href="../games/ttal/index.html"><img class="game-img-preview" src="../img/ttal.png"/></a>
-		    	<h3>To Tame A Land (1992/2012)</h3>
-		    </div>
-		    <div class="col-sm-6 col-md-4">
-		    	<a href="../games/sacredLamps/index.html"><img class="game-img-preview" src="../img/sacredLamps.png"/></a>
-		    	<h3>The Sacred Lamps (1990/2012)</h3>
-		    </div>
-		    <div class="col-sm-6 col-md-4">
-		    	<a href="../games/mountainbike/index.html"><img class="game-img-preview" src="../img/mountainbike.png"/></a>
-		    	<h3>Mountain Bike (2012)</h3>
-		    </div>
+			</div>
+<hr>
+			<div class="row">
+				<div class="col-sm-6 col-md-4">
+			    	<a href="http://www1.journaldemontreal.com/2014/04/jeu/"><img class="game-img-preview" src="../img/election.png"/></a>
+			    	<h3>Élections Québec (2014)</h3>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+			    	<a href="http://www1.journaldemontreal.com/2015/04/sauterelles/"><img class="game-img-preview" src="../img/sauterelles.png"/></a>
+			    	<h3>Sauterelles (2012)</h3>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+			    	<a href="../games/ttal/index.html"><img class="game-img-preview" src="../img/ttal.png"/></a>
+			    	<h3>To Tame A Land (1992/2012)</h3>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+			    	<a href="../games/sacredLamps/index.html"><img class="game-img-preview" src="../img/sacredLamps.png"/></a>
+			    	<h3>The Sacred Lamps (1990/2012)</h3>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+			    	<a href="../games/mountainbike/index.html"><img class="game-img-preview" src="../img/mountainbike.png"/></a>
+			    	<h3>Mountain Bike (2012)</h3>
+			    </div>
+			</div>
 		</div>
-	</div>
 
   {{> Footer}}
 </template>
 
-
-
-	<template name="animation">
-	  {{> Nav}}
+<template name="animation">
+	{{> Nav}}
 
 	<div class="jumbotron">
 	  <div class="container">
 	    <h1>Animation</h1>
-	    <p>These are the only animations I ever finished. It takes a lot of time and energy. After these, I moved on to making games... which takes even more time and energy.</p>
+	    <p>I made these animated cartoons from 1998 to 2003. Only the first three are finished. The other videos are collections of sketches, ideas and unfinished portions. It takes a lot of time and energy, and realistically a whole team.</p>
 	  </div>
 	</div>
 
 	<div class="container">
-		<ul id="animation-list">
-			<li><iframe src="http://player.vimeo.com/video/84733869" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			<p><a href="http://vimeo.com/84733869">Ange Terrestre trouve ses ailes</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
-
-			<li><iframe src="http://player.vimeo.com/video/84733354" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			<p><a href="http://vimeo.com/84733354">Ange Terrestre et les abeilles</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
-
-			<li><iframe src="http://player.vimeo.com/video/84643209" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			<p><a href="http://vimeo.com/84643209">Ange Terrestre et l’oiseau qui a faim</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
-
-			<li><iframe src="http://player.vimeo.com/video/84734301" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			<p><a href="http://vimeo.com/84734301">Boy oh Boil</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p></li>
-		</ul>
+		<div class="col-md-6">
+			<!-- 16:9 aspect ratio -->
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84733869" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<p><a href="http://vimeo.com/84733869">Ange Terrestre trouve ses ailes</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p>
+		</div>
+		<div class="col-md-6">
+			<!-- 16:9 aspect ratio -->
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84733354" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<p><a href="http://vimeo.com/84733354">Ange Terrestre et les abeilles</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p>
+		</div>
+		<div class="col-md-6">
+			<!-- 16:9 aspect ratio -->
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84643209" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<p><a href="http://vimeo.com/84643209">Ange Terrestre et l’oiseau qui a faim</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p>
+		</div>
+		<div class="col-md-6">
+			<!-- 16:9 aspect ratio -->
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/84734301" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<p><a href="http://vimeo.com/84734301">Boy oh Boil</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p>
+		</div>
+		<div class="col-md-6">
+			<!-- 16:9 aspect ratio -->
+			<div class="embed-responsive embed-responsive-16by9">
+			  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/132043969" scrolling="no" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<p><a href="http://vimeo.com/132043969">Le Robot Rebelle</a> — <a href="http://vimeo.com/stahlmandesign">Justin Stahlman</a></p>
+		</div>
 	</div>
-
 
   {{> Footer}}
 </template>
@@ -282,97 +309,84 @@
 <template name="music">
   {{> Nav}}
 
-<div class="jumbotron">
-  <div class="container">
-    <h1>Music</h1>
-    <p>These are solo albums from 1997-present, which are on iTunes.</p>
-  </div>
-</div>
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>Music</h1>
+	    <p>These are solo albums from 1997-present, which are on iTunes.</p>
+	  </div>
+	</div>
 
 	<div class="container">
-	   	<div id="music"></div>
-			<ul class="albums">
-
-			<li>
+		<div class="col-sm-3 col-xs-6">
 			<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-3-volume/id916557420"><img class="artwork" alt="Capricornucopia Vol. 3, Justin Stahlman" src="http://a2.mzstatic.com/us/r30/Music4/v4/95/32/bd/9532bd13-e83f-349c-5553-5bbb0352962b/capricornucopia3cover.170x170-75.jpg"></a>
 			<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-3-volume/id916557420" class="album"><br>
 			<span class="album">Capricornucopia Vol. 3</span></a><br>
 			<span class="year">2014</span>
-			</li>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<a href="https://itunes.apple.com/ca/album/god-of-love-ep/id666112858"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a3.mzstatic.com/us/r30/Music/v4/e5/d9/49/e5d949da-6b93-faeb-ee55-a8f2abc336fd/godOfLove.170x170-75.jpg"></a>
+			<a href="https://itunes.apple.com/ca/album/god-of-love-ep/id666112858" class="album"><br>
+			<span class="album">God of Love</span></a><br>
+			<span class="year">2013</span>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+			<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-2-volume/id513827605"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a2.mzstatic.com/us/r1000/116/Music/v4/c6/c7/96/c6c7961c-518f-942c-ec17-20605b511356/capricornucopia2cover.170x170-75.jpg"></a>
+			<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-2-volume/id513827605" class="album"><br>
+			<span class="album">Capricornucopia Vol. 2</span></a><br>
+			<span class="year">2012</span>
+		</div>
 
-				<li>
-				<a href="https://itunes.apple.com/ca/album/god-of-love-ep/id666112858"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a3.mzstatic.com/us/r30/Music/v4/e5/d9/49/e5d949da-6b93-faeb-ee55-a8f2abc336fd/godOfLove.100x100-75.jpg"></a>
-				<a href="https://itunes.apple.com/ca/album/god-of-love-ep/id666112858" class="album"><br>
-				<span class="album">God of Love</span></a><br>
-				<span class="year">2013</span>
-				</li>
-
-				<li>
-				<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-2-volume/id513827605"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a2.mzstatic.com/us/r1000/116/Music/v4/c6/c7/96/c6c7961c-518f-942c-ec17-20605b511356/capricornucopia2cover.100x100-75.jpg"></a>
-				<a href="https://itunes.apple.com/ca/album/capricornucopia-volume-2-volume/id513827605" class="album"><br>
-				<span class="album">Capricornucopia Vol. 2</span></a><br>
-				<span class="year">2012</span>
-				</li>
-
-				<li>
-				<a href="http://itunes.apple.com/us/album/capricornucopia-volume-1-volume/id436564730"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a3.mzstatic.com/us/r1000/059/Music/3e/4a/48/mzi.lbzwgszo.100x100-75.jpg"></a>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/capricornucopia-volume-1-volume/id436564730"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a3.mzstatic.com/us/r1000/059/Music/3e/4a/48/mzi.lbzwgszo.170x170-75.jpg"></a>
 				<a href="http://itunes.apple.com/us/album/capricornucopia-volume-1-volume/id436564730" class="album"><br>
 				<span class="album">Capricornucopia Vol. 1</span></a><br>
 				<span class="year">2011</span>
-				</li>
-
-				<li>
-				<a href="http://itunes.apple.com/us/album/passions-convene/id347232120"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/042/Music/bb/64/96/mzi.iugjufpd.100x100-75.jpg"></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/passions-convene/id347232120"><img class="artwork" alt="Passions Convene, Justin Stahlman" src="http://a3.mzstatic.com/us/r1000/042/Music/bb/64/96/mzi.iugjufpd.170x170-75.jpg"></a>
 				<a href="http://itunes.apple.com/us/album/passions-convene/id347232120" class="album"><br>
 				<span class="album">Passions Convene</span></a><br>
 				<span class="year">2009</span>
-				</li>
-
-				<li>
-				<a href="http://itunes.apple.com/us/album/heroes-change/id268660337"><img class="artwork" alt="Heroes Change, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/028/Music/32/a7/18/mzi.cfkrsyju.100x100-75.jpg"></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/heroes-change/id268660337"><img class="artwork" alt="Heroes Change, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/028/Music/32/a7/18/mzi.cfkrsyju.170x170-75.jpg"></a>
 				<a href="http://itunes.apple.com/us/album/heroes-change/id268660337" class="album"><br>
 				<span class="album">Heroes Change</span></a><br>
 				<span class="year">2007</span>
-				</li>
+		</div>
 
-				<li>
-				<a href="http://itunes.apple.com/us/album/sucker/id251356377"><img class="artwork" alt="Sucker, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/033/Music/c6/7a/79/mzi.augwznci.100x100-75.jpg"></a>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/sucker/id251356377"><img class="artwork" alt="Sucker, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/033/Music/c6/7a/79/mzi.augwznci.170x170-75.jpg"></a>
 				<a href="http://itunes.apple.com/us/album/sucker/id251356377" class="album"><br>
 				<span class="album">Sucker</span></a><br>
 				<span class="year">2004</span>
-				</li>
-
-				<li>
-				<a href="http://itunes.apple.com/us/album/the-expatriate/id250907207"><img class="artwork" alt="The Expatriate, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/030/Music/cd/cb/7a/mzi.mykljaqa.100x100-75.jpg"></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/the-expatriate/id250907207"><img class="artwork" alt="The Expatriate, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/030/Music/cd/cb/7a/mzi.mykljaqa.170x170-75.jpg"></a>
 				<a href="http://itunes.apple.com/us/album/the-expatriate/id250907207" class="album"><br>
 				<span class="album">The Expatriate</span></a><br>
 				<span class="year">2003</span>
-				</li>
-
-				<li>
-				<a href="http://itunes.apple.com/us/album/heart-soul-control/id163982990"><img class="artwork" alt="Heart &amp; Soul Control, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/030/Music/b9/5f/c4/mzi.vgnipkml.100x100-75.jpg"></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/heart-soul-control/id163982990"><img class="artwork" alt="Heart &amp; Soul Control, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/030/Music/b9/5f/c4/mzi.vgnipkml.170x170-75.jpg"></a>
 				<a href="http://itunes.apple.com/us/album/heart-soul-control/id163982990" class="album"><br>
 				<span class="album">Heart &amp; Soul Control</span></a><br>
 				<span class="year">2000</span>
-				</li>
+		</div>
 
-				<li>
-				<a href="http://itunes.apple.com/us/album/injustice-of-beauty/id111790682"><img class="artwork" alt="Injustice of Beauty, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/014/Music/bf/02/e0/mzi.uyhatflh.100x100-75.jpg"></a>	<a href="http://itunes.apple.com/us/album/injustice-of-beauty/id111790682" class="album"><br>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/injustice-of-beauty/id111790682"><img class="artwork" alt="Injustice of Beauty, Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/014/Music/bf/02/e0/mzi.uyhatflh.170x170-75.jpg"></a>
+				<a href="http://itunes.apple.com/us/album/injustice-of-beauty/id111790682" class="album"><br>
 				<span class="album">Injustice of Beauty</span></a><br>
 				<span class="year">1999</span>
-				</li>
-
-				<li>
-				<a href="http://itunes.apple.com/us/album/sweet-s-a/id99487950"><img class="artwork" alt="Sweet S.A., Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/055/Music/a6/cc/1d/mzi.osbotuib.100x100-75.jpg"></a>
+		</div>
+		<div class="col-sm-3 col-xs-6">
+				<a href="http://itunes.apple.com/us/album/sweet-s-a/id99487950"><img class="artwork" alt="Sweet S.A., Justin Stahlman" src="http://a1.phobos.apple.com/us/r1000/055/Music/a6/cc/1d/mzi.osbotuib.170x170-75.jpg"></a>
 				<a href="http://itunes.apple.com/us/album/sweet-s-a/id99487950" class="album"><br>
 				<span class="album">Sweet S.A.</span></a><br>
 				<span class="year">1997</span>
-				</li>
-
-			</ul>
-	    </div>
-
-
+		</div>
+	</div>
   {{> Footer}}
 </template>
 

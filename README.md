@@ -46,7 +46,7 @@ Requires on VPS server:
 - **cd /home/stahlman3/stahlmandesign.com/bundle/programs/server**
 - **npm install**
 - **cd /home/stahlman3/stahlmandesign.com/bundle**
-- **env PORT=3000 MONGO_URL=mongodb://localhost:27017/myapp node main.js**
+- **env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js**
 - may be working at this point. If not, continue
 - On next line put real password in place of Lni11
 - **export MONGO_URL='mongodb://stahlman3:Lni11@www.stahlmandesign.com:3000/test'**
