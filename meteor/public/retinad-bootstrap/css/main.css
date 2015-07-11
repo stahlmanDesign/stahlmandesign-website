@@ -1,0 +1,107 @@
+
+@import "https://fonts.googleapis.com/css?family=Julius+Sans+One|Roboto+Condensed:300italic,400,700,300";
+@import "http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic";
+
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+	font-family:'FontAwesome';
+	src:url(../fonts/fontawesome-webfont.eot?v=4.2.0);
+	src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0) format("embedded-opentype"),url(../fonts/fontawesome-webfont.woff?v=4.2.0) format("woff"),url(../fonts/fontawesome-webfont.ttf?v=4.2.0) format("truetype"),url(../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular) format("svg");
+	font-weight:400;
+	font-style:normal;
+}
+body, html{
+  font-family: 'Lato', Verdana, Arial;
+  height:100%;
+}
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* ------------------------------- nav -------------------------------  */
+
+/* make navbar deeper */
+.navbar{
+/* 	min-height:80px; */
+}
+
+.nav-logo {
+	background-image:url(../images/logo-blanc.svg);
+	width:35px;
+	height:38px;
+	display:block;
+	position:relative;
+	top:-7px;
+}
+
+/* ------------------------------- footer -------------------------------  */
+.footer {
+  position: relative;
+
+  clear:both;
+  padding: 15px 0 100px 0;
+  color:white;
+  background:black;
+}
+.footer-list, .list-style-none{
+	list-style: none;
+	padding:0px;
+}
+
+/* ------------------------------- home -------------------------------  */
+.jumbotron, #home{
+/* 	height:30.0em; */
+
+	padding-top:20%;
+	padding-bottom:20%;
+	color:white;
+	background: url(../images/spacevideo.jpg);
+
+	background-size: cover;                      /* <------ */
+    background-repeat: no-repeat;
+    background-position: center center;            /* optionally, center the image */
+}
+
+.jumbotron-logo{
+	width:45px;
+	height:55px;
+}
+
+ul.jumbotrong-logo-name{
+	list-style: none;
+}
+ul.jumbotrong-logo-name li{
+	float:left;
+	padding:0;
+}
+.jumbotrong-logo-name h1{
+	padding-left:15px;
+	margin:6px 0px 10px 0px;
+}
+#home h1{
+	text-transform:lowercase;
+	font-family: 'Roboto condensed', sans-serif, Verdana, Arial;
+
+	letter-spacing:0.1em;
+}
+
+#home h4{
+	text-transform:uppercase;
+	font-family: 'Roboto condensed', Verdana, Arial;
+	font-weight: 100;
+	letter-spacing: 0.1em;
+}
+
+/* ------------------------------- faq -------------------------------  */
+
+.faq-list{
+	list-style: none;
+	padding:2.0em;
+
+}
