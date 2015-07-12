@@ -57,7 +57,10 @@ body {
 
 /* to fix problem with itunes art being off 1 pixel in some cases */
 .artwork {
-	height:170px;
+	width: 100%;
+}
+.padding-bottom{
+	padding-bottom:20px;
 }
 
 .photo-container img {

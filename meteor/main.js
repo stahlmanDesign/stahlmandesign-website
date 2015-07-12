@@ -137,7 +137,23 @@ Router.route('/illustration', function() {
 	});
 	getFlickr("72157639954127264");
 });
-Router.route('/music');
+Router.route('/music',function(){
+	this.render('music');
+
+	function iTunesFixImageHeight(){
+		var w = $(".artwork").width();
+		$(".artwork").height(w);
+	}
+	setTimeout(function(){
+		iTunesFixImageHeight();
+	},1000);
+
+	$( window ).resize(function() {
+		iTunesFixImageHeight();
+	});
+
+
+});
 Router.route('/nyt/links', function() {
 	this.render('nyt-links', {
 		data: {
@@ -256,6 +272,8 @@ function shuffle(array) {
 	}
 	return array;
 }
+
+
 
 
 // this is for general photos
