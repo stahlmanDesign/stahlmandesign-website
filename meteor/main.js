@@ -56,6 +56,19 @@ if (Meteor.isClient) {
 }
 */
 
+function loadGoogleAnalytics(){
+	// Google Analytics for stahlmandesign.com
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-25169855-1', 'auto');
+	ga('send', 'pageview');
+	//console.log(window.location.href);
+}
+
 Router.route('/', function() {
 	// render the Home template with a custom data context
 	this.render('home', {
@@ -64,15 +77,20 @@ Router.route('/', function() {
 			description: ' is a retro-style game, and requires a keyboard (not optimized for touch screens)'
 		}
 	});
+	Template["home"].onRendered(function(){ loadGoogleAnalytics(); });
 });
 // when you navigate to "/one" automatically render the template named "One".
-Router.route('/infographics');
+Router.route('/infographics',function(){
+	this.render('infographics');
+	Template["infographics"].onRendered(function(){ loadGoogleAnalytics(); });
+});
 Router.route('/newsgraphics', function() {
 	this.render('newsgraphics', {
 		data: {
 			title: 'newsgraphics'
 		}
 	});
+	Template["newsgraphics"].onRendered(function(){ loadGoogleAnalytics(); });
 	//$("#newsgraphics").addClass('active'); // #en5minutes = active
 	getFlickr("72157600073936574"); // photoset id
 });
@@ -83,6 +101,7 @@ Router.route('/en5minutes/1', function() {
 			description: 'The page « En 5 minutes » began as a full-page, stand-alone infographic published daily in Le Journal de Montréal. Collections were republished and distributed in schools in 2008.'
 		}
 	});
+	Template["en5minutes"].onRendered(function(){ loadGoogleAnalytics(); });
 	getFlickr("72157600047687564");
 });
 Router.route('/en5minutes/2', function() {
@@ -92,6 +111,7 @@ Router.route('/en5minutes/2', function() {
 			description: 'The page « En 5 minutes » has evolved over the years and remains a stand-alone infographic page published daily in Le Journal de Montréal. The team is beginning to do private work for businesses.'
 		}
 	});
+	Template["en5minutes"].onRendered(function(){ loadGoogleAnalytics(); });
 	getFlickr("72157649406297688");
 	// featured infographics photoset id = 72157600088568733
 	// en 5 minutes = 72157600047687564
@@ -105,10 +125,17 @@ Router.route('/html5', function() {
 			description: ''
 		}
 	});
+	Template["html5"].onRendered(function(){ loadGoogleAnalytics(); });
 	getFlickr("72157640089367186", true); // true means call function useFlickrDescAsUrl
 });
-Router.route('/flash');
-Router.route('/games');
+Router.route('/flash',function(){
+	this.render('flash');
+	Template["flash"].onRendered(function(){ loadGoogleAnalytics(); });
+});
+Router.route('/games',function(){
+	this.render('games');
+	Template["games"].onRendered(function(){ loadGoogleAnalytics(); });
+});
 
 
 /*
@@ -127,7 +154,10 @@ Router.route('/games/mountainbike', function (){
 */
 
 
-Router.route('/animation');
+Router.route('/animation',function(){
+	this.render('animation');
+	Template["animation"].onRendered(function(){ loadGoogleAnalytics(); });
+});
 Router.route('/illustration', function() {
 	this.render('illustration', {
 		data: {
@@ -135,10 +165,12 @@ Router.route('/illustration', function() {
 			description: ''
 		}
 	});
+	Template["illustration"].onRendered(function(){ loadGoogleAnalytics(); });
 	getFlickr("72157639954127264");
 });
 Router.route('/music',function(){
 	this.render('music');
+	Template["music"].onRendered(function(){ loadGoogleAnalytics(); });
 
 	function iTunesFixImageHeight(){
 		var w = $(".artwork").width();
@@ -160,6 +192,7 @@ Router.route('/nyt/links', function() {
 			links: 'http://www.nytimes.com/2015/06/26/us/politics/obama-supreme-court-aca-ruling-health-care.html?hp&action=click&pgtype=Homepage&module=first-column-region&region=top-news&WT.nav=top-news&_r=0&gwh=7F17B9A408C1CA3B9E4921A085C049E1&gwt=pay'
 		}
 	});
+	Template["nyt-links"].onRendered(function(){ loadGoogleAnalytics(); });
 });
 Router.route('/nyt', function() {
 	this.render('nyt', {
@@ -167,6 +200,8 @@ Router.route('/nyt', function() {
 			test: ''
 		}
 	});
+	Template["nyt"].onRendered(function(){ loadGoogleAnalytics(); });
+
 	var newHTML = {};
 	newHTML.head = '<!DOCTYPE html>' + '<html lang="fr">' + '<head>' + '<meta charset="utf-8">' + '<title></title>';
 	newHTML.foot = '<img src="images/coocoo.jpg">' + '<p>v1.21 - The Vampirates</p>' + '</head>' + '<body>';
@@ -205,7 +240,12 @@ Router.route('/nyt', function() {
 		});
 	}
 });
+
+
+
 //--------------
+
+
 
 function getFlickr(photosetId, useFlickrDescAsUrl) {
 	//console.log(useFlickrDescAsUrl)
