@@ -2,6 +2,7 @@
 
 **stahlmandesign.com** on the Meteor framework is an experiment taking the regular HTML & Jquery site and reformatting it for Meteor's templating system and routing using iron:router.
 
+--
 #A portfolio site for Justin Stahlman
 
 - Work samples
@@ -13,9 +14,18 @@ Requires on VPS server:
 - Node.js
 - MonogDB
 
-#Node
+--
+#Node.js
+### Installing Node.js v0.12 Debian / Ubuntu repository
+
+- **curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -**
+- **sudo apt-get install -y nodejs**
+
+### Check which node processes are running
 - **ps aux | grep node** find node processes running. 2nd number is process ID
 - **kill -9 PID** kill individual process where PID is replaced with the number
+
+--
 
 #VPS server
 
