@@ -31,9 +31,15 @@ Requires on VPS server:
 
 - using ngnix ("engine-x") instead of Apache on server
 - need to edit ```nginx.conf``` to add proxy_server to point port (ex. :3000) to www.stahlmandesign.com
-- **cd /dh/nginx/servers/httpd-ps439607**
+- **cd /dh/nginx/servers/httpd-ps454920**
 - **sudo pico nginx.conf**
 - must edit in ssh as sudoer using pico, cannot edit from FTP or in another text program
+- in server section add this to redirect root to port 3000:
+ 
+		location / {
+			proxy_pass http://www.stahlmandesign.com:3000;
+		}
+
 - **sudo service nginx restart**
 - server should now serve index.html in **/home/stahlman3/stahlmandesign.com**
 - but this will be overridden as soon as meteor app started
@@ -46,22 +52,22 @@ Requires on VPS server:
 - first, kill node processes currently running from last deploy (see above)
 - On next line, build path should be outside current folder. Will create tarball *meteor.tar.gz*
 - **meteor build** *your-build-path* **--server http://www.stahlmandesign.com**
-- upload meteor.tar.gz to */home/stahlman3/stahlmandesign.com*
-- **ssh stahlman3@stahlmandesign.com**
-- **cd /home/stahlman3/stahlmandesign.com**
+- upload meteor.tar.gz to */home/stahlmanshell/stahlmandesign.com*
+- **ssh stahlmanshell@stahlmandesign.com**
+- **cd /home/stahlmanshell/stahlmandesign.com**
 - **tar -xzvf meteor.tar.gz** <-- expand tarball which creates folder *bundle*
 - If node.js module *forever* is not installed, install it: **sudo npm install forever -g**
-- **cd /home/stahlman3/stahlmandesign.com/bundle**
+- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
 - **forever start main.js**
-- **cd /home/stahlman3/stahlmandesign.com/bundle/programs/server**
+- **cd /home/stahlmanshell/stahlmandesign.com/bundle/programs/server**
 - **npm install**
-- **cd /home/stahlman3/stahlmandesign.com/bundle**
+- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
 - **env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js**
 - may be working at this point. If not, continue
 - On next line put real password in place of Lni11
-- **export MONGO_URL='mongodb://stahlman3:Lni11@www.stahlmandesign.com:3000/test'**
+- **export MONGO_URL='mongodb://stahlmanshell:Lni11@www.stahlmandesign.com:3000/test'**
 - **export ROOT_URL='http://www.stahlmandesign.com'**
-- **cd /home/stahlman3/stahlmandesign.com/bundle**
+- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
 - **node main.js**
 
 #Author
