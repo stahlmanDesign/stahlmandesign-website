@@ -69,6 +69,9 @@ Requires on VPS server:
 - **export ROOT_URL='http://www.stahlmandesign.com'**
 - **cd /home/stahlmanshell/stahlmandesign.com/bundle**
 - **node main.js**
+- if not working, then now apply next lines
+- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
+- **env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js**
 
 #Author
 
