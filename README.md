@@ -1,77 +1,103 @@
 #README
 
-**stahlmandesign.com** on the Meteor framework is an experiment taking the regular HTML & Jquery site and reformatting it for Meteor's templating system and routing using iron:router.
+**stahlmandesign.com** on the Meteor framework is an experiment taking the regular HTML & JQuery site and reformatting it for Meteor's built-in Blaze templating system and routing using iron:router.
 
 --
 #A portfolio site for Justin Stahlman
 
 - Work samples
 - C.V.
-- Links to github, linkedIn, Flickr etc.
-- Blog using ghost platform with CNAME modif on stahlmandesign.com to point to ghost-hosted blog but looks like hosted on stahlmandesign.com
+- Links to github, LinkedIn, Flickr etc.
+- Blog using Ghost platform with stahlmandesign.com CNAME 'blog' pointing to 'stahlmandesign.ghost.io' where Ghost Pro (their hosting) blog resides.
 
-Requires on VPS server:
-- Node.js
+###Meteor requires:
+- Node.js ** 0.10.x only** for Meteor as of Dec. 2 2015
 - MonogDB
 
 --
-#Node.js
-### Installing Node.js v0.12 Debian / Ubuntu repository
 
-- **curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -**
-- **sudo apt-get install -y nodejs**
-
-### Check which node processes are running
-- **ps aux | grep node** find node processes running. 2nd number is process ID
-- **kill -9 PID** kill individual process where PID is replaced with the number
-
---
 
 #VPS server
 
-- using ngnix ("engine-x") instead of Apache on server
-- need to edit ```nginx.conf``` to add proxy_server to point port (ex. :3000) to www.stahlmandesign.com
-- **cd /dh/nginx/servers/httpd-ps454920**
-- **sudo pico nginx.conf**
-- must edit in ssh as sudoer using pico, cannot edit from FTP or in another text program
-- in server section add this to redirect root to port 3000:
- 
-		location / {
-			proxy_pass http://www.stahlmandesign.com:3000;
-		}
+Create droplet: https://cloud.digitalocean.com/ (See README-2)
 
-- **sudo service nginx restart**
-- server should now serve index.html in **/home/stahlman3/stahlmandesign.com**
-- but this will be overridden as soon as meteor app started
+Install Node.js and MongoDB (See README-2)
+
+Using Ngnix ("engine-x") instead of Apache for webserver
+
+Need to edit ```nginx.conf``` to add proxy_server 
+ 
+	location / {
+		proxy_pass http://www.stahlmandesign.com:3000;
+	}
+
+**If hosting multiple domains on server (as I am), add proxy_pass in /etc/nginx/sites-available/stahlmandesign.com**
+
+For config changes to take effect:
+
+	nginx -s reload
+	
+
+Server should now serve index.html at **/var/www/html/stahlmandesign.com**, but we will change this to point to port 3000 instead to run Meteor app.
 
 # MongoDB
-- MongoDB requires starting mongod in one tab
-- and then mongo in another tab
+MongoDB requires starting mongod in one tab, and then mongo in another tab
 
-# To start Meteor app
-- first, kill node processes currently running from last deploy (see above)
-- On next line, build path should be outside current folder. Will create tarball *meteor.tar.gz*
-- **meteor build** *your-build-path* **--server http://www.stahlmandesign.com**
-- upload meteor.tar.gz to */home/stahlmanshell/stahlmandesign.com*
-- **ssh stahlmanshell@stahlmandesign.com**
-- **cd /home/stahlmanshell/stahlmandesign.com**
-- **tar -xzvf meteor.tar.gz** <-- expand tarball which creates folder *bundle*
-- If node.js module *forever* is not installed, install it: **sudo npm install forever -g**
-- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
-- **forever start main.js**
-- **cd /home/stahlmanshell/stahlmandesign.com/bundle/programs/server**
-- **npm install**
-- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
-- **env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js**
-- may be working at this point. If not, continue
-- On next line put real password in place of Lni11
-- **export MONGO_URL='mongodb://stahlmanshell:Lni11@www.stahlmandesign.com:3000/test'**
-- **export ROOT_URL='http://www.stahlmandesign.com'**
-- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
-- **node main.js**
-- if not working, then now apply next lines
-- **cd /home/stahlmanshell/stahlmandesign.com/bundle**
-- **env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js**
+	mongod
+
+(in other tab)
+
+
+	mongo
+	
+# Meteor app
+First, kill node processes running from last deploy. Second number is process (PID); kill individual process where PID is replaced with the number
+ 
+	ps aux | grep node
+	kill -9 PID 
+
+Create tarball *meteor.tar.gz* on local machine
+
+	meteor build your-build-path --server http://www.stahlmandesign.com
+
+Upload meteor.tar.gz to */home/stahlmanshell/stahlmandesign.com*
+
+
+	ssh root@159.203.16.127
+	cd /var/www/html/stahlmandesign.com
+	
+Expand tarball which creates folder *bundle*
+
+	tar -xzvf meteor.tar.gz
+
+If node.js module *forever* is not installed, install it
+
+
+	npm install forever -g
+	cd /var/www/html/stahlmandesign.com/bundle
+	forever start main.js
+	cd /var/www/html/stahlmandesign.com/bundle/programs/server
+	npm install
+	cd /var/www/html/stahlmandesign.com/bundle/
+	env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js
+
+	
+May be working at this point. If not, continue (replace PASSWORD with your password)
+
+
+	export MONGO_URL='mongodb://root:PASSWORD@www.stahlmandesign.com:3000'
+
+May or may not need this
+
+
+	export ROOT_URL='http://www.stahlmandesign.com'
+	cd /var/www/html/stahlmandesign.com/bundle/
+	node main.js
+
+If not working, then now apply next lines (tell Meteor where is MongoDB)
+
+	cd /var/www/html/stahlmandesign.com/bundle/
+	env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js
 
 #Author
 
