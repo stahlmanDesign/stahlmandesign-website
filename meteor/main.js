@@ -186,6 +186,10 @@ Router.route('/music',function(){
 
 
 });
+Router.route('/december',function(){
+	this.render('december');
+	Template["december"].onRendered(function(){ loadGoogleAnalytics(); });
+});
 Router.route('/nyt/links', function() {
 	this.render('nyt-links', {
 		data: {
@@ -194,31 +198,48 @@ Router.route('/nyt/links', function() {
 	});
 	Template["nyt-links"].onRendered(function(){ loadGoogleAnalytics(); });
 });
+
+
+
 Router.route('/nyt', function() {
 	this.render('nyt', {
 		data: {
-			test: ''
+			test: '',
+			processedUrl: function() {
+				return Session.get('processedUrl');
+			}
 		}
 	});
-	Template["nyt"].onRendered(function(){ loadGoogleAnalytics(); });
 
-	var newHTML = {};
-	newHTML.head = '<!DOCTYPE html>' + '<html lang="fr">' + '<head>' + '<meta charset="utf-8">' + '<title></title>';
-	newHTML.foot = '<img src="images/coocoo.jpg">' + '<p>v1.21 - The Vampirates</p>' + '</head>' + '<body>';
-	$(document).on("click", "#savebutton", function() {
-		var url = $("#url").val();
-		console.log(url);
-		var link = $('<a></a>').attr("href", url)
-		console.log(link);
-		$("body").append("<a href='" + url + "'>GO GO GO --> " + url + "</a>");
-		//$('#savebutton').append(url);
-	});
+	Template["nyt"].onRendered(function(){loadGoogleAnalytics();});
+
+
+		//var newHTML = {};
+		//newHTML.head = '<!DOCTYPE html>' + '<html lang="fr">' + '<head>' + '<meta charset="utf-8">' + '<title></title>';
+		//newHTML.foot = '<img src="images/coocoo.jpg">' + '<p>v1.21 - The Vampirates</p>' + '</head>' + '<body>';
+/*
+		$(document).on("click", "#savebutton", function() {
+			var url = $("#url").val();
+			console.log(url);
+			//var link = $('<a></a>').attr("href", url)
+			//alert(link);
+			$("#newURL").append("<a href='" + url + "'>P) " + url + "</a>");
+
+
+			// TODO Meteor is reloading page, not allowing jquery dom manipulation, so added URL disappears
+
+			//$('#savebutton').append(url);
+		});
+*/
+
+/*
 	$("#savebutton").click(function() {
 		//savedata($("#url").val());
 		var url = $("#url").val();
 		console.log(url);
 	});
 
+	// in future can save searches but PHP not installed
 	function savedata(url) {
 		console.log($("#urlparams").is(':checked'))
 		if ($("#urlparams").is(':checked')) {
@@ -239,13 +260,10 @@ Router.route('/nyt', function() {
 			window.open("lien.html", "_parent");
 		});
 	}
+*/
 });
 
-
-
 //--------------
-
-
 
 function getFlickr(photosetId, useFlickrDescAsUrl) {
 	//console.log(useFlickrDescAsUrl)

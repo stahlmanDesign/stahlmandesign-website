@@ -380,23 +380,57 @@
   {{> Footer}}
 </template>
 
+<template name="december">
+  {{> Nav}}
+
+	<div class="jumbotron">
+	  <div class="container">
+	    <h1>Brandon Stahlman - December</h1>
+	    <p class="click"><a href="december/december.zip">Click to download the album for free(60 MB)</a></p>
+	  </div>
+	</div>
+
+	<div class="container text-center">
+		<img class="image" src="december/DECEMBER.png"/>
+		<p>&nbsp;</p>
+		<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/3245617&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+	</div>
+  {{> Footer}}
+</template>
+
 <template name="nyt">
   {{> Nav}}
-	<div id="content">
+  <p>&nbsp;</p>
+	<div class="container">
+		<div id="content">
+			<form>
+				<div class="form-group">
+					<label for="url" id="urllabel">URL</label>
+					<input id="url" name="submittedUrl" class="form-control" placeholder="http://..."/>
+				</div>
+				<div class="form-group">
+					<div class="checkbox">
+						<label>
+							<input id="urlparams" name="urlparams" type="checkbox" checked> Sans params
+						</label>
+					</div>
 
-		<label for="url" id="urllabel">URL</label>
-		<input id="url" placeholder="http://..."/>
-		<br/>
+					<div class="checkbox">
+						<label>
+							<input id="pagewantedall" name="pagewantedall" type="checkbox" checked> ?pagewanted=all
+						</label>
+					</div>
+					<button type="submit" class="btn btn-warning" id="savebutton">OK</button>
+				</div>
+			</form>
+		</div>
 
-		<input id="urlparams" type="checkbox" checked><label for="urlparams"> Sans params</label>
-		<br/>
-		<input id="pagewantedall" type="checkbox" checked><label for="pagewantedall"> ?pagewanted=all</label>
-		<br/>
-		<br/>
-		<button type="submit" id="savebutton">OK</button>
+		<a href='{{processedUrl}}'>{{processedUrl}}</a>
+
 	</div>
-    <div id="newURL"></div>
-  {{> Footer}}
+
+
 </template>
 
 <template name="nyt-links">
@@ -469,6 +503,9 @@
 			Find me here:
 			<a href="https://www.linkedin.com/in/justinstahlman">LinkedIn</a>,
 			<a href="https://github.com/stahlmanDesign">GitHub</a>,
+			<a href="http://stackoverflow.com/users/5045055/stahlmandesign">StackOverflow</a>,
+			<a href="http://impactjs.com/forums/user/stahlmanDesign">ImpactJS</a>,
+			<a href="http://www.meetup.com/fr/members/96407332/">Meetup</a>,
 			<a href="https://www.quora.com/Justin-Stahlman">Quora</a>,
 			<a href="https://3dwarehouse.sketchup.com/by/stahlmandesign">3D Warehouse</a>,
 
@@ -480,7 +517,7 @@
 
 			<p>I accept Bitcoin: <strong>18M89SAL2dEqwtNjiJXtf7y8NeFQX5s7ux</strong></p>
 
-			<p>© 2004 - 2015
+			<p>©2004-2015
 <!--
 			<script language=JavaScript>
 
