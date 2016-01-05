@@ -60,7 +60,7 @@ Create tarball *meteor.tar.gz* on local machine
 
 	meteor build your-build-path --server http://www.stahlmandesign.com
 
-Upload meteor.tar.gz to */home/stahlmanshell/stahlmandesign.com*
+Upload meteor.tar.gz to **/var/www/html/stahlmandesign.com**
 
 
 	ssh root@159.203.16.127
@@ -87,7 +87,7 @@ May be working at this point. If not, continue (replace PASSWORD with your passw
 
 	export MONGO_URL='mongodb://root:PASSWORD@www.stahlmandesign.com:3000'
 
-May or may not need this
+If you get **Error: Must pass options.rootUrl or set ROOT_URL in the server environment**, then run previous step again :
 
 
 	export ROOT_URL='http://www.stahlmandesign.com'
