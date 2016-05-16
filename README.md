@@ -64,6 +64,7 @@ Upload meteor.tar.gz to **/var/www/html/stahlmandesign.com**
 
 
 	ssh root@159.203.16.127
+	Password hint : I went to (LNI) in 2007
 	cd /var/www/html/stahlmandesign.com
 	
 Expand tarball which creates folder *bundle*

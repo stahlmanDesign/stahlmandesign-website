@@ -56,85 +56,92 @@ if (Meteor.isClient) {
 }
 */
 
-function loadGoogleAnalytics(){
-	// Google Analytics for stahlmandesign.com
+function loadGoogleAnalytics() {
+    // Google Analytics for stahlmandesign.com
 
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-	ga('create', 'UA-25169855-1', 'auto');
-	ga('send', 'pageview');
-	//console.log(window.location.href);
+    ga('create', 'UA-25169855-1', 'auto');
+    ga('send', 'pageview');
+    //console.log(window.location.href);
 }
 
-Router.route('/', function() {
-	// render the Home template with a custom data context
-	this.render('home', {
-		data: {
-			link: 'The Dreamsong',
-			description: ' is a retro-style game, and requires a keyboard (not optimized for touch screens)'
-		}
-	});
-	Template["home"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/', function () {
+    // render the Home template with a custom data context
+    this.render('home', {
+        data: {
+            link: 'The Dreamsong',
+            description: ' is a retro-style game, and requires a keyboard (not optimized for touch screens)'
+        }
+    });
+    Template["home"].onRendered(function () { loadGoogleAnalytics(); });
 });
 // when you navigate to "/one" automatically render the template named "One".
-Router.route('/infographics',function(){
-	this.render('infographics');
-	Template["infographics"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/infographics', function () {
+    this.render('infographics');
+    Template["infographics"].onRendered(function () { loadGoogleAnalytics(); });
 });
-Router.route('/newsgraphics', function() {
-	this.render('newsgraphics', {
-		data: {
-			title: 'newsgraphics'
-		}
-	});
-	Template["newsgraphics"].onRendered(function(){ loadGoogleAnalytics(); });
-	//$("#newsgraphics").addClass('active'); // #en5minutes = active
-	getFlickr("72157600073936574"); // photoset id
+Router.route('/newsgraphics', function () {
+    this.render('newsgraphics', {
+        data: {
+            title: 'newsgraphics'
+        }
+    });
+    Template["newsgraphics"].onRendered(function () { loadGoogleAnalytics(); });
+    //$("#newsgraphics").addClass('active'); // #en5minutes = active
+    getFlickr("72157600073936574"); // photoset id
 });
-Router.route('/en5minutes/1', function() {
-	this.render('en5minutes', {
-		data: {
-			years: '2005-2008',
-			description: 'The page « En 5 minutes » began as a full-page, stand-alone infographic published daily in Le Journal de Montréal. Collections were republished and distributed in schools in 2008.'
-		}
-	});
-	Template["en5minutes"].onRendered(function(){ loadGoogleAnalytics(); });
-	getFlickr("72157600047687564");
+Router.route('/en5minutes/1', function () {
+    this.render('en5minutes', {
+        data: {
+            years: '2005-2008',
+            description: 'The page « En 5 minutes » began as a full-page, stand-alone infographic published daily in Le Journal de Montréal. Collections were republished and distributed in schools in 2008.'
+        }
+    });
+    Template["en5minutes"].onRendered(function () { loadGoogleAnalytics(); });
+    getFlickr("72157600047687564");
 });
-Router.route('/en5minutes/2', function() {
-	this.render('en5minutes', {
-		data: {
-			years: '2009-2015',
-			description: 'The page « En 5 minutes » has evolved over the years and remains a stand-alone infographic page published daily in Le Journal de Montréal. The team is beginning to do private work for businesses.'
-		}
-	});
-	Template["en5minutes"].onRendered(function(){ loadGoogleAnalytics(); });
-	getFlickr("72157649406297688");
-	// featured infographics photoset id = 72157600088568733
-	// en 5 minutes = 72157600047687564
-	// en 5 minutes 2 = 72157649406297688
-	// info https://www.flickr.com/services/api/misc.urls.html
+Router.route('/en5minutes/2', function () {
+    this.render('en5minutes', {
+        data: {
+            years: '2009-2015',
+            description: 'The page « En 5 minutes » has evolved over the years and remains a stand-alone infographic page published daily in Le Journal de Montréal. The team is beginning to do private work for businesses.'
+        }
+    });
+    Template["en5minutes"].onRendered(function () { loadGoogleAnalytics(); });
+    getFlickr("72157649406297688");
+    // featured infographics photoset id = 72157600088568733
+    // en 5 minutes = 72157600047687564
+    // en 5 minutes 2 = 72157649406297688
+    // info https://www.flickr.com/services/api/misc.urls.html
 });
-Router.route('/html5', function() {
-	this.render('html5', {
-		data: {
-			years: '',
-			description: ''
-		}
-	});
-	Template["html5"].onRendered(function(){ loadGoogleAnalytics(); });
-	getFlickr("72157640089367186", true); // true means call function useFlickrDescAsUrl
+Router.route('/html5', function () {
+    this.render('html5', {
+        data: {
+            years: '',
+            description: ''
+        }
+    });
+    Template["html5"].onRendered(function () { loadGoogleAnalytics(); });
+    getFlickr("72157640089367186", true); // true means call function useFlickrDescAsUrl
 });
-Router.route('/flash',function(){
-	this.render('flash');
-	Template["flash"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/flash', function () {
+    this.render('flash');
+    Template["flash"].onRendered(function () { loadGoogleAnalytics(); });
 });
-Router.route('/games',function(){
-	this.render('games');
-	Template["games"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/games', function () {
+    this.render('games');
+    Template["games"].onRendered(function () { loadGoogleAnalytics(); });
 });
 
 
@@ -154,181 +161,184 @@ Router.route('/games/mountainbike', function (){
 */
 
 
-Router.route('/animation',function(){
-	this.render('animation');
-	Template["animation"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/animation', function () {
+    this.render('animation');
+    Template["animation"].onRendered(function () { loadGoogleAnalytics(); });
 });
-Router.route('/illustration', function() {
-	this.render('illustration', {
-		data: {
-			years: '',
-			description: ''
-		}
-	});
-	Template["illustration"].onRendered(function(){ loadGoogleAnalytics(); });
-	getFlickr("72157639954127264");
+Router.route('/illustration', function () {
+    this.render('illustration', {
+        data: {
+            years: '',
+            description: ''
+        }
+    });
+    Template["illustration"].onRendered(function () { loadGoogleAnalytics(); });
+    getFlickr("72157639954127264");
 });
-Router.route('/music',function(){
-	this.render('music');
-	Template["music"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/music', function () {
+    this.render('music');
+    Template["music"].onRendered(function () { loadGoogleAnalytics(); });
 
-	function iTunesFixImageHeight(){
-		var w = $(".artwork").width();
-		$(".artwork").height(w);
-	}
-	setTimeout(function(){
-		iTunesFixImageHeight();
-	},1000);
+    function iTunesFixImageHeight() {
+        var w = $(".artwork").width();
+        $(".artwork").height(w);
+    }
+    setTimeout(function () {
+        iTunesFixImageHeight();
+    }, 1000);
 
-	$( window ).resize(function() {
-		iTunesFixImageHeight();
-	});
-
-
+    $(window).resize(function () {
+        iTunesFixImageHeight();
+    });
 });
-Router.route('/december',function(){
-	this.render('december');
-	Template["december"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/december', function () {
+    this.render('december');
+    Template["december"].onRendered(function () { loadGoogleAnalytics(); });
 });
-Router.route('/nyt/links', function() {
-	this.render('nyt-links', {
-		data: {
-			links: 'http://www.nytimes.com/2015/06/26/us/politics/obama-supreme-court-aca-ruling-health-care.html?hp&action=click&pgtype=Homepage&module=first-column-region&region=top-news&WT.nav=top-news&_r=0&gwh=7F17B9A408C1CA3B9E4921A085C049E1&gwt=pay'
-		}
-	});
-	Template["nyt-links"].onRendered(function(){ loadGoogleAnalytics(); });
+Router.route('/nyt/links', function () {
+    this.render('nyt-links', {
+        data: {
+            links: 'http://www.nytimes.com/2015/06/26/us/politics/obama-supreme-court-aca-ruling-health-care.html?hp&action=click&pgtype=Homepage&module=first-column-region&region=top-news&WT.nav=top-news&_r=0&gwh=7F17B9A408C1CA3B9E4921A085C049E1&gwt=pay'
+        }
+    });
+    Template["nyt-links"].onRendered(function () { loadGoogleAnalytics(); });
 });
 
+Router.route('/nyt', function () {
+    this.render('nyt', {
+        data: {
+            test: '',
+            processedUrl: function () {
+                return Session.get('processedUrl');
+            }
+        }
+    });
+
+    Template["nyt"].onRendered(function () { loadGoogleAnalytics(); });
 
 
-Router.route('/nyt', function() {
-	this.render('nyt', {
-		data: {
-			test: '',
-			processedUrl: function() {
-				return Session.get('processedUrl');
-			}
-		}
-	});
-
-	Template["nyt"].onRendered(function(){loadGoogleAnalytics();});
-
-
-		//var newHTML = {};
-		//newHTML.head = '<!DOCTYPE html>' + '<html lang="fr">' + '<head>' + '<meta charset="utf-8">' + '<title></title>';
-		//newHTML.foot = '<img src="images/coocoo.jpg">' + '<p>v1.21 - The Vampirates</p>' + '</head>' + '<body>';
-/*
-		$(document).on("click", "#savebutton", function() {
-			var url = $("#url").val();
-			console.log(url);
-			//var link = $('<a></a>').attr("href", url)
-			//alert(link);
-			$("#newURL").append("<a href='" + url + "'>P) " + url + "</a>");
+    //var newHTML = {};
+    //newHTML.head = '<!DOCTYPE html>' + '<html lang="fr">' + '<head>' + '<meta charset="utf-8">' + '<title></title>';
+    //newHTML.foot = '<img src="images/coocoo.jpg">' + '<p>v1.21 - The Vampirates</p>' + '</head>' + '<body>';
+    /*
+    		$(document).on("click", "#savebutton", function() {
+    			var url = $("#url").val();
+    			console.log(url);
+    			//var link = $('<a></a>').attr("href", url)
+    			//alert(link);
+    			$("#newURL").append("<a href='" + url + "'>P) " + url + "</a>");
 
 
-			// TODO Meteor is reloading page, not allowing jquery dom manipulation, so added URL disappears
+    			// TODO Meteor is reloading page, not allowing jquery dom manipulation, so added URL disappears
 
-			//$('#savebutton').append(url);
-		});
-*/
+    			//$('#savebutton').append(url);
+    		});
+    */
 
-/*
-	$("#savebutton").click(function() {
-		//savedata($("#url").val());
-		var url = $("#url").val();
-		console.log(url);
-	});
+    /*
+    	$("#savebutton").click(function() {
+    		//savedata($("#url").val());
+    		var url = $("#url").val();
+    		console.log(url);
+    	});
 
-	// in future can save searches but PHP not installed
-	function savedata(url) {
-		console.log($("#urlparams").is(':checked'))
-		if ($("#urlparams").is(':checked')) {
-			url = url.split("?")[0];
-		}
-		if ($("#pagewantedall").is(':checked')) {
-			url += "?pagewanted=all";
-		}
-		var myHTML = (newHTML.head + '<a target="_blank" href="' + url + '">' + url + '</a>' + newHTML.foot);
-		var json = {
-			"newHTML": myHTML
-		};
-		var dataString = JSON.stringify(json);
-		$.post('save.php', {
-			formData: dataString
-		}, function(phpmessage) {
-			console.log(phpmessage);
-			window.open("lien.html", "_parent");
-		});
-	}
-*/
+    	// in future can save searches but PHP not installed
+    	function savedata(url) {
+    		console.log($("#urlparams").is(':checked'))
+    		if ($("#urlparams").is(':checked')) {
+    			url = url.split("?")[0];
+    		}
+    		if ($("#pagewantedall").is(':checked')) {
+    			url += "?pagewanted=all";
+    		}
+    		var myHTML = (newHTML.head + '<a target="_blank" href="' + url + '">' + url + '</a>' + newHTML.foot);
+    		var json = {
+    			"newHTML": myHTML
+    		};
+    		var dataString = JSON.stringify(json);
+    		$.post('save.php', {
+    			formData: dataString
+    		}, function(phpmessage) {
+    			console.log(phpmessage);
+    			window.open("lien.html", "_parent");
+    		});
+    	}
+    */
 });
+
+Router.route('/cv', function () {
+    this.render('cv');
+    Template["cv"].onRendered(function () { loadGoogleAnalytics(); });
+});
+
 
 //--------------
 
 function getFlickr(photosetId, useFlickrDescAsUrl) {
-	//console.log(useFlickrDescAsUrl)
-	// photosetId as per Flickr API
-	// featured infographics photoset id = 72157600088568733
-	// en 5 minutes = 72157600047687564
-	// en 5 minutes 2 = 72157649406297688
-	// info https://www.flickr.com/services/api/misc.urls.html
-	$.getJSON("https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&photoset_id=" + photosetId + "&api_key=0120d5b1ebad15c8364c1c646e977d92&user_id=93823488@N00&per_page=900&format=json&jsoncallback=?", function(data) {
-		jsonFlickrApi(data)
-	});
+    //console.log(useFlickrDescAsUrl)
+    // photosetId as per Flickr API
+    // featured infographics photoset id = 72157600088568733
+    // en 5 minutes = 72157600047687564
+    // en 5 minutes 2 = 72157649406297688
+    // info https://www.flickr.com/services/api/misc.urls.html
+    $.getJSON("https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&photoset_id=" + photosetId + "&api_key=0120d5b1ebad15c8364c1c646e977d92&user_id=93823488@N00&per_page=900&format=json&jsoncallback=?", function (data) {
+        jsonFlickrApi(data)
+    });
 
-	function jsonFlickrApi(data) {
-		var limit = data.photoset.photo.length;
-		//limit = 500 // this is Flickr's max limit per photoset
-		$(".main-content").html("<ul></ul>");
-		// randomize photos array data.photoset.photo
-		//console.log(data.photoset)
-		//shuffle(data.photoset.photo);
-		for (var i = 0; i < limit; i++) {
-			var url = {};
-			var head = "https://farm" + data.photoset.photo[i].farm + ".staticflickr.com/" + data.photoset.photo[i].server + "/" + data.photoset.photo[i].id + "_" + data.photoset.photo[i].secret;
-			url.small = head + "_m.jpg";
-			url.big = head + "_b.jpg";
-			$(".main-content").prepend(
-						"<li class='photo-container'>\n\
-							<a href='" + url.big + "' id='desc-"+i+"'>\n\
+    function jsonFlickrApi(data) {
+        var limit = data.photoset.photo.length;
+        //limit = 500 // this is Flickr's max limit per photoset
+        $(".main-content").html("<ul></ul>");
+        // randomize photos array data.photoset.photo
+        //console.log(data.photoset)
+        //shuffle(data.photoset.photo);
+        for (var i = 0; i < limit; i++) {
+            var url = {};
+            var head = "https://farm" + data.photoset.photo[i].farm + ".staticflickr.com/" + data.photoset.photo[i].server + "/" + data.photoset.photo[i].id + "_" + data.photoset.photo[i].secret;
+            url.small = head + "_m.jpg";
+            url.big = head + "_b.jpg";
+            $(".main-content").prepend(
+                "<li class='photo-container'>\n\
+							<a href='" + url.big + "' id='desc-" + i + "'>\n\
 								<img src='js/vendor/unveil-master/img/loader.gif' data-src='" + url.small + "' data-src-retina='" + url.small + "'/>\n\
 								<p class='photo-title'>" + data.photoset.photo[i].title + "</p>\n\
 							</a>\n\
 						</li>");
-			if (useFlickrDescAsUrl) getDesc(data.photoset.photo[i],url,i); // will add description to photo by using desc-0 ID when callback is done
-			//$("#infographics").append("<img src='https://www.flickr.com/photos/93823488@N00/"+id+"'/>");
-		}
-		$("img").unveil(0, function() {
-			$(this).load(function() {
-				this.style.opacity = 1;
-			});
-		});
-	}
+            if (useFlickrDescAsUrl) getDesc(data.photoset.photo[i], url, i); // will add description to photo by using desc-0 ID when callback is done
+            //$("#infographics").append("<img src='https://www.flickr.com/photos/93823488@N00/"+id+"'/>");
+        }
+        $("img").unveil(0, function () {
+            $(this).load(function () {
+                this.style.opacity = 1;
+            });
+        });
+    }
 
-	function getDesc(photo,url,i){
+    function getDesc(photo, url, i) {
 
-		$.getJSON("https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=0120d5b1ebad15c8364c1c646e977d92&photo_id="+photo.id+"&format=json&nojsoncallback=1",function(data){
-			//console.log(data)
-			//console.log(data.photo.description._content)
+        $.getJSON("https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=0120d5b1ebad15c8364c1c646e977d92&photo_id=" + photo.id + "&format=json&nojsoncallback=1", function (data) {
+            //console.log(data)
+            //console.log(data.photo.description._content)
 
-			$("#desc-"+i).attr( "href", "http://" + $(data.photo.description._content).text());
-		});
-	}
+            $("#desc-" + i).attr("href", "http://" + $(data.photo.description._content).text());
+        });
+    }
 }
+
 function shuffle(array) {
-	var currentIndex = array.length,
-		temporaryValue, randomIndex;
-	// While there remain elements to shuffle...
-	while (0 !== currentIndex) {
-		// Pick a remaining element...
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
-		// And swap it with the current element.
-		temporaryValue = array[currentIndex];
-		array[currentIndex] = array[randomIndex];
-		array[randomIndex] = temporaryValue;
-	}
-	return array;
+    var currentIndex = array.length,
+        temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+    return array;
 }
 
 
@@ -352,6 +362,3 @@ function shuffle(array) {
   <size label="Original" width="2400" height="1800" source="https://farm2.staticflickr.com/1103/567229075_6dc09dc6da_o.jpg" url="https://www.flickr.com/photos/stewart/567229075/sizes/o/" media="photo" />
 </sizes>
 */
-
-
-

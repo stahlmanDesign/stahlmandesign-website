@@ -37,7 +37,9 @@
 	<!-- 	<link rel="stylesheet" type="text/css" href="css/main.css"> -->
 
 	<style type="text/css">
-
+.iframe-cv{
+	min-height: 50em!important;
+}
 	</style>
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -466,8 +468,6 @@
 		<a href='{{processedUrl}}'>{{processedUrl}}</a>
 
 	</div>
-
-
 </template>
 
 <template name="nyt-links">
@@ -478,6 +478,17 @@
 	</div>
 	{{> Footer}}
 </template>
+
+<template name="cv">
+	{{> Nav}}
+<div class="container">
+	<div class="container embed-responsive embed-responsive-4by3 iframe-cv">
+	<iframe class="embed-responsive-item " src="http://www.justinstahlman.com/cv"></iframe>
+</div>
+</div>
+	{{> Footer}}
+</template>
+
 
 <template name="Nav">
 	<div id="navbar" class="navbar navbar-default navbar-fixed-top">
