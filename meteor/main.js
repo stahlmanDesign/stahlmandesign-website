@@ -97,7 +97,16 @@ Router.route('/newsgraphics', function () {
             title: 'newsgraphics'
         }
     });
-    Template["newsgraphics"].onRendered(function () { loadGoogleAnalytics(); });
+    Template["newsgraphics"].onRendered(function () {
+
+      loadGoogleAnalytics();
+
+      var self = this;
+      self.autorun(function(){
+          //Session.get("imageChanged");
+          $("img").unveil();
+      });
+    });
     //$("#newsgraphics").addClass('active'); // #en5minutes = active
     getFlickr("72157600073936574"); // photoset id
 });
@@ -300,18 +309,27 @@ function getFlickr(photosetId, useFlickrDescAsUrl) {
             $(".main-content").prepend(
                 "<li class='photo-container'>\n\
 							<a href='" + url.big + "' id='desc-" + i + "'>\n\
-								<img src='js/vendor/unveil-master/img/loader.gif' data-src='" + url.small + "' data-src-retina='" + url.small + "'/>\n\
+								<img class='unveil-img' src='js/vendor/unveil-master/img/loader.gif' data-src='" + url.small + "' data-src-retina='" + url.small + "'/>\n\
 								<p class='photo-title'>" + data.photoset.photo[i].title + "</p>\n\
 							</a>\n\
 						</li>");
             if (useFlickrDescAsUrl) getDesc(data.photoset.photo[i], url, i); // will add description to photo by using desc-0 ID when callback is done
             //$("#infographics").append("<img src='https://www.flickr.com/photos/93823488@N00/"+id+"'/>");
         }
-        $("img").unveil(0, function () {
-            $(this).load(function () {
-                this.style.opacity = 1;
-            });
+        $.getScript( "http://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js", function( data, textStatus, jqxhr ) {
+          // console.log( data ); // Data returned
+          // console.log( textStatus ); // Success
+          // console.log( jqxhr.status ); // 200
+          // console.log( "Load was performed." );
+
+          $(".unveil-img").unveil(0, function () {
+              $(this).load(function () {
+                  this.style.opacity = 1;
+              });
+          });
         });
+
+
     }
 
     function getDesc(photo, url, i) {

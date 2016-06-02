@@ -11,7 +11,12 @@
 - Blog using Ghost platform with stahlmandesign.com CNAME 'blog' pointing to 'stahlmandesign.ghost.io' where Ghost Pro (their hosting) blog resides.
 
 ###Meteor requires:
-- Node.js ** 0.10.x only** for Meteor as of Dec. 2 2015
+- ~~Node.js ** 0.10.x only** for Meteor as of Dec. 2 2015~~
+- ~~Updated Node to 4.4.1 LTS 1 juin 2016~~
+
+**Update June 1, 2016:**
+- Updated Meteor to 1.3.2.4
+- and iron:middleware-stack upgraded from 1.0.11 to 1.1.0 to fix Chrome 51 bug
 - MonogDB
 
 --
@@ -99,6 +104,19 @@ If not working, then now apply next lines (tell Meteor where is MongoDB)
 
 	cd /var/www/html/stahlmandesign.com/bundle/
 	env PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign node main.js
+	
+##If error about node fibers
+
+- http://stackoverflow.com/questions/13327088/meteor-bundle-fails-because-fibers-node-is-missing
+
+```
+cd bundle/server
+npm uninstall fibers
+npm install fibers
+$ cd ../../ (to /bundle)
+PORT=3000 MONGO_URL=mongodb://localhost:27017/stahlmandesign
+node main.js
+```
 
 #Author
 
