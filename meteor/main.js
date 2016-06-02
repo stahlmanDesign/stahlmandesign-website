@@ -316,6 +316,9 @@ function getFlickr(photosetId, useFlickrDescAsUrl) {
             if (useFlickrDescAsUrl) getDesc(data.photoset.photo[i], url, i); // will add description to photo by using desc-0 ID when callback is done
             //$("#infographics").append("<img src='https://www.flickr.com/photos/93823488@N00/"+id+"'/>");
         }
+
+        // NOTE this is a hack because unveil is not loading in normal <script> tag in index.html, probably because of meteor. Used to work in Meteor 1.2.1, but not after upgrade to 1.3.4.2
+        
         $.getScript( "http://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js", function( data, textStatus, jqxhr ) {
           // console.log( data ); // Data returned
           // console.log( textStatus ); // Success
