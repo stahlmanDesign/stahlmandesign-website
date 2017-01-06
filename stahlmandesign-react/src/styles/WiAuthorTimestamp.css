@@ -1,0 +1,13 @@
+.WiAuthorTimestamp .revision-author-and-date{
+  padding-top:0.5em;
+  font-family: Arial;
+  font-size: 0.8em;
+  font-weight: 100;
+}
+.WiAuthorTimestamp .revision-author-and-date ul{
+  list-style: none;
+  padding:0;
+}
+.WiAuthorTimestamp .revision-author-and-date .emphasis{
+  font-weight: 900
+}

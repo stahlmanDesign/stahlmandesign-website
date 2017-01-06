@@ -1,0 +1,36 @@
+/*@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,800|Work+Sans:300,400,700');*/
+body {
+  /*background: #f1f1f1;
+  z-index: -1*/
+}
+html, body{
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  height:100%;
+  /*font-family: 'Work Sans', sans-serif;*/
+
+}
+
+h1, h2, h3{
+  /*font-family: 'Raleway', sans-serif;*/
+  font-weight: 700;
+}
+hr{
+  border:1px solid #ccc
+}
+.jumbotron{
+  background-color: #e8e4ea;
+
+}
+.container {
+  /*margin-left:0.5em;*/
+}
+
+/*details*/
+.rc-collapse-content-active{
+  /*overflow: visible;
+  padding: 1px 16px;
+  margin: 2px 0px 0px;*/
+}

@@ -1,4 +1,5 @@
-# Purchased folder for ImpactJS game engine
+# use purchased folder for ImpactJS game engine impact and weltmeister, the other use npm install 
 impact/
 weltmeister/
-
+node_modules/
+build/

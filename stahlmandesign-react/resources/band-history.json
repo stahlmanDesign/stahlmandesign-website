@@ -1,0 +1,24 @@
+{
+	"timeline": {
+		"name": "Music & bands",
+		"groups": [{
+			"name": "Piano compositions",
+			"periods": [{
+				"start": "1989-10-15",
+				"end": "1996-05-15",
+				"label": "Manic piano"
+			}]
+		}, {
+			"name": "Total Eclipse",
+			"periods": [{
+				"start": "1990-05-15",
+				"end": "1991-03-15",
+				"name": "Total Eclipse v1"
+			}, {
+				"start": "1991-03-15",
+				"end": "1991-10-15",
+				"name": "Total Eclipse with Nathan Meckel"
+			}]
+		}]
+	}
+}

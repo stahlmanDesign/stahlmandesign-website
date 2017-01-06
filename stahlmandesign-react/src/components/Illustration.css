@@ -1,0 +1,13 @@
+.Illustration ul{
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items:flex-end;
+	list-style: none;
+
+}
+.Illustration .photo-container{
+	padding:3em;
+}
+.Illustration .photo-container p{
+	padding-top:1em;
+}

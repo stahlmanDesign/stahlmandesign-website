@@ -1,0 +1,25 @@
+.button-with-status-waiting{
+  color:black
+}
+.button-with-status-error{
+  color:firebrick
+}
+.button-with-status-success{
+  color:green
+}
+.button-with-status-edit{
+  /*color:*/
+}
+.button-with-status-save{
+  color:white
+}
+.done-editing-save-button{
+  background: green;
+  color:white;
+  border: 1px solid white;
+}
+.done-editing-save-button{
+  background: green;
+  color:white;
+  border: 1px solid white;
+}
