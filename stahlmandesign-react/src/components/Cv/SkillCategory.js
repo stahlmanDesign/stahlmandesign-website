@@ -16,7 +16,7 @@ class SkillCategory extends React.Component {
           <p
             className='skill-category-skill-item'
             key={this.props.skillCategoryId + ' rating-' +i}>
-            <span class="skill-units-gray">
+            <span className="skill-units-gray">
             {this._getSkillBarTrending(this.props.skills[i].trending)}
             </span>
           </p>

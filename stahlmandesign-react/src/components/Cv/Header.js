@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import GitHubActivity from './GitHubActivity.js'
 class Header extends React.Component {
   render() {
@@ -8,52 +9,50 @@ class Header extends React.Component {
       </h1>
       <div
         className="lead adjust-title-style"
-        dangerouslySetInnerHTML={{
+        >
+        <span dangerouslySetInnerHTML={{
           __html: this.props.data.title[this.props.lang],
           sanitize: true
-        }}>
+        }}></span>
       </div>
       <strong>
         <span id="email">
-          <a href={"mailto:" + this.props.data.email.code}>
+          <Link to={"mailto:" + this.props.data.email.code}>
             {this.props.data.email.appearance}
-          </a>&nbsp;&nbsp;</span>
+          </Link>&nbsp;&nbsp;</span>
       </strong>
       <strong>
         <span id="phone">
-          <a
-            href={"tel:" + this.props.data.phone.code}
-            dangerouslySetInnerHTML={{
+          <Link to={"tel:" + this.props.data.phone.code}>
+            <span dangerouslySetInnerHTML={{
               __html: this.props.data.phone.appearance,
               sanitize: true
-            }}>
-          </a>
+            }}></span>
+
+          </Link>
           &nbsp;&nbsp;
         </span>
       </strong>
       <strong>
         <span id="website">
-          <a
-            href={this.props.data.website.code}
-            dangerouslySetInnerHTML={{
+          <Link to={this.props.data.website.code}>
+            <span dangerouslySetInnerHTML={{
               __html: this.props.data.website.appearance,
               sanitize: true
-            }}>
-          </a>
+            }}></span>
+          </Link>
           &nbsp;&nbsp;
         </span>
       </strong>
-      <p
-        id="note"
-        className="note"
-        dangerouslySetInnerHTML={{
+      <p id="note" className="note" >
+        <span dangerouslySetInnerHTML={{
           __html: this.props.data.note[this.props.lang],
           sanitize: true
-        }}>
+        }}></span>
       </p>
       <h4>
         <a href='https://github.com/stahlmanDesign'>GitHub</a>
-        {this.props.lang == 'en'
+        {this.props.lang === 'en'
           ? ' contributions over the last year'
           : ' contributions depuis un an'}
       </h4>

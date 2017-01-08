@@ -28,25 +28,25 @@ export function parseQueryString( queryString ) {
     }
     return params;
 }
-export function loadGoogleAnalytics(ga) {
-    // Google Analytics for stahlmandesign.com
-
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-25169855-1', 'auto');
-    ga('send', 'pageview');
-    //console.log(window.location.href);
-}
+// export function loadGoogleAnalytics(ga) {
+//     // Google Analytics for stahlmandesign.com
+//
+//     (function (i, s, o, g, r, a, m) {
+//         i['GoogleAnalyticsObject'] = r;
+//         i[r] = i[r] || function () {
+//             (i[r].q = i[r].q || []).push(arguments)
+//         }, i[r].l = 1 * new Date();
+//         a = s.createElement(o),
+//             m = s.getElementsByTagName(o)[0];
+//         a.async = 1;
+//         a.src = g;
+//         m.parentNode.insertBefore(a, m)
+//     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+//
+//     ga('create', 'UA-25169855-1', 'auto');
+//     ga('send', 'pageview');
+//     //console.log(window.location.href);
+// }
 export function getFlickr(photosetId, useFlickrDescAsUrl, callback) {
     //console.log(useFlickrDescAsUrl)
     // photosetId as per Flickr API
@@ -69,17 +69,32 @@ export function getFlickr(photosetId, useFlickrDescAsUrl, callback) {
         for (var i = 0; i < limit; i++) {
             var url = {};
             var head = "https://farm" + data.photoset.photo[i].farm + ".staticflickr.com/" + data.photoset.photo[i].server + "/" + data.photoset.photo[i].id + "_" + data.photoset.photo[i].secret;
-            url.small = head + "_m.jpg";
-            url.big = head + "_b.jpg";
+            let urlSmall = head + "_m.jpg";
+            let urlBig = head + "_b.jpg";
+            let title = data.photoset.photo[i].title
             // )$(".main-content").prepend(
-            images.push( {urlBig:url.big,index:i,urlSmall:url.small,title:data.photoset.photo[i].title} );
-            // if (useFlickrDescAsUrl) getDesc(data.photoset.photo[i], url, i); // will add description to photo by using desc-0 ID when callback is done
+
+            getDesc(data.photoset.photo[i], url, i, (descUrlCallbackContent)=>{
+              // console.log(descUrlCallbackContent)
+              let image = {
+                urlBig: urlBig,
+                index:i,
+                urlSmall:urlSmall,
+                title: title,
+                descUrl: descUrlCallbackContent // OPTIONAL, may not exists: will add description to photo by using desc-0 ID when callback is done
+              }
 
 
+              // const descUrl = getDesc(data.photoset.photo[i], url, i)
+
+              images.push( image );
+              if (images.length === limit) callback(images)
+            })
 
             //$("#infographics").append("<img src='https://www.flickr.com/photos/93823488@N00/"+id+"'/>");
         }
-        if (callback) callback(images)
+
+
 
         // NOTE this is a hack because unveil is not loading in normal <script> tag in index.html, probably because of meteor. Used to work in Meteor 1.2.1, but not after upgrade to 1.3.4.2
 
@@ -99,13 +114,15 @@ export function getFlickr(photosetId, useFlickrDescAsUrl, callback) {
 
     }
 
-    function getDesc(photo, url, i) {
+    function getDesc(photo, url, i, descUrlCallback) {
 
         $.getJSON("https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=0120d5b1ebad15c8364c1c646e977d92&photo_id=" + photo.id + "&format=json&nojsoncallback=1", function (data) {
             //console.log(data)
-            //console.log(data.photo.description._content)
+            // console.log(data.photo.description._content)
+            let res =  data.photo.description._content.split('"')[1]; // get url from markup right after href=" , using the " to split and take index 1
 
-            $("#desc-" + i).attr("href", "http://" + $(data.photo.description._content).text());
+            if (descUrlCallback) descUrlCallback( res )
+            //$("#desc-" + i).attr("href", "http://" + $(data.photo.description._content).text());
         });
     }
 }

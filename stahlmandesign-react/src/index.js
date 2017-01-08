@@ -13,22 +13,14 @@ import reduxStore, { reduxHistory } from './reduxStore' // for future redux
 
 // app-specific
 import localisation from './libraries/localisation.json'
-import {
-  newLoginDefault,
-  newTagDefault,
-  newTokenDefault,
-  newMemberDefault,
-  newCompanyDefault,
-  newWorkInstructionDefault
- } from './libraries/defaults'
 
 // stats
 import { intercom } from './libraries/statistics'
 import ReactGA from 'react-ga'; // https://www.npmjs.com/package/react-ga
 ReactGA.initialize('UA-83796779-1'); //Unique Google Analytics tracking number
 
-import { urls /*, membersLogout */ } from './libraries/global'
-import { LS } from './libraries/localStorage'
+// import { urls /*, membersLogout */ } from './libraries/global'
+// import { LS } from './libraries/localStorage'
 
 import { NumberIsIntegerPolyfill } from './libraries/utilities'
 NumberIsIntegerPolyfill()

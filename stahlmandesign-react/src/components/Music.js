@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link, browserHistory} from 'react-router'
-import { API, urls } from '../libraries/global'
-import { UT, getFlickr } from '../libraries/utilities'
+// import { Link, browserHistory} from 'react-router'
+// import { API, urls } from '../libraries/global'
+// import { UT, getFlickr } from '../libraries/utilities'
 import $ from 'jquery'
 
-// import './Music.css'
+import './Music.css'
 
 class Music extends React.Component {
   componentWillMount(){
@@ -27,7 +27,6 @@ class Music extends React.Component {
   }
 
   render() {
-    const { era } = this.props;
 
     return (
       <div className='Music '>

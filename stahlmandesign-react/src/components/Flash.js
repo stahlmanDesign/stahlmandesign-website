@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link, browserHistory} from 'react-router'
-import { API, urls } from '../libraries/global'
-import { UT, getFlickr } from '../libraries/utilities'
+// import { Link, browserHistory} from 'react-router'
+// import { API, urls } from '../libraries/global'
+// import { UT, getFlickr } from '../libraries/utilities'
 
 // import './Flash.css'
 
@@ -15,7 +15,6 @@ class Flash extends React.Component {
   }
 
   render() {
-    const { era } = this.props;
 
     return (
       <div className='Flash '>
@@ -29,6 +28,11 @@ class Flash extends React.Component {
       	<div className="container">
       		{/* 16:9 aspect ratio */}
       		<div className="embed-responsive embed-responsive-4by3">
+            <span className="fa-stack fa-lg">
+              <i className="fa fa-camera fa-stack-1x"></i>
+              <i className="fa fa-ban fa-stack-2x text-danger"></i>
+            </span>
+            <span>These graphics appear to no longer be hosted on canoe.ca. One day I will host my original files.</span>
       			<iframe className="embed-responsive-item" src="http://www.canoe.ca/FlashInfo/home.php?lang=fr" scrolling="yes" allowFullScreen></iframe>
       		</div>
       	</div>

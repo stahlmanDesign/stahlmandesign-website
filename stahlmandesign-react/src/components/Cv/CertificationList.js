@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery';
+
 import Certification from './Certification.js';
 class CertificationList extends React.Component {
   render() {

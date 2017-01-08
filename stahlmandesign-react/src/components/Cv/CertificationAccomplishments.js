@@ -5,8 +5,9 @@ class CertificationAccomplishments extends React.Component {
       return (
         <li
           className='certification-accomplishment-item'
-          key={this.props.certificationId + i}
-          dangerouslySetInnerHTML={{__html:item.certification,sanitize:true}}>
+          key={ i }
+          >
+          <span dangerouslySetInnerHTML={{__html:item.certification,sanitize:true}}></span>
         </li>
       )
     });

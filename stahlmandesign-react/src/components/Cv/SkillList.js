@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery';
+
 import SkillCategory from './SkillCategory.js';
 class SkillList extends React.Component {
   render() {
@@ -24,58 +24,3 @@ class SkillList extends React.Component {
   }
 }
 export default SkillList
-
-
-// constructor() {
-//   super();
-//   this.state = {
-//     skills: [
-//       {
-//         "category": {
-//           "en": "",
-//           "fr": ""
-//         },
-//         "skills": [
-//           {
-//             "skill": {
-//               "en": "",
-//               "fr": ""
-//             },
-//             "score": 0,
-//             "trending": ""
-//           }
-//         ]
-//       }, {
-//         "category": {
-//           "en": "",
-//           "fr": ""
-//         },
-//         "skills": [
-//           {
-//             "skill": {
-//               "en": "",
-//               "fr": ""
-//             },
-//             "score": 0,
-//             "trending": ""
-//           }
-//         ]
-//       }, {
-//         "category": {
-//           "en": "",
-//           "fr": ""
-//         },
-//         "skills": [
-//           {
-//             "skill": {
-//               "en": "",
-//               "fr": ""
-//             },
-//             "score": 0,
-//             "trending": ""
-//           }
-//         ]
-//       }
-//     ]
-//   }
-// }

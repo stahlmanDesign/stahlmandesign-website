@@ -1,0 +1,13 @@
+.JavaScript ul{
+	display: flex;
+	flex-wrap: wrap;
+	align-items:flex-end;
+	list-style: none;
+
+}
+.JavaScript .photo-container{
+	padding:0.75em;
+}
+.JavaScript .photo-container p{
+	padding-top:1em;
+}

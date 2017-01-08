@@ -18,22 +18,14 @@ class Job extends React.Component {
     let parentCompany = "";
     if (this.props.showParentCompany) {
       parentCompany =
-      <h2
-        className="parent-company"
-        dangerouslySetInnerHTML={{
-          __html: this.props.job.company,
-          sanitize: true
-        }}>
+      <h2 className="parent-company">
+        <span dangerouslySetInnerHTML={{ __html: this.props.job.company, sanitize: true }}></span>
       </h2>
     }
     return <div className="job">
       {parentCompany}
-      <h2
-        className='company-division'
-        dangerouslySetInnerHTML={{
-          __html: this.props.job.division,
-          sanitize: true
-        }}>
+      <h2 className='company-division'>
+        <span dangerouslySetInnerHTML={{ __html: this.props.job.division, sanitize: true }}></span>
       </h2>
       <p className='job-title'>
         {this.props.job.title[this.props.lang]}
@@ -47,10 +39,8 @@ class Job extends React.Component {
       <span className='month-year-to-month-year'>
         {this._getDates(this.props.job.start,this.props.job.end,this.props.lang)}
       </span>
-        <p dangerouslySetInnerHTML={{
-            __html: this.props.job.description[this.props.lang],
-            sanitize: true
-          }}>
+        <p>
+          <span dangerouslySetInnerHTML={{ __html: this.props.job.description[this.props.lang], sanitize: true }}></span>
         </p>
         <ul>
           <Accomplishments

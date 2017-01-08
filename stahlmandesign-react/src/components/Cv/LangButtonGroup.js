@@ -1,5 +1,5 @@
 import React from 'react';
-import $ from 'jquery';
+
 class LangButtonGroup extends React.Component {
   constructor() {
     // must call as first thing, like in other object-oriented languages, because we're extending a class and must execute parent functionality first
@@ -13,6 +13,8 @@ class LangButtonGroup extends React.Component {
     };
   }
   render() {
+
+
     // instead of passing arguments, read properties using this.Header
     // NOTE: if props contain markup, there is a way to render it, although it is considered a potential security risk
     // https://facebook.github.io/react/tips/dangerously-set-inner-html.html
@@ -41,10 +43,13 @@ class LangButtonGroup extends React.Component {
       </p>
       <div className='LangButtonGroup-about'>
         {this.props.about.stack.list.map((item, i) => {
-          return <li key={'LangButtonGroup-list-' + i}
-              dangerouslySetInnerHTML={{__html:item.name[this.props.lang] + ": " + item.type[this.props.lang]}}>
 
+          return (
+          <li key={'LangButtonGroup-list-' + i}>
+            { item.name[this.props.lang] }
+            <span dangerouslySetInnerHTML={{__html:": " + item.type[this.props.lang]}}></span>
           </li>
+          )
         })}
       </div>
     </div>

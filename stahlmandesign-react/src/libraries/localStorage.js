@@ -71,6 +71,15 @@ export const LS = {
       if (callback) callback(result);
     }
   },
+  getSavedLinks: (callback)=>{
+    if (localStorage.isSet("savedLinks")) {
+      const result = JSON.parse(localStorage.get("savedLinks"));
+      if (callback) callback(result);
+    }
+  },
+  saveSavedLinks: (savedLinks)=>{
+    localStorage.set('savedLinks', savedLinks); // save array in local storage
+  },
   getToken: (callback)=>{
     if (localStorage.isSet("jitbase-login-token")) {
       const result = JSON.parse(localStorage.get("jitbase-login-token"));

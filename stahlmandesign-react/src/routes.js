@@ -12,11 +12,10 @@ import Animation from './components/Animation'
 import Illustration from './components/Illustration'
 import Music from './components/Music'
 import December from './components/December'
-import NytLinks from './components/NytLinks'
 import Nyt from './components/Nyt'
 import Cv from './components/Cv/Cv'
 
-import { urls } from './libraries/global'
+// import { urls } from './libraries/global'
 
 import Page404 from './components/Page404'
 
@@ -37,7 +36,6 @@ export default(
         <Route path={ '/illustration' } component={ Illustration } />
         <Route path={ '/music' } component={ Music } />
         <Route path={ '/december' } component={ December } />
-        <Route path={ '/nyt/links' } component={ NytLinks } />
         <Route path={ '/nyt' } component={ Nyt } />
         <Route path={ '/cv' } component={ Cv } />
 

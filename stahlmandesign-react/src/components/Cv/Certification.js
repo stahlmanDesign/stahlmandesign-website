@@ -9,7 +9,10 @@ class Certification extends React.Component {
                 sanitize: true
             }}></h2>
           <ul>
-            <CertificationAccomplishments certificationId={this.props.certificationId} certifications={this.props.certification.certifications} lang={this.props.lang}/>
+            <CertificationAccomplishments
+              certificationId={this.props.certificationId}
+              certifications={this.props.certification.certifications}
+              lang={this.props.lang}/>
           </ul>
       </div>
     }

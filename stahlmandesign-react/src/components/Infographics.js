@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link, browserHistory } from 'react-router'
-import { API, urls } from '../libraries/global'
+// import { Link, browserHistory } from 'react-router'
+// import { API, urls } from '../libraries/global'
 
-import Loading from './Loading'
+// import Loading from './Loading'
 
 // import './Infographics.css'
 

@@ -1,9 +1,17 @@
 import React from 'react'
-import { Link, browserHistory} from 'react-router'
-import { API, urls } from '../libraries/global'
-import { UT, getFlickr } from '../libraries/utilities'
+// import { Link, browserHistory} from 'react-router'
+// import { API, urls } from '../libraries/global'
+// import { UT, getFlickr } from '../libraries/utilities'
 
-// import './Games.css'
+import dreamsong from '../images/dreamsong.png'
+import ffff from "../images/ffff.gif"
+import election from "../images/election.gif"
+import sauterelles from "../images/sauterelles.gif"
+import ttal from "../images/ttal.gif"
+import sacredLamps from "../images/sacredLamps.gif"
+import mountainbike from "../images/mountainbike.gif"
+
+import './Games.css'
 
 class Games extends React.Component {
   componentWillMount(){
@@ -15,8 +23,54 @@ class Games extends React.Component {
   }
 
   render() {
-    const { era } = this.props;
 
+    const games = [
+      {
+        title:'Fee-Fi-Fo-Fum',
+        link:'http://www.justinstahlman.com/ffff.html',
+        image:ffff,
+        desc:'<a href="http://ludumdare.com/compo/ludum-dare-33/?action=preview&uid=49932">Ludum Dare 33</a>, 2015'
+      },
+      {
+        title:'Élections Québec',
+        link:'http://www1.journaldemontreal.com/2014/04/jeu/',
+        image:election,
+        desc:'2014'
+      },
+      {
+        title:'Sauterelles',
+        link:'http://www1.journaldemontreal.com/2015/04/sauterelles/',
+        image:sauterelles,
+        desc:'2012'
+      },
+      {
+        title:'To Tame A Land',
+        link:'../_games/ttal/index.html',
+        image:ttal,
+        desc:'1992 Microsoft QuickBASIC - remade in JavaScript in 2012'
+      },
+      {
+        title:'The Sacred Lamps',
+        link:'../_games/sacredLamps/index.html',
+        image:sacredLamps,
+        desc:'1990 Apple IIe ProDOS Basic, Beagle Compiler - remade in JavaScript in 2012'
+      },
+      {
+        title:'Mountain Bike',
+        link:'../_games/mountainbike/index.html',
+        image:mountainbike,
+        desc:'2012'
+      },
+    ]
+    const gamesMarkup = games.map( (game,i)=>{
+      return (
+        <div key={i} className="col-sm-6 col-md-4 game-group">
+          <a href={ game.link }><img className="game-img-preview" src={ game.image } alt='thumbnail'/></a>
+          <h4>{ game.title }</h4>
+          <p dangerouslySetInnerHTML={{ __html: game.desc, sanitize: true }}></p>
+        </div>
+      )
+    })
     return (
       <div className='Games '>
         <div className="jumbotron">
@@ -33,36 +87,13 @@ class Games extends React.Component {
       	<div className="container">
       		<div className="row">
       			<div className="col-xs-12 text-center">
-      				<a href="http://www.thedreamsong.com/"><img className="game-img-preview" src="../img/dreamsong.png" /></a>
+      				<a href="http://www.thedreamsong.com/"><img className="game-img-preview" src={ dreamsong } alt='intro-screen'/></a>
       				<h3><a href="http://www.thedreamsong.com">The Dreamsong</a> (2015) - beta v0.12.*</h3>
       			</div>
       		</div>
       		<hr/>
       		<div className="row">
-      			<div className="col-sm-6 col-md-4">
-      				<a href="http://www.justinstahlman.com/ffff.html"><img className="game-img-preview" src="../img/ffff.png" /></a>
-      				<h4>Fee-Fi-Fo-Fum (<a href="http://ludumdare.com/compo/ludum-dare-33/?action=preview&uid=49932">Ludum Dare 33</a>, 2015)</h4>
-      			</div>
-      			<div className="col-sm-6 col-md-4">
-      				<a href="http://www1.journaldemontreal.com/2014/04/jeu/"><img className="game-img-preview" src="../img/election.png" /></a>
-      				<h4>Élections Québec (2014)</h4>
-      			</div>
-      			<div className="col-sm-6 col-md-4">
-      				<a href="http://www1.journaldemontreal.com/2015/04/sauterelles/"><img className="game-img-preview" src="../img/sauterelles.png" /></a>
-      				<h4>Sauterelles (2012)</h4>
-      			</div>
-      			<div className="col-sm-6 col-md-4">
-      				<a href="../games/ttal/index.html"><img className="game-img-preview" src="../img/ttal.png" /></a>
-      				<h4>To Tame A Land (1992/2012)</h4>
-      			</div>
-      			<div className="col-sm-6 col-md-4">
-      				<a href="../games/sacredLamps/index.html"><img className="game-img-preview" src="../img/sacredLamps.png" /></a>
-      				<h4>The Sacred Lamps (1990/2012)</h4>
-      			</div>
-      			<div className="col-sm-6 col-md-4">
-      				<a href="../games/mountainbike/index.html"><img className="game-img-preview" src="../img/mountainbike.png" /></a>
-      				<h4>Mountain Bike (2012)</h4>
-      			</div>
+            { gamesMarkup }
       		</div>
       	</div>
       </div>

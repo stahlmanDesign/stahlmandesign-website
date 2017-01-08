@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link, browserHistory } from 'react-router'
-import { API, urls } from '../libraries/global'
-import { UT, getFlickr } from '../libraries/utilities'
+import { Link } from 'react-router'
+// import { API, urls } from '../libraries/global'
+import { getFlickr } from '../libraries/utilities'
 import LazyLoad from 'react-lazyload';
 import './Illustration.css'
 
@@ -24,18 +24,19 @@ class Illustration extends React.Component {
 	getImagesMarkup( images ) {
 		return images.map(( image, i ) => {
 			return <li key={i} className='photo-container'>
-				<LazyLoad height={200} offset={0} overflow={true}>
+
 					<Link to={image.urlBig} target='_blank' id={'desc-' + image.index}>
-						<img className={'unveil-img'} src={image.urlSmall} alt='flickr'/>
+						<LazyLoad height={200} offset={-100} overflow={true}>
+							<img className={'unveil-img'} src={image.urlSmall} alt='flickr'/>
+						</LazyLoad>
 						<p className={'photo-title'}>{image.title} </p>
 					</Link>
-				</LazyLoad>
+
 			</li>
 		})
 	}
 	render( ) {
-		if ( !this.state.images )
-			return <div></div>
+		if ( !this.state.images ) return <div></div>
 		return (
 			<div className='Illustration '>
 				<div className="jumbotron">

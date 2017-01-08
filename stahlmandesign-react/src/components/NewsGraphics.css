@@ -1,0 +1,13 @@
+.NewsGraphics ul{
+	display: flex;
+	flex-wrap: wrap;
+	align-items:flex-end;
+	list-style: none;
+
+}
+.NewsGraphics .photo-container{
+	padding:0.75em;
+}
+.NewsGraphics .photo-container p{
+	padding-top:1em;
+}

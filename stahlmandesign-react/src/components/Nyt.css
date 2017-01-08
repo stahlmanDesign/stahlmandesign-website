@@ -1,0 +1,15 @@
+.Nyt ul {
+  list-style: none;
+  margin:0;
+  padding:0
+}
+.Nyt .remove-button {
+  color:red;
+}
+.Nyt .remove-button:hover {
+  color:firebrick;
+  cursor: pointer;
+}
+.Nyt li {
+  padding-bottom:0.5em;
+}
