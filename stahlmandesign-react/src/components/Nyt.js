@@ -53,7 +53,7 @@ class Nyt extends React.Component {
     // })
   }
   render() {
-    if (this.state.savedLinks.length === 0) return <div></div>
+    // if (this.state.savedLinks.length === 0) return <div></div>
     const processedUrls = this.state.savedLinks.map( (link,i)=>
       <li key={i}>
         <i className="fa fa-times-circle fa-lg remove-button" aria-hidden="true" onClick={ this.handleRemoveLink.bind(this,i) }></i>
