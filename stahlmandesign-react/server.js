@@ -8,4 +8,4 @@ app.use(express.static(__dirname + '/build'));
 app.get('/*', function(req, res) {
   res.sendfile(__dirname + '/build/index.html');
 });
-app.listen(3003);
+app.listen(3000);

@@ -391,7 +391,7 @@
         }]
     }],
     "jobs": [{
-        "start": "September, 2016",
+        "start": "September 14, 2016",
         "end": "today",
         "title": {
             "en": "Co-founder, Head of UX and Design",
@@ -422,7 +422,7 @@
         "tags": ["Startup", "Business","cofounder","React","Node","MongoDB","NPM","UX"]
     },{
         "start": "December 1, 2014",
-        "end": "September, 2016",
+        "end": "September 14, 2016",
         "title": {
             "en": "Team leader infographics",
             "fr": "Chef de l’infographie"

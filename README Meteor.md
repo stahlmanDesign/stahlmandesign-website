@@ -4,7 +4,7 @@
 
 --
 	
-# Node Express server running built React app
+# Meteor app
 First, kill node processes running from last deploy. Second number is process (PID); kill individual process where PID is replaced with the number
  
 	ps aux | grep node
