@@ -27,9 +27,12 @@ Documentation:
 ## Build mode for deployment
 
 - `npm run build` creates a `build` folder
-- upload build folder and `server.js` to website
-- on website, `nodemon server.js` will start serving built app on port 3000 (defined in server.js)
--  NOTE: may need to kill node processes running from last deploy. Second number is process (PID); kill individual process where PID is replaced with the number
+- upload build folder to website and on local machine: 
+- `scp ...localpath/build root@159.203.16.127:/var/www/html/stahlmandesign.com/stahlmandesign-react/`
+- ssh to remove server and `forever start server.js`  will start serving built app on port 3000 (defined in server.js)
+- to stop `forever stop server.js`  will start serving built app on port 3000 (defined in server.js)
+
+-  NOTE: can also kill node processes running from last deploy if `forever stop` doesn't work or if used another process manager. Second number is process (PID); kill individual process where PID is replaced with the number
 
 		ps aux | grep node
 		kill -9 PID
