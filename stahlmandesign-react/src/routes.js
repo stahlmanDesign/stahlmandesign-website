@@ -14,6 +14,7 @@ import Music from './components/Music'
 import December from './components/December'
 import Nyt from './components/Nyt'
 import Cv from './components/Cv/Cv'
+import GoogleAllowIndexReact from './components/GoogleAllowIndexReact'
 
 // import { urls } from './libraries/global'
 
@@ -38,6 +39,7 @@ export default(
         <Route path={ '/december' } component={ December } />
         <Route path={ '/nyt' } component={ Nyt } />
         <Route path={ '/cv' } component={ Cv } />
+        <Route path={ '/googlee042d9479118b231.html' } component={ GoogleAllowIndexReact } />
 
 
         {/*
