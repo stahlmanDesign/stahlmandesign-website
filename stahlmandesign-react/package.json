@@ -44,6 +44,7 @@
     "react-redux": "^4.4.5",
     "react-remarkable": "^1.1.1",
     "react-router": "^2.6.0",
+    "react-router-dom": "^4.0.0",
     "react-router-redux": "^4.0.5",
     "react-select": "^1.0.0-rc.1",
     "react-sortable": "^1.1.0",
