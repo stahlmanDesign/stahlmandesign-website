@@ -5,9 +5,10 @@ import { getFlickr } from '../libraries/utilities'
 import LazyLoad from 'react-lazyload';
 // import $ from 'jquery'
 import ReactGA from 'react-ga'; // https://www.npmjs.com/package/react-ga
-ReactGA.initialize('UA-25169855-1'); //Unique Google Analytics tracking number
 
 import './NewsGraphics.css'
+
+ReactGA.initialize('UA-25169855-1'); //Unique Google Analytics tracking number
 
 class NewsGraphics extends React.Component {
   constructor( props ) {

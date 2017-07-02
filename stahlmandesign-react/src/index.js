@@ -17,15 +17,17 @@ import localisation from './libraries/localisation.json'
 // stats
 import { intercom } from './libraries/statistics'
 import ReactGA from 'react-ga'; // https://www.npmjs.com/package/react-ga
-ReactGA.initialize('UA-83796779-1'); //Unique Google Analytics tracking number
-
 // import { urls /*, membersLogout */ } from './libraries/global'
 // import { LS } from './libraries/localStorage'
 
+import './styles/index.css'
+
 import { NumberIsIntegerPolyfill } from './libraries/utilities'
+
+ReactGA.initialize('UA-83796779-1'); //Unique Google Analytics tracking number
 NumberIsIntegerPolyfill()
 // styles
-import './styles/index.css'
+
 
 // NOTE the below libraries are imported with <script> tag because not yet working with import modules
 // import bootstrap from 'bootstrap'

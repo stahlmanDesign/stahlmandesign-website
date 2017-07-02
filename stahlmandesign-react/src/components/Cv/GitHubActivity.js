@@ -24,7 +24,7 @@ class GitHubActivity extends React.Component {
         console.log("success loading svg string")
       },
       error: (e) => {
-        console.error(this.props.url, status, e.toString());
+        console.error(this.props.url, e.toString());
       }
     });
 
