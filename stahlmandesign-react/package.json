@@ -31,6 +31,7 @@
     "react-bootstrap": "^0.30.3",
     "react-bootstrap-confirm": "^1.0.1",
     "react-burger-menu": "^1.10.7",
+    "react-calendar-heatmap": "^1.1.0",
     "react-confirm2": "^0.2.1",
     "react-dom": "^15.4.2",
     "react-draggable": "^2.2.2",

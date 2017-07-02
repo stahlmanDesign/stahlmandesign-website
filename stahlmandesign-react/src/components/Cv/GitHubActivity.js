@@ -1,6 +1,11 @@
 import React from 'react';
 import $ from 'jquery'
 
+/* NOTE not using this because found a site that scrapes the data an serves the svg http://ghchart.rshah.org*/
+// import CalendarHeatmap from 'react-calendar-heatmap'
+
+import './GitHubActivity.css'
+
 class GitHubActivity extends React.Component {
   constructor(){
     super();
@@ -32,9 +37,15 @@ class GitHubActivity extends React.Component {
   render() {
     // explicitly build the SVG to be rendered here so we don't lose the NS
     const stringifiedSvg = this.state.svgString;
-    return <div dangerouslySetInnerHTML={{
-      __html: stringifiedSvg
-    }}/>
+    return (
+      <div>
+        <img src="http://ghchart.rshah.org/stahlmandesign" alt="stahlmandesign's Github chart" />
+
+      </div>
+    )
+    // return <div dangerouslySetInnerHTML={{
+    //   __html: stringifiedSvg
+    // }}/>
   }
 }
 export default GitHubActivity
