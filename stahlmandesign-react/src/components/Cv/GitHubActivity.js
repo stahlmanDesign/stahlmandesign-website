@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery'
 
-/* NOTE not using this because found a site that scrapes the data an serves the svg http://ghchart.rshah.org*/
+/* NOTE not using this because found a site that scrapes the data an serves the svg https://github.com/2016rshah/githubchart-api */
 // import CalendarHeatmap from 'react-calendar-heatmap'
 
 import './GitHubActivity.css'
