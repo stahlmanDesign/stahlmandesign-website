@@ -14,6 +14,66 @@
     "fr": "Un test",
     "es": "El test"
   },
+  "StahlmanDesign": {
+    "en": "Stahlman Design",
+    "fr": "Stahlman Design",
+    "es": "Stahlman Design"
+  },
+  "Code": {
+    "en": "Code",
+    "fr": "Code",
+    "es": "Código"
+  },
+  "JavaScript": {
+    "en": "JavaScript",
+    "fr": "JavaScript",
+    "es": "JavaScript"
+  },
+  "TheseInteractiveGraphicsAndDataVisualisations_ETC": {
+    "en": "These interactive graphics and data visualisations were done in JavaScript/CSS/Javascript using Bootstrap for responsive design. Data is loaded from CSV files or by querying Google Fusion Tables or any API that returns JSON/JSONP.",
+    "fr": "These interactive graphics and data visualisations were done in JavaScript/CSS/Javascript using Bootstrap for responsive design. Data is loaded from CSV files or by querying Google Fusion Tables or any API that returns JSON/JSONP.",
+    "es": "These interactive graphics and data visualisations were done in JavaScript/CSS/Javascript using Bootstrap for responsive design. Data is loaded from CSV files or by querying Google Fusion Tables or any API that returns JSON/JSONP."
+  },
+  "JavaScriptReactNode": {
+    "en": "JavaScript (React, Node, ES6)",
+    "fr": "JavaScript (React, Node, ES6)",
+    "es": "JavaScript (React, Node, ES6)"
+  },
+  "ActionScriptFlash": {
+    "en": "ActionScript (Flash games, AS3)",
+    "fr": "ActionScript (Flash games, AS3)",
+    "es": "ActionScript (Flash games, AS3)"
+  },
+  "Games": {
+    "en": "Games",
+    "fr": "Jeux",
+    "es": "Juegos"
+  },
+  "RetroPixelGames": {
+    "en": "Retro pixel games",
+    "fr": "Jeux-vidéo rétro",
+    "es": "Videojuegos retro"
+  },
+  "Infographics": {
+    "en": "Infographics",
+    "fr": "Infographie",
+    "es": "Infografía"
+  },
+  "Journalism": {
+    "en": "Journalism",
+    "fr": "Journalisme",
+    "es": "Periodismo"
+  },
+  "En5MinutesOld": {
+    "en": "“In 5 Minutes” old",
+    "fr": "« En 5 Minutes » vieux",
+    "es": "“En 5 minutos„ antiguos"
+  },
+  "En5MinutesNew": {
+    "en": "“In 5 Minutes” more recent",
+    "fr": "« En 5 Minutes » plus récents",
+    "es": "“En 5 minutos„ más recientes"
+  },
   "Home": {
     "en": "Home",
     "fr": "Accueil",

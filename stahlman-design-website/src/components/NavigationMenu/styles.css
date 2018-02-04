@@ -1,6 +1,8 @@
 .NavigationMenu {
   color: var(--sd-white);
   background: var(--sd-orange);
+  position: fixed;
+  width: 100%;
 }
 .NavigationMenu .menu-item {
   padding: 1em;

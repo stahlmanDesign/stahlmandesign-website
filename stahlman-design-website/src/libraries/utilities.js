@@ -32,7 +32,6 @@ export const UT = {
       }
       return params
   },
-
   localise: (key, APP, options)=>{
     let lang = APP.state.lang
     if (options){
@@ -92,19 +91,12 @@ export const UT = {
                 title: title,
                 descUrl: descUrlCallbackContent // OPTIONAL, may not exists: will add description to photo by using desc-0 ID when callback is done
               }
-
-
               // const descUrl = getDesc(data.photoset.photo[i], url, i)
-
               images.push( image );
               if (images.length === limit) callback(images)
             })
-
             //$("#infographics").append("<img src='https://www.flickr.com/photos/93823488@N00/"+id+"'/>");
         }
-
-
-
         // NOTE this is a hack because unveil is not loading in normal <script> tag in index.html, probably because of meteor. Used to work in Meteor 1.2.1, but not after upgrade to 1.3.4.2
 
         // $.getScript( "http://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js", function( data, textStatus, jqxhr ) {

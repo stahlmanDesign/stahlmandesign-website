@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { UT } from '../libraries/utilities'
-import {
-  // BrowserRouter as Router,
-  Route,
-  withRouter,
-  // match,
-  // Link,
-  Switch
-} from 'react-router-dom'
+import { Route, withRouter, Switch } from 'react-router-dom'
 import Home from '../components/Home'
-import Web from '../components/Web'
+import JavaScript from '../components/JavaScript'
+import Flash from '../components/Flash'
+import Games from '../components/Games'
+import Journalism from '../components/Journalism'
+import En5Minutes from '../components/En5Minutes'
 import NavigationMenu from '../components/NavigationMenu'
 import Footer from '../components/Footer'
 import localisation from '../libraries/localisation.json'
@@ -50,7 +47,12 @@ class App extends React.Component{
           {/* https://css-tricks.com/react-router-4/ */}
           <Route exact path={ '/' } component={ Home }/>
           <Route exact path={ '/home' } component={ Home }/>
-          <Route exact path={ '/web' } component={ Web }/>
+          <Route exact path={ '/javascript' } component={ JavaScript }/>
+          <Route exact path={ '/flash' } component={ Flash }/>
+          <Route exact path={ '/games' } component={ Games }/>
+          <Route exact path={ '/journalism' } component={ Journalism }/>
+          <Route exact path={ '/en5minutes/1' } component={() => (<En5Minutes era='2005-2008' />)}/>
+          <Route exact path={ '/en5minutes/2' } component={() => (<En5Minutes era='2009-2016' />)}/>
 
           <Route render={ () => <div>404</div> } />
 

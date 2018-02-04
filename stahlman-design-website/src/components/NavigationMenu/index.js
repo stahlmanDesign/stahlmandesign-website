@@ -17,52 +17,58 @@ class NavigationMenu extends Component {
 
     const menuItems = [
       { localisationKey: 'StahlmanDesign',
-        url: '/',
+        path: '/',
         subMenuItems: []
       },
       { localisationKey: 'Code',
-        url: null,
+        path: null,
         subMenuItems: [{
-          localisationKey: 'ReactNodeJs',
-          url: '/web'
+          localisationKey: 'JavaScriptReactNode',
+          path: '/javascript'
         },{
-          localisationKey: 'FlashInteractiveAs3',
-          url: '/flash'
+          localisationKey: 'ActionScriptFlash',
+          path: '/flash'
         }]
       },
       { localisationKey: 'Games',
-        url: '/games',
-        subMenuItems: []
+        path: null,
+        subMenuItems: [{
+          localisationKey: 'RetroPixelGames',
+          path: '/games'
+        }]
       },
       { localisationKey: 'Infographics',
-        url: '/infographics',
+        path: null,
         subMenuItems: [{
-          localisationKey: 'NewsGraphics',
-          url: '/newsgraphics',
+          localisationKey: 'Journalism',
+          path: '/journalism',
         },{
-          localisationKey: 'En5Minutes',
-          url: '/en5minutes'
+          localisationKey: 'En5MinutesOld',
+          path: '/en5minutes/1'
+        },{
+          localisationKey: 'En5MinutesNew',
+          path: '/en5minutes/2'
         }]
       },
       { localisationKey: 'Animation',
-        url: '/animation',
+        path: '/animation',
         subMenuItems: []
       },
       { localisationKey: 'Illustration',
-        url: '/illustration',
+        path: '/illustration',
         subMenuItems: []
       },
       { localisationKey: 'Music',
-        url: '/music',
+        path: '/music',
         subMenuItems: []
       },
       { localisationKey: 'Blog',
-        url: '//blog.stahlmandesign.com',
+        path: '//blog.stahlmandesign.com',
         target: '_blank',
         subMenuItems: []
       },
       { localisationKey: 'CV',
-        url: '/cv',
+        path: '/cv',
         subMenuItems: []
       },
     ]
@@ -81,18 +87,18 @@ class NavigationMenu extends Component {
               { ii > 0 ? <MenuItem divider/> : '' }
               <MenuItem key={ i } className='subMenuItem'
                 onClick={ ()=>{} }>
-                <Link to={ subMenuItem.url || '/' }
+                <Link to={ subMenuItem.path || '/' }
                   target={ subMenuItem.target || '' }
-                  className={ 'sd-dark' }> { subMenuItem.localisationKey } </Link>
+                  className={ 'sd-dark' }> { UT.localise(subMenuItem.localisationKey, APP)  } </Link>
               </MenuItem>
             </div>
             )
           }
         </ContextMenu>
         </Fragment>
-        : <Link key={ i } to={ mi.url || '/' }
+        : <Link key={ i } to={ mi.path || '/' }
             target={ mi.target || '' }
-            className={ 'menu-item sd-light' }> { mi.localisationKey } </Link>
+            className={ 'menu-item sd-light' }> { UT.localise(mi.localisationKey, APP) } </Link>
       )}
 
       <div className='menu-item sd-light ml-auto'><ChooseLanguage/></div>
