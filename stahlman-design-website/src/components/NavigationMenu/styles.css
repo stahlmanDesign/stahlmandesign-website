@@ -1,0 +1,10 @@
+.NavigationMenu {
+  color: var(--sd-white);
+  background: var(--sd-orange);
+}
+.NavigationMenu .menu-item {
+  padding: 1em;
+}
+.NavigationMenu .menu-item:hover {
+  background: var(--sd-dark-orange)
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:900|Titillium+Web:400,700');
+
+:root {
+  --sd-orange: #dd4815;
+  --sd-med-orange: #ae3911;
+  --sd-dark-orange: #97310e;
+  --sd-white: #fff;
+  --sd-black: #000;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height:100%;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.0em;
+}
+h1, h2, h3{
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+  /*font-weight: 700;*/
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: var(--sd-orange);
+  /* text-decoration: underline; */
+}
+.sd-light,
+.sd-light:link,
+.sd-light:visited,
+.sd-light:hover,
+.sd-light:active {
+  color: var(--sd-white);
+}
+.sd-dark,
+.sd-dark:link,
+.sd-dark:visited,
+.sd-dark:hover,
+.sd-dark:active {
+  color: var(--sd-black);
+}

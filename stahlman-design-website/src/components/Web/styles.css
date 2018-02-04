@@ -1,0 +1,15 @@
+.Web {
+
+}
+.Web ul{
+	display: flex;
+	flex-wrap: wrap;
+	align-items:flex-end;
+	list-style: none;
+}
+.Web .photo-container{
+	padding:0.75em;
+}
+.Web .photo-container p{
+	padding-top:1em;
+}

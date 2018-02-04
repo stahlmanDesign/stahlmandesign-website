@@ -1,0 +1,32 @@
+{
+  "English": {
+    "en": "English",
+    "fr": "Anglais",
+    "es": "Inglés"
+  },
+  "French": {
+    "en": "French",
+    "fr": "Français",
+    "es": "Francés"
+  },
+  "Test": {
+    "en": "A test",
+    "fr": "Un test",
+    "es": "El test"
+  },
+  "Home": {
+    "en": "Home",
+    "fr": "Accueil",
+    "es": "Inicio"
+  },
+  "FindMeHere": {
+    "en": "Find me here",
+    "fr": "Trouvez-moi ici",
+    "es": "Encuéntrame aquí"
+  },
+  "ThisSiteIsASPA": {
+    "en": "This website is a “single-page application” made with React, Node & MongoDB",
+    "fr": "Ce site est une « application web monopage » fait avec React, Node et MongoDB",
+    "es": "Este sitio web es una “single-page application” hecha con React, Node y MongoDB"
+  }
+}
