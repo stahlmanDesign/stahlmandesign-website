@@ -11,7 +11,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div className='Home'>
+      <div className='Home sd-pad-top'>
         <div className='jumbotron'>
       		<div className='container'>
       			<h1>Stahlman Design</h1>
