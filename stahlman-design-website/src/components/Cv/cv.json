@@ -1,0 +1,763 @@
+{
+    "dictionary": {
+        "skill": {
+            "en": "skill",
+            "fr": "connaissance"
+        },
+        "trend": {
+            "en": "trend",
+            "fr": "tend."
+        },
+        "rating": {
+            "en": "rating",
+            "fr": "marque"
+        }
+    },
+    "name": "Justin Stahlman",
+    "title": {
+        "en": "Front-end web & JavaScript game development, <a target='_blank' href='https://en.wikipedia.org/wiki/Infographic'>infographics</a> and <a target='_blank' href='https://github.com/d3/d3/wiki/Gallery'>data visualization</a>",
+        "fr": "Front-end web et JavaScript, jeux-vidéo, <a target='_blank' href='https://en.wikipedia.org/wiki/Infographic'>infographie</a> et <a target='_blank' href='https://github.com/d3/d3/wiki/Gallery'>la visualisation des données</a>"
+    },
+    "note": {
+        "en": "<p>Designer turned developer, using JavaScript, CSS, JQuery, Bootstrap and SVG. Currently in love with React and want to do all projects using components, D3.js, ES6 and Webpack. I use Leaflet.js, Mapbox, GeoJSON, Meteor.js, Node, NPM and MongoDB. Presented my video game at JS Montréal in Aug. 2015",
+        "fr": "<p>Designer devenu développeur, adepte en JavaScript, CSS, JQuery, Bootstrap et SVG. Amoureux de React, voulant refaire tous mes projets avec composants, D3.js, ES6 et Webpack. J'utilise aussi Leaflet.js, MapBox, GeoJSON, Meteor.js, Node, NPM et MongoDB. Présenté mon jeu vidéo à JS Montréal en août 2015.</p>"
+    },
+    "email": {
+        "code": "jstahlman@mac.com",
+        "appearance": "jstahlman@mac.com"
+    },
+    "website": {
+        "code": "http://www.stahlmandesign.com",
+        "appearance": "stahlmandesign.com"
+    },
+    "phone": {
+        "code": 5147812416,
+        "appearance": "(514)&nbsp;781&#8209;2416"
+    },
+    "about": {
+        "desc": {
+            "en": "This interactive CV uses React and Bootstrap, ES6 transpiled with Babel, Webpack for packaging.",
+            "fr": "Ce CV interactif créé avec React, Bootstrap, ES6, transcompilé avec Babel, assemblé avec Webpack."
+        },
+        "stack": {
+            "title": {
+                "en": "Stack preferences:",
+                "fr": "Préférence de tech : "
+            },
+            "list": [{
+                "name": {
+                    "en": "Server",
+                    "fr": "Serveur"
+                },
+                "type": {
+                    "en": "<strong>Nginx</strong>, easy config, works well with Node.js, low memory usage",
+                    "fr": "<strong>Nginx</strong>, facile à configurer, bon pour Node.js, utilise peu de RAM"
+                }
+            }, {
+                "name": {
+                    "en": "OS",
+                    "fr": "OS"
+                },
+                "type": {
+                    "en": "<strong>Ubuntu</strong>, as a web server, <strong>OS&nbsp;X</strong> for development",
+                    "fr": "<strong>Ubuntu</strong>, comme serveur web, <strong>OS&nbsp;X</strong> pour development"
+                }
+            }, {
+                "name": {
+                    "en": "Hosting",
+                    "fr": "Hôte"
+                },
+                "type": {
+                    "en": "<strong>Digital Ocean</strong>, simple and elegant UI, robust, Node.js apps never down in a year",
+                    "fr": "<strong>Digital Ocean</strong>, UI simple et élégant, robuste, apps Node.js roulent depuis un an sans panne"
+                }
+            }, {
+                "name": {
+                    "en": "DB",
+                    "fr": "BD"
+                },
+                "type": {
+                    "en": "<strong>MongoDB</strong>, works like my brain, JavaScript queries, can also use in relational manner",
+                    "fr": "<strong>MongoDB</strong>, fonctionne comme mon cerveau, queries en JavaScript, peut fonctionner come SQL"
+                }
+            }]
+        }
+    },
+    "about-this-cv": "This interactive CV uses React and Bootstrap, ES6 transpiled with Babel, Webpack for packaging.",
+    "stack": {
+        "title": "Stack preferences",
+        "list": [{
+            "server": "Nginx — good with Node.js"
+        }]
+    },
+
+    "certifications": [{
+        "authority": "<a href='https://www.cebglobal.com/shl/us'>CEB | SHL Talent Measurement</a>",
+        "certifications": [{
+            "certification": "Javascript 1.8, Proficiency Level: Advanced (3.56), May 2016"
+        }]
+    }, {
+        "authority": "<a href='https://www.codeschool.com/users/603798'>Code School</a>",
+        "certifications": [{
+            "certification": "<a href='http://campus.codeschool.com/courses/powering-up-with-react/'>Powering Up With React</a>, April 2016"
+        }, {
+            "certification": "<a href ='http://backbone.codeschool.com/levels/1'>Anatomy of Backbone.js</a>, April 2016"
+        }, {
+            "certification": "<a href='http://campus.codeschool.com/courses/adventures-in-web-animations/contents'>Adventures in Web Animations</a>, April 2016"
+        }, {
+            "certification": "<a href='http://campus.codeschool.com/courses/you-me-svg/contents'>You, Me and SVG</a>, April 2016"
+        }, {
+            "certification": "<a href='https://www.codeschool.com/courses/building-blocks-of-express-js/'>Building Blocks of Express.js</a>, March 2016"
+        }, {
+            "certification": "<a href='https://www.codeschool.com/courses/the-magical-marvels-of-mongodb'>The Magical Marvels of MongoDB</a>, December 2015"
+        }, {
+            "certification": "Staying Sharp With Angular.js, March 2015"
+        }, {
+            "certification": "<a href='https://www.codeschool.com/courses/real-time-web-with-node-js'>Real-time web with Node.js</a>, February 2015"
+        }, {
+            "certification": "Shaping Up With Angular.js, February 2015"
+        }]
+    }, {
+        "authority": "Microsoft",
+        "certifications": [{
+            "certification": "<a href='http://weblogs.asp.net/lduveau/full-stack-web-camp-montreal'>Full Stack Web Camp Montréal</a>, <a href='https://github.com/sayar/fullstack-training-kit'>(Git)</a>, April 2015"
+        }]
+    }, {
+        "authority": "Google",
+        "certifications": [{
+            "certification": "<a href='https://datasense.withgoogle.com/course'>Making Sense of Data</a>, April 2014"
+        }]
+    }, {
+        "authority": "Sun Media",
+        "certifications": [{
+            "certification": "Intermediate Flash Actionscript 3.0, 2009"
+        }]
+    }],
+    "skills": [{
+        "category": {
+            "en": "Web / programming",
+            "fr": "Web / programmation"
+        },
+        "skills": [ {
+            "skill": {
+                "en": "React, Meteor",
+                "fr": "React, Meteor"
+            },
+            "score": 8,
+            "trending": "up"
+        },{
+            "skill": {
+                "en": "JavaScript, ES6, TypeScript",
+                "fr": "JavaScript, ES6, TypeScript"
+            },
+            "score": 8,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "JQuery, Underscore, etc.",
+                "fr": "JQuery, Underscore, etc."
+            },
+            "score": 8,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "ImpactJS (game engine)",
+                "fr": "ImpactJS (game engine)"
+            },
+            "score": 8,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Mapbox, Leaflet, GeoJSON",
+                "fr": "Mapbox, Leaflet, GeoJSON"
+            },
+            "score": 7,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Bootstrap UI",
+                "fr": "Bootstrap UI"
+            },
+            "score": 7,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "NoSQL, MongoDB",
+                "fr": "NoSQL, MongoDB"
+            },
+            "score": 6,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "CSS, Sass, Less",
+                "fr": "CSS, Sass, Less"
+            },
+            "score": 6,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "D3, data visualization",
+                "fr": "D3, visualiser les données"
+            },
+            "score": 4,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "Node, Express, Passport, npm",
+                "fr": "Node, Express, Passport, npm"
+            },
+            "score": 4,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "Knockout.js",
+                "fr": "Knockout.js"
+            },
+            "score": 4,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "Browserify, Webpack, Babel",
+                "fr": "Browserify, Webpack, Babel"
+            },
+            "score": 4,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "Prototype, InVision, Framer",
+                "fr": "Prototype, InVision, Framer"
+            },
+            "score": 3,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "WebGL, Three.js",
+                "fr": "WebGL, Three.js"
+            },
+            "score": 3,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "iOS, XCode",
+                "fr": "iOS, XCode"
+            },
+            "score": 3,
+            "trending": "down"
+        }, {
+            "skill": {
+                "en": "Angular 1.x, Ember",
+                "fr": "Angular 1.x, Ember"
+            },
+            "score": 2,
+            "trending": "down"
+        }, {
+            "skill": {
+                "en": "Tests (Mocha, qUnit, Sinon)",
+                "fr": "Tests (Mocha, qUnit, Sinon)"
+            },
+            "score": 2,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "PHP, Python, Ruby",
+                "fr": "PHP, Python, Ruby"
+            },
+            "score": 1,
+            "trending": "down"
+        }]
+    }, {
+        "category": {
+            "en": "Infographics / design",
+            "fr": "Infographie / design"
+        },
+        "skills": [{
+            "skill": {
+                "en": "Illustrator, vector",
+                "fr": "Illustrator, vecteur"
+            },
+            "score": 9,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Photoshop, pixels",
+                "fr": "Photoshop, pixels"
+            },
+            "score": 8,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Interactivity in Flash, AS3",
+                "fr": "Interactivité en Flash, AS3"
+            },
+            "score": 6,
+            "trending": "down"
+        }, {
+            "skill": {
+                "en": "3D (SketchUp, Modo, PBR)",
+                "fr": "3D (SketchUp, Modo, PBR)"
+            },
+            "score": 6,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "Animation 2D, cartoon",
+                "fr": "Animation 2D, dessin animé"
+            },
+            "score": 5,
+            "trending": "down"
+        }, {
+            "skill": {
+                "en": "Video / Final Cut",
+                "fr": "Video / Final Cut"
+            },
+            "score": 4,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "After Effects",
+                "fr": "After Effects"
+            },
+            "score": 2,
+            "trending": "down"
+        }]
+    }, {
+        "category": {
+            "en": "Personality",
+            "fr": "Personnalité"
+        },
+        "skills": [{
+            "skill": {
+                "en": "Précision, détails",
+                "fr": "Precision, details"
+            },
+            "score": 8,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Estimate, meet deadlines",
+                "fr": "Estimer, livrer à temps"
+            },
+            "score": 8,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Organize, documentation",
+                "fr": "Organiser, documentation"
+            },
+            "score": 7,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Collaborative, teams",
+                "fr": "Collaborateur, équipes"
+            },
+            "score": 6,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Self-teaching, resourceful",
+                "fr": "Autodidact, touche-à-tout"
+            },
+            "score": 6,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "Generator of ideas, creative",
+                "fr": "Générateur d’idées, créatif"
+            },
+            "score": 6,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Visionary, big-picture",
+                "fr": "Visionnaire, gros plan"
+            },
+            "score": 4,
+            "trending": "stable"
+        }, {
+            "skill": {
+                "en": "Can delegate, trust others",
+                "fr": "Déleguer, faire confiance"
+            },
+            "score": 3,
+            "trending": "up"
+        }, {
+            "skill": {
+                "en": "Manage other employees",
+                "fr": "Gestion d’employees"
+            },
+            "score": 3,
+            "trending": "up"
+        }]
+    }],
+    "jobs": [{
+        "start": "September 14, 2016",
+        "end": "today",
+        "title": {
+            "en": "Co-founder, Head of UX and Design",
+            "fr": "Co-fondateur, Chef de UX et design"
+        },
+        "company": "JITbase",
+        "division": "Startup cofounder",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": ["Build a web application from the ground up",
+                "Selecting the latest technologies and also knowing what to avoid",
+                "Wear many hats: design, font-end and back-end programming, business management ",
+                "Eat, sleep and drink React.js, MongoDB, Node.js",
+                "Design and copywriting of business and promotional material",
+                "Connected in the startup community, including District 3, Centec, & Founder Institute",
+                "Sprint planning, deployments, learning Git inside out"
+            ],
+            "fr": [""
+            ]
+        },
+        "description": {
+            "en": "I have the unique opportunity to join the startup community as an entreprenneur after 20 years in design and programming. Now I'm learning the business side and how each member of the team in indespensible — no one person can do all the work required.",
+            "fr": "J’ai l’occasion unique de me joindre à la communauté startup en tant qu’entreprenneur après avoir eu 20 ans d’expérience en design et programmation web. Maintenant j’apprend le côté des affaires et comment chaque membre de l’equipe est essentiel — personne ne peut tout faire."
+        },
+        "tags": ["Startup", "Business","cofounder","React","Node","MongoDB","NPM","UX"]
+    },{
+        "start": "December 1, 2014",
+        "end": "September 14, 2016",
+        "title": {
+            "en": "Team leader infographics",
+            "fr": "Chef de l’infographie"
+        },
+        "company": "Québecor Média",
+        "division": "<em>Le Journal de Montréal</em>",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": ["Manage 3D artists and researchers; liason to pool of journalists",
+                "Research and write text in French for infographics",
+                "Generate interactive 3D models using Substance Painter and Sketchfab, and VR using Unity",
+                "Capture 3D models using 123D Catch from Autodesk, for Sketchfab or Autodesk Forge",
+                "Find appropriate visual-news subjects, manage ongoing and published projects using Trello",
+                "Project to scrape 10 years of PDF archives with Node.js; use tags for query in MongoDB",
+                "Teach data visualization to journalists, for use with D3.js, and geolocation projects"
+            ],
+            "fr": ["Gérer les artistes et les chercheurs 3D; liason aux journalistes",
+                "Rechercher et écire du texte en français pour les infographies",
+                "Générer des modèles 3D interactifs en utilisant Sketchfab et VR avec Unity",
+                "Capturer des modèles 3D à l'aide de 123D Catch d'Autodesk, pour Sketchfab",
+                "Trouver des sujets appropriés pour traitement visuel, gérer projets en cours et publiés",
+                "Projet de scraper 10 ans d'archives PDF avec Node.js pour query en MongoDB",
+                "Enseigner la visualisation des données aux journalistes, pour faire des projets de géolocalisation"
+            ]
+        },
+        "description": {
+            "en": "I’ve had several different roles inside Québecor Média over the past 11 years. I currently lead a team that produces the daily infographic called « En 5 minutes » in <em>Le Journal de Montréal</em>. More and more, we also create graphics, 3D models and interactive VR experiences for external clients.",
+            "fr": "J'ai eu plusieurs rôles différents chez Québecor depuis 11 ans. Actuellement je dirige une équipe qui produit le infographique au quotidien appelé « En 5 minutes » dans <em>Le Journal de Montréal</em>. De plus en plus, nous créons des modèles 3D et des expériences interactives VR pour des clients externes."
+        },
+        "tags": ["Team lead", "NPM", "Webpack", "React", "Infographics", "Illustrator", "Photoshop", "3D modeling", "Sketchfab", "Substance Painter"]
+    }, {
+        "start": "May 1, 2014",
+        "end": "December 1, 2014",
+        "title": {
+            "en": "Front-end JavaScript developer",
+            "fr": "Développeur JavaScript front-end "
+        },
+        "company": "Québecor Média",
+        "division": "Sun Media, Nurun",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": ["Designed mosaic theme of jdem.com; solved using Packery.js packing algorithm",
+                "Used JQuery CSS, Sass, and eventually Less for Bootstrap integration on front-end",
+                "Refactored prototype for production for TVA Sports. Code reused across Québecor",
+                "Created drag-and-drop UI mirroring jdem.com allowing publication preview",
+                "Spoke with client during project to fix bugs & expand features not initially understood",
+                "Communication with Java team allowed efficient REST services (fewer queries)",
+                "Estimated time in JIRA issues, prioritized features into different sprints",
+                "Worked in cumbersome Java environment (Liferay portlets, Maven, Jenkins, Vaadin)",
+                "Used a Mac, IntelliJ IDEA, Git, Bitbucket, JIRA, Confluence, MongoDB, RoboMongo",
+                "Four environments: Dev, Staging, QA and Prod, group messaging with HipChat"
+            ],
+            "fr": ["Conçu thème mosaïque de jdem.com; résolu avec Packery.js algorithme d'emballage",
+                "JQuery CSS, Sass, et finalement Less pour l'intégration Bootstrap sur le front-end",
+                "Refactor du prototype pour la production de TVA Sports. Code réutilisé dans la compagnie",
+                "Créé UI glisser-déposer pour jdem.com permettant aperçu de la publication",
+                "Communiqué avec le client au cours du projet pour corriger les bugs et fonctionnalités",
+                "Services REST efficaces (moins de requêtes) grâce à la communication avec l'équipe Java",
+                "Estimation du temps dans JIRA, priorisation de différents sprints",
+                "Travaillé dans un environnement Java lourd (portlets Liferay, Maven, Jenkins, Vaadin)",
+                "Utilisé Mac, IntelliJ IDEA, Git, Bitbucket, JIRA, Confluence, MongoDB, RoboMongo",
+                "Quatre environnements: Dev, Staging, QA et Prod; messagerie avec HipChat"
+            ]
+        },
+        "description": {
+            "en": "Full-time job for the redesign of <em>Le Journal de Montréal</em>",
+            "fr": "Contrat à temps-plein pour la refonte du<em>Journal de Montréal</em>"
+        },
+        "tags": ["JavaScript", "JQuery", "Bootstrap", "UI", "MongoDB", "Packery.js", "Packing algorithm", "REST", "Agile", "Scum", "Team", "Java"]
+    }, {
+        "start": "September 1, 2011",
+        "end": "June 1, 2014",
+        "title": {
+            "en": "Head of interactive graphics",
+            "fr": "Chef de l’infographie interactive"
+        },
+        "company": "Québecor Média",
+        "division": "<em>Le Journal de Montréal</em>",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": [
+                "Video games in Impact.js for provincial election, and during student tuition protest",
+                "Maps using Leaflet.js, Mapbox and Open Street Map for tiles",
+                "Taught data visualization best practices for journalists; taught geocoding",
+                "Geocoding addresses of sex offenders in Quebec; used Fusion Tables, Google Refine",
+                "Supervised live election map; D3.js, JSON feed; GeoJSON and TopoJSON for ridings",
+                "Data visualizations of gun registry; mafia crime per neighbourhood; live NHL stats",
+                "Web development at beginning of responsive-design era, and later “mobile-first”",
+                "Used Rafaël.js SVG library before SVG was compatible with IE"
+            ],
+            "fr": ["Jeux-vidéo avec Impact.js pour les élections et manifs contre la hausse des frais scolaires",
+                "Cartes interactives avec Leaflet.js, MapBox et Open Street Map pour les textures",
+                "Enseigné la visualisation des données et meilleures pratiques aux journalistes",
+                "Géocodage adresses des délinquants sexuels au Québec; Fusion Tables; Google Refine",
+                "Supervisé la carte en direct de circonscriptons lors de l'élection; D3.js, flux JSON; GeoJSON",
+                "Visualisations de données du registre des armes à feu; crime mafia par quartier; stats LNH",
+                "Développement Web au début de l'ère « responsive », et plus tard « mobile-first »",
+                "Librairie Rafaël.js pour utiliser SVG dans tous les navigateurs (avant IE 9)"
+            ]
+        },
+        "description": {
+            "en": "Transitioned interactive maps and charts from Flash AS3 to HTML5, JavaScript and CSS",
+            "fr": "Migré cartes interactives et infographies en Flash AS3 à HTML5, JavaScript et CSS"
+        },
+        "tags": ["Data visualisation", "HTML5", "JavaScript", "D3", "UI", "Node.js", "CSS", "Sass", "Leaflet", "Mapbox", "Geolocation", "Interactive", "Bootstrap", "Responsive", "PHP"]
+    }, {
+        "start": "January 1, 2009",
+        "end": "September 1, 2011",
+        "title": {
+            "en": "Flash developer",
+            "fr": "Développeur Flash"
+        },
+        "company": "Québecor Média",
+        "division": "Canoë / Agence QMI",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": ["Created interactive graphics using Actionscript 3.0, XML, FlashVars (to talk to HTML)",
+                "Integrated Google Maps when API was at version 2 (deprecated)",
+                "Learned OOP concepts; i.e. encapsulation, private variables, classes and inheritance",
+                "Learned game-programming tricks; i.e. backwards iteration when using pop() on array"
+            ],
+            "fr": ["Graphiques interactifs créés en utilisant Actionscript 3.0, XML, FlashVars (pour parler a l’HTML)",
+                "Intégré version 2 de l’API des Cartes Google dans Flash  (dépréciée)",
+                "Concepts OOP; ex.encapsulation, des variables privées, les classes et l'héritage, design patterns",
+                "Apprentissage des jeux-vidéo; ex. itération à l'envers lorsque vous utilisez .pop() sur l'array modifé"
+            ]
+        },
+        "description": {
+            "en": "Art direction and programming of interactive infographics in Flash (AS3), and a video game for iPad using Cocos2D for iOS.",
+            "fr": "Direction artistique et programmation des infographies interactives Flash (AS3); jeu-vidéo pour iPad en Objective-C pour iOS."
+        },
+        "tags": ["Flash", "Actionscript 3.0", "UI", "Games", "Interactive", "XML", "iOS", "Cocos2D", "iPad", "XCode", "Illustrator", "Photoshop"]
+
+    }, {
+        "start": "August 31, 2005",
+        "end": "December 18, 2008",
+        "title": {
+            "en": "Visual journalist",
+            "fr": "Journaliste graphiste"
+        },
+        "company": "Québecor Média",
+        "division": "<em>Le Journal de Montréal</em>",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": [
+                "Made precise 3D models, geo-referenced for accurate shadows from sunlight",
+                "Placed geolocated 3D models made in SketchUp into Google Earth",
+                "Became advanced user of Adobe Illustrator, Photoshop, Quark Xpress, Google SketchUp"
+            ],
+            "fr": ["Modélisaton 3D précise et géo-référencée pour les ombres précises à partir de la lumière du soleil",
+                "Création de modèles 3D géolocalisées placés dans SketchUp, inclus dans Google Earth",
+                "Utilisateur avancé d'Adobe Illustrator, Photoshop, Quark Xpress, Google SketchUp"
+            ]
+        },
+        "description": {
+            "en": "I created the daily full-page infographic called « En 5 minutes » which explained news using 3D models, maps and graphics.",
+            "fr": "J'ai créé la page « En 5 minutes » qui explique les nouvelles de façon visuelle avec modèles en 3D, cartes et graphiques."
+        },
+        "tags": ["Geolocation", "Google Earth", "3D modeling", "3D", "SketchUp", "Infographics", "Illustrator", "Photoshop", "Quark XPress"]
+    }, {
+        "start": "May 1, 2005",
+        "end": "August 31, 2005",
+        "title": {
+            "en": "Visual journalist",
+            "fr": "Journaliste graphiste"
+        },
+        "company": "<em>The Toronto Star</em>",
+        "division": "",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": ["Made daily infographics for breaking news, business charts and 3D models in SketchUp",
+                "Created animated Flash graphic to show how a plane ran off the runway at Pearson airport"
+            ],
+            "fr": []
+        },
+        "description": {
+            "en": "Summer graphics internship.",
+            "fr": "Stage d’été en infographie."
+        },
+        "tags": ["Infographics", "Illustrator", "3D", "Poser", "SketchUp", "Flash"]
+    }, {
+        "start": "November 1, 2003",
+        "end": "May 1, 2005",
+        "title": {
+            "en": "Graphic artist",
+            "fr": "Graphiste"
+        },
+        "company": "<em>Le Soleil</em>",
+        "division": "",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": ["Wrote text in French for infographics and headlines",
+                "Made infographics for news, 3D models in SketchUp and artwork for stories",
+                "Page layout and art direction for section fronts",
+                "Resident expert at Macromedia FreeHand and AP graphics before Illustrator was used"
+            ],
+            "fr": []
+        },
+        "description": {
+            "en": "Page layout and art direction for section fronts, infographics and illustration.",
+            "fr": "Mise en page et direction artistique des cahiers, infographie et illustration."
+        },
+        "tags": ["Infographics", "Freehand", "Page layout", "Quark XPress", "Illustrator", "Photoshop", "SketchUp"]
+    }, {
+        "start": "December 15, 1999",
+        "end": "April 15, 2000",
+        "title": {
+            "en": "Graphic artist",
+            "fr": "Graphiste"
+        },
+        "company": "IDÉ.fr",
+        "division": "Infographics agency (JSI in 2001)",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": ["Worked in Paris creating infographics for French daily newspapers",
+                "Executed infographics based on sketch by storyboard artist"
+            ],
+            "fr": []
+        },
+        "description": {
+            "en": "At this graphics agency competing with Agence France Presse, I created infographics for French daily newspapers.",
+            "fr": "À cette agence en concourence avec Agence France Presse, j’ai créé des infographies pour des journaux français."
+        },
+        "tags": ["Infographics", "Illustrator", "Flash"]
+    }, {
+        "start": "May 1, 1998",
+        "end": "September 1, 2002",
+        "title": {
+            "en": "Graphics Editor",
+            "fr": "Chef de l’infographie"
+        },
+        "company": "<em>The Montreal Gazette</em>",
+        "division": "",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": [],
+            "fr": []
+        },
+        "description": {
+            "en": "I made and assigned infographics, locator maps, charts and graphs. Won a Canadian National Newspaper Award in 2001.",
+            "fr": "J'ai créé et assigné des infographies, cartes, tableaux et diagrames. Gagnant du Concours Canadien de Journalisme 2001."
+        },
+        "tags": ["Infographics", "Freehand", "Photoshop", "maps", "charts", "diagrams"]
+    }, {
+        "start": "December 15, 1996",
+        "end": "May 1, 1998",
+        "title": {
+            "en": "News artist",
+            "fr": "Journaliste graphiste"
+        },
+        "company": "<em>The San Antonio Express-News</em>",
+        "division": "",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": [],
+            "fr": []
+        },
+        "description": {
+            "en": "I made daily news infographics, locator maps, charts and graphs, and designed some section fronts.",
+            "fr": "J'ai créé des infographies pour les nouvelles, cartes, tableaux et diagrames, et a illustré la une des cahiers."
+        },
+        "tags": ["Infographics", "Illustration", "Freehand", "Page Layout", "Photoshop", "maps", "charts", "diagrams"]
+    }, {
+        "start": "June 1, 1996",
+        "end": "August 15, 1996",
+        "title": {
+            "en": "News artist",
+            "fr": "Journaliste graphiste"
+        },
+        "company": "<em>The Sacramento Bee</em>",
+        "division": "",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": [],
+            "fr": []
+        },
+        "description": {
+            "en": "Summer graphics internship.",
+            "fr": "Stage d’été en infographie."
+        },
+        "tags": ["Infographics", "Freehand", "maps", "charts", "diagrams"]
+    }, {
+        "start": "June 1, 1995",
+        "end": "August 15, 1995",
+        "title": {
+            "en": "News artist",
+            "fr": "Journaliste graphiste"
+        },
+        "company": "<em>The Kansas City Star</em>",
+        "division": "",
+        "failures": {
+            "en": [],
+            "fr": []
+        },
+        "accomplishments": {
+            "en": [],
+            "fr": []
+        },
+        "description": {
+            "en": "Summer graphics internship.",
+            "fr": "Stage d’été en infographie."
+        },
+        "tags": ["Infographics", "Freehand", "maps", "charts", "diagrams"]
+    }]
+}

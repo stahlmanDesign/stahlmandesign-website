@@ -8,6 +8,10 @@ import Flash from '../components/Flash'
 import Games from '../components/Games'
 import Journalism from '../components/Journalism'
 import En5Minutes from '../components/En5Minutes'
+import Animation from '../components/Animation'
+import Illustration from '../components/Illustration'
+import Music from '../components/Music'
+import Cv from '../components/Cv'
 import NavigationMenu from '../components/NavigationMenu'
 import Footer from '../components/Footer'
 import localisation from '../libraries/localisation.json'
@@ -53,6 +57,10 @@ class App extends React.Component{
           <Route exact path={ '/journalism' } component={ Journalism }/>
           <Route exact path={ '/en5minutes/1' } component={() => (<En5Minutes era='2005-2008' />)}/>
           <Route exact path={ '/en5minutes/2' } component={() => (<En5Minutes era='2009-2016' />)}/>
+          <Route exact path={ '/animation' } component={ Animation }/>
+          <Route exact path={ '/illustration' } component={ Illustration }/>
+          <Route exact path={ '/music' } component={ Music }/>
+          <Route exact path={ '/cv' } component={ Cv }/>
 
           <Route render={ () => <div>404</div> } />
 
