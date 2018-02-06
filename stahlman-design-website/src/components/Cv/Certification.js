@@ -8,7 +8,7 @@ class Certification extends React.Component {
                 __html: this.props.certification.authority,
                 sanitize: true
             }}></h2>
-          <ul>
+          <ul className='p-0'>
             <CertificationAccomplishments
               certificationId={this.props.certificationId}
               certifications={this.props.certification.certifications}

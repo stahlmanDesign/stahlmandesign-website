@@ -4,7 +4,7 @@ import JobList from './JobList'
 class JobBox extends React.Component {
   render() {
     return <div className="JobBox">
-      <div className='col-12 col-sm-5 col-md-7'>
+      <div className='col'>
         <h3 className='head-type-of-section'>
           {this.props.lang === 'en' ? 'EXPERIENCE' : 'EXPÉRIENCE'}
         </h3>

@@ -20,14 +20,14 @@ class AboutThisCv extends React.Component {
         { about.stack.title[lang]}
         </strong>
       </p>
-      <div className=''>
+      <ul className='p-0'>
         { about.stack.list.map((item, i) =>
           <li key={ i }>
-            { '• ' +  item.name[lang] }
+            { item.name[lang] }
             <span dangerouslySetInnerHTML={{__html:': ' + item.type[lang]}}></span>
           </li>
         )}
-      </div>
+      </ul>
     </div>
   }
 

@@ -1,14 +1,20 @@
 import React from 'react';
+import Certification from './Certification'
 
-
-import CertificationList from './CertificationList.js'
 class CertificationBox extends React.Component {
   render() {
     return <div className="certification-box">
       <h3 className='head-type-of-section'>
         {this.props.lang === 'en' ? 'CERTIFICATIONS' : 'CERTIFICATIONS'}
       </h3>
-      <CertificationList certifications={this.props.certifications} lang={this.props.lang}/>
+      { this.props.certifications.map((certification, i)=>
+        <Certification
+          certification={certification}
+          lang={this.props.lang}
+          certificationId={'certificationId-' + i}
+          key={'certification-key-' + i}>
+        </Certification>
+      ) }
 
   </div>
   }

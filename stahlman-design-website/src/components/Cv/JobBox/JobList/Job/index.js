@@ -4,17 +4,15 @@ import _ from 'lodash'
 
 class Job extends React.Component {
   render() {
-    var tags = this.props.job.tags.map((tag, i) => {
-      return (
+    var tags = this.props.job.tags.map((tag, i) =>
         <span key={this.props.jobId+i}>
           {' '}
           <span
-            className='label label-danger'>
+            className='badge badge-danger'>
             {tag}
           </span>
         </span>
       )
-    })
     let parentCompany = ''
     if (this.props.showParentCompany) {
       parentCompany =
@@ -98,7 +96,7 @@ class Job extends React.Component {
       }
 
       if (textOrunits === 'units') {
-        return _.times(totalMonths, '|')
+        return _.times(totalMonths, ()=>'|').join('')
       }
     }
     _getDates(startDate, endDate, lang) {

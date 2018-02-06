@@ -3,10 +3,7 @@ class CertificationAccomplishments extends React.Component {
   render() {
     var nodes = this.props.certifications.map((item, i) => {
       return (
-        <li
-          className='certification-accomplishment-item'
-          key={ i }
-          >
+        <li key={ i }>
           <span dangerouslySetInnerHTML={{__html:item.certification,sanitize:true}}></span>
         </li>
       )
