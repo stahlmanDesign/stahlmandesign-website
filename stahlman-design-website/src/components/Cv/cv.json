@@ -83,7 +83,7 @@
             }]
         }
     },
-    "about-this-cv": "This interactive CV uses React and Bootstrap, ES6 transpiled with Babel, Webpack for packaging.",
+    "aboutThisCv": "This interactive CV uses React and Bootstrap, ES6 transpiled with Babel, Webpack for packaging.",
     "stack": {
         "title": "Stack preferences",
         "list": [{
