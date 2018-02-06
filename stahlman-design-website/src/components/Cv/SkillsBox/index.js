@@ -1,5 +1,6 @@
 import React from 'react'
-import SkillList from './SkillList.js'
+import SkillCategory from './SkillCategory'
+
 class SkillsBox extends React.Component {
   render() {
     return (
@@ -7,10 +8,21 @@ class SkillsBox extends React.Component {
         <h3 className='head-type-of-section'>
           {this.props.lang === 'en' ? 'SKILLS' : 'CONNAISSANCES'}
         </h3>
-        <SkillList
-          skills={this.props.skills}
-          dictionary={this.props.dictionary}
-          lang={this.props.lang}/>
+
+
+        { this.props.skills.map((skill, i) =>
+
+            <SkillCategory
+              className='skill-list'
+              category={skill.category}
+              skills={skill.skills}
+              dictionary={this.props.dictionary}
+              lang={this.props.lang}
+              skillCategoryId={'skillCategoryId-' + i}
+              key={'skillCategoryId-' + i}
+            />
+
+        ) }
       </div>
     )
   }

@@ -80,6 +80,15 @@
                     "en": "<strong>MongoDB</strong>, works like my brain, JavaScript queries, can also use in relational manner",
                     "fr": "<strong>MongoDB</strong>, fonctionne comme mon cerveau, queries en JavaScript, peut fonctionner come SQL"
                 }
+            }, {
+                "name": {
+                    "en": "“Serverless”",
+                    "fr": "« Serverless »"
+                },
+                "type": {
+                    "en": "<strong>Firebase</strong>, real-time, event-driven, perfect when paired with <strong>React</strong>, fast and easy to set up",
+                    "fr": "<strong>Firebase</strong>, temps-réel, event-driven, parfait avec <strong>React</strong>, rapide et facile à configurer"
+                }
             }]
         }
     },

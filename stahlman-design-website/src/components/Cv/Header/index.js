@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import GitHubActivity from './GitHubActivity'
 
 class Header extends React.Component {
   componentWillMount(){
@@ -59,13 +58,7 @@ class Header extends React.Component {
           sanitize: true
         }}></span>
       </p>
-      <h4>
-        <a href='https://github.com/stahlmanDesign'>GitHub</a>
-        {lang === 'en'
-          ? ' contributions over the last year'
-          : ' contributions depuis un an'}
-      </h4>
-    <GitHubActivity lang={lang} />
+
   </div>
   }
 }
