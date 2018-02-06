@@ -3,6 +3,9 @@
   background: var(--sd-orange);
   position: fixed;
   width: 100%;
+  z-index: 1;
+  /* font-size: 1vmax */
+  /* font-size: 1vw */
 }
 .NavigationMenu .menu-item {
   padding: 1em;

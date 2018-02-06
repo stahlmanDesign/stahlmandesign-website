@@ -22,9 +22,11 @@ class Cv extends React.Component {
 
     return <div className='Cv sd-pad-top container'>
       <div className='pt-5'></div>
+
       <Header { ...cvdata }/>
+
       <div className='row'>
-        <div className='col-xs-12 col-sm-7 col-md-5'>
+        <div className='col-12 col-sm-7 col-md-5'>
           <CertificationBox
             certifications={ cvdata.certifications }
             lang={ lang }/>
@@ -34,9 +36,11 @@ class Cv extends React.Component {
             lang={ lang }/>
         </div>
       </div>
+
       <JobBox
         jobs={ cvdata.jobs }
         lang={ lang }/>
+
     </div>
   }
 }

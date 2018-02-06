@@ -1,5 +1,5 @@
-import React from 'react';
-import SkillList from './SkillList.js';
+import React from 'react'
+import SkillList from './SkillList.js'
 class SkillsBox extends React.Component {
   render() {
     return (

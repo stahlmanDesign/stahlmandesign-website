@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom';
-import GitHubActivity from './GitHubActivity.js'
+import { Link } from 'react-router-dom'
+import GitHubActivity from './GitHubActivity'
 
 class Header extends React.Component {
   componentWillMount(){
@@ -11,12 +11,13 @@ class Header extends React.Component {
     const APP = this.APP
     const { dictionary, name, note, title, email, website, phone, about, aboutThisCv, stack, certifications, skills, jobs } = this.props
     const lang = APP.state.lang
-    return <div className="Header col-sm-9">
-      <h1 id="name">
+    return <div className='Header '>
+
+      <h1 className='section-name'>
         { name }
       </h1>
       <div
-        className="lead adjust-title-style"
+        className='lead adjust-title-style'
         >
         <span dangerouslySetInnerHTML={{
           __html: title[lang],
@@ -24,14 +25,14 @@ class Header extends React.Component {
         }}></span>
       </div>
       <strong>
-        <span id="email">
-          <Link to={"mailto:" + email.code}>
+        <span className='section-email'>
+          <Link to={'mailto:' + email.code}>
             { email.appearance}
           </Link>&nbsp;&nbsp;</span>
       </strong>
       <strong>
-        <span id="phone">
-          <Link to={"tel:" + phone.code}>
+        <span className='section-phone'>
+          <Link to={'tel:' + phone.code}>
             <span dangerouslySetInnerHTML={{
               __html: phone.appearance,
               sanitize: true
@@ -42,7 +43,7 @@ class Header extends React.Component {
         </span>
       </strong>
       <strong>
-        <span id="website">
+        <span className='section-website'>
           <Link to={ website.code}>
             <span dangerouslySetInnerHTML={{
               __html: website.appearance,
@@ -52,7 +53,7 @@ class Header extends React.Component {
           &nbsp;&nbsp;
         </span>
       </strong>
-      <p id="note" className="note" >
+      <p className='section-note' className='note' >
         <span dangerouslySetInnerHTML={{
           __html: note[lang],
           sanitize: true
