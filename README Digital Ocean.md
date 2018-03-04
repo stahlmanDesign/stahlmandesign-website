@@ -69,6 +69,15 @@ Make sure to install for Ubuntu 14.04 (because that is what we install at the be
 
 https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
 
-###Install Node.js / NPM
+### Install Node.js / NPM
 
 http://howtonode.org/how-to-install-nodejs
+
+- if npm not found, may need to rebuild hash database `hash -r` to fix symlink
+
+#### Other helpful sites when having trouble installing node & NPM
+- https://coderwall.com/p/tu0trq/npm-won-t-run-after-update-linux
+- https://stackoverflow.com/questions/26571326/how-do-i-resolve-the-following-packages-have-unmet-dependencies#35679746
+- https://askubuntu.com/questions/641215/npm-cant-be-installed
+- https://stackoverflow.com/questions/34243719/how-to-install-npm-after-purge/34244847#34244847
+- https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server
