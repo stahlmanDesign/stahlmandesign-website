@@ -1,0 +1,15 @@
+{
+  "name": "stahlman-design-server",
+  "version": "1.0.0",
+  "description": "serves react app on port 3001",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Justin Stahlman <jstahlman@mac.com> (http://www.stahlmandesign.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

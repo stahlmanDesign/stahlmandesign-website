@@ -15,10 +15,16 @@ Updated 13 Feb 2018
 
 - `npm run build` creates a `build` folder
 - upload build folder to website from local terminal by typing: 
-- `scp -r <...localpath/build> root@159.203.16.127:/var/www/html/stahlmandesign.com/stahlmandesign-react/`
+- `scp -r <...localpath/build> root@159.203.16.127:/var/www/html/stahlmandesign.com/`
 	- https://unix.stackexchange.com/questions/52634/error-using-scp-not-a-regular-file#93410
-- ssh to remove server and `forever start server.js`  will start serving built app on port 3000 (defined in server.js)
-- to stop `forever stop server.js`  will start serving built app on port 3000 (defined in server.js)
+	
+### server.js
+Upload this file at the same level as `build/`
+
+Make sure express is installed in node_modules
+
+- ssh to remote server and `forever start server.js`  will start serving built app on port 3001 (defined in server.js)
+- to stop `forever stop server.js`  will start serving built app on port 3001 (defined in server.js)
 
 -  NOTE: can also kill node processes running from last deploy if `forever stop` doesn't work or if used another process manager. Second number is process (PID); kill individual process where PID is replaced with the number
 
