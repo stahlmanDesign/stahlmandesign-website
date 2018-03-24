@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { UT } from '../libraries/utilities'
 import { Route, withRouter, Switch } from 'react-router-dom'
 import Home from '../components/Home'
+import Callback from '../components/Callback'
 import JavaScript from '../components/JavaScript'
 import Flash from '../components/Flash'
 import Games from '../components/Games'
@@ -15,8 +16,12 @@ import Cv from '../components/Cv'
 import NavigationMenu from '../components/NavigationMenu'
 import Footer from '../components/Footer'
 import localisation from '../libraries/localisation.json'
-
 import './styles.css'
+
+import Auth from '../Auth/Auth.js'
+const auth = new Auth()
+
+auth.login()
 
 class App extends React.Component{
   constructor(props){
@@ -38,11 +43,26 @@ class App extends React.Component{
       this.setState({ loadingMessage: UT.localise('Initialization', this) })
     })
   }
+  goTo(route) {
+    this.props.history.replace(`/${route}`)
+  }
+
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
+  }
   render() {
+    const { isAuthenticated } = this.props.auth
     return (
       <div className='App'>
         <header className='App-header'>
           <NavigationMenu/>
+          <button className='btn btn-sm' onClick={ this.goTo.bind(this,'home') }>Home</button>
+          <button className='btn btn-sm' onClick={ this.login.bind(this) }>Login</button>
+          <button className='btn btn-sm' onClick={ this.logout.bind(this) }>Logout</button>
         </header>
 
         <Switch>
@@ -50,6 +70,7 @@ class App extends React.Component{
           {/* Alternatively, use 'exact' param to put in the order you wish */}
           {/* https://css-tricks.com/react-router-4/ */}
           <Route exact path={ '/' } component={ Home }/>
+          <Route exact path={ '/callback' } component={ Callback }/>
           <Route exact path={ '/home' } component={ Home }/>
           <Route exact path={ '/javascript' } component={ JavaScript }/>
           <Route exact path={ '/flash' } component={ Flash }/>
